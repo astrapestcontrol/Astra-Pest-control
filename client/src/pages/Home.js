@@ -78,6 +78,11 @@ function Home() {
           <div className="video-showcase">
             <div className={`mobile-phone-frame ${isVideoPlaying ? 'landscape' : ''}`}>
               <div className="phone-notch"></div>
+              <div className="phone-buttons">
+                <div className="volume-up"></div>
+                <div className="volume-down"></div>
+                <div className="power-button"></div>
+              </div>
               <div className="phone-screen">
                 {!isVideoPlaying && (
                   <div className="play-overlay" onClick={handlePlayVideo}>

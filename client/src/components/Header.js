@@ -15,10 +15,6 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isActive = (path) => {
-    return location.pathname === path;
-  };
-
   return (
     <>
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -35,42 +31,38 @@ function Header() {
           </button>
 
           <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <Link to="/" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/') ? 'active' : ''}`}>
+            <Link to="/" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/' ? 'active' : ''}`}>
               Home
               <span className="nav-underline"></span>
             </Link>
             
-            <Link to="/cleaning" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/cleaning') ? 'active' : ''}`}>
+            <Link to="/cleaning" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/cleaning' ? 'active' : ''}`}>
               Cleaning
               <span className="nav-underline"></span>
             </Link>
 
-            <Link to="/pest-control" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/pest-control') ? 'active' : ''}`}>
+            <Link to="/pest-control" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/pest-control' ? 'active' : ''}`}>
               Pest Control
               <span className="nav-underline"></span>
             </Link>
 
-            <Link to="/about" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/about') ? 'active' : ''}`}>
+            <Link to="/about" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/about' ? 'active' : ''}`}>
               About
               <span className="nav-underline"></span>
             </Link>
-            
-            <Link to="/hints-tips" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/hints-tips') ? 'active' : ''}`}>
+            <Link to="/hints-tips" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/hints-tips' ? 'active' : ''}`}>
               Hints & Tips
               <span className="nav-underline"></span>
             </Link>
-            
-            <Link to="/faq" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/faq') ? 'active' : ''}`}>
+            <Link to="/faq" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/faq' ? 'active' : ''}`}>
               FAQ
               <span className="nav-underline"></span>
             </Link>
-            
-            <Link to="/blog" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/blog') ? 'active' : ''}`}>
+            <Link to="/blog" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/blog' ? 'active' : ''}`}>
               Blog
               <span className="nav-underline"></span>
             </Link>
-            
-            <Link to="/contact" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/contact') ? 'active' : ''}`}>
+            <Link to="/contact" className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/contact' ? 'active' : ''}`}>
               Contact
               <span className="nav-underline"></span>
             </Link>

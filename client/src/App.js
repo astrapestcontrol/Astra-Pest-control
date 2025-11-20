@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Header from './components/Header';
+import StickyCTA from './components/StickyCTA';
+import ScrollToTopButton from './components/ScrollToTopButton';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
 import Home from './pages/Home';
@@ -37,11 +39,9 @@ function ScrollToTop() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: 'instant'
-    });
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, [pathname]);
 
   return null;
@@ -54,6 +54,8 @@ function App() {
       <ScrollToTop />
       <div className="App">
         <Header />
+        <StickyCTA />
+        <ScrollToTopButton />
         <main>
           <Routes>
             <Route path="/" element={<Home />} />

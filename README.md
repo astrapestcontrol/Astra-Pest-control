@@ -1,6 +1,24 @@
-# Best1 Cleaning - MERN Stack Website
+# Astra Pest Control - MERN Stack Website
 
-A modern, SEO-optimized cleaning services website built with the MERN stack, inspired by Allure Pest Control's design.
+A modern, SEO-optimized pest control services website built with the MERN stack featuring advanced UI/UX design.
+
+## Recent Updates (Nov 2024)
+
+### UI/UX Enhancements
+- Modern timeline design on Hints & Tips page with scroll animations
+- Sticky CTA bar with Call Now and Get Free Quote buttons
+- Floating Scroll to Top button
+- Transparent video feature cards with glass-morphism effect
+- Enhanced button animations with gradient borders and shine effects
+- Smooth scrolling across entire website
+- Responsive header padding optimization
+- Fixed About page values grid layout
+
+### Performance & Navigation
+- Optimized spacing between sections
+- Fixed icon alignment issues in buttons
+- Improved mobile responsiveness
+- Enhanced scroll-based animations
 
 ## Features
 
