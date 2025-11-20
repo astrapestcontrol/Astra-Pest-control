@@ -4,46 +4,43 @@ import './ServicePages.css';
 
 function PestControl() {
   const pests = [
-    { name: 'Fleas', icon: '🦟', link: '/pest-control/fleas' },
-    { name: 'Cockroaches', icon: '🪳', link: '/pest-control/cockroaches' },
-    { name: 'Silverfish', icon: '🐟', link: '/pest-control/silverfish' },
-    { name: 'Spiders', icon: '🕷️', link: '/pest-control/spiders' },
-    { name: 'Bed Bugs', icon: '🐛', link: '/pest-control/bed-bugs' },
-    { name: 'Mice', icon: '🐭', link: '/pest-control/mice' },
-    { name: 'Rats', icon: '🐀', link: '/pest-control/rats' },
-    { name: 'Termites', icon: '🐜', link: '/pest-control/termites' },
-    { name: 'Carpet Beetles', icon: '🪲', link: '/pest-control/beetles' },
-    { name: 'Lice', icon: '🦠', link: '/pest-control/lice' }
+    { name: 'Cockroaches', icon: '🪳', desc: 'Complete cockroach elimination', link: '/pest-control/cockroaches' },
+    { name: 'Termites', icon: '🐜', desc: 'Termite inspection & treatment', link: '/pest-control/termites' },
+    { name: 'Bed Bugs', icon: '🐛', desc: 'Thorough bed bug removal', link: '/pest-control/bed-bugs' },
+    { name: 'Spiders', icon: '🕷️', desc: 'Safe spider control', link: '/pest-control/spiders' },
+    { name: 'Rodents', icon: '🐀', desc: 'Mice & rat extermination', link: '/pest-control/rats' },
+    { name: 'Ants', icon: '🐜', desc: 'Ant colony elimination', link: '/pest-control/ants' },
+    { name: 'Fleas', icon: '🦟', desc: 'Complete flea treatment', link: '/pest-control/fleas' },
+    { name: 'Silverfish', icon: '🐟', desc: 'Silverfish control', link: '/pest-control/silverfish' }
   ];
 
   const products = [
     {
       name: 'MAXFORCE GOLD',
-      description: 'A gel formulation for control of cockroaches in residential and commercial areas by professional pest control operators.',
+      description: 'Gel formulation for cockroach control in residential and commercial areas',
       image: '/maxforce-box.png'
     },
     {
       name: 'BIFLEX AQUA',
-      description: 'An advanced water based 100g/l bifenthrin formulation that is suitable as a termiticide and general insecticide for both interior and exterior application.',
+      description: 'Advanced water based termiticide and general insecticide',
       image: '/biflex-aquamax.png'
     },
     {
       name: 'COOPEX DUST',
-      description: 'For the control of cockroaches, ants, fleas, silverfish and bed bugs in and around domestic and industrial premises, food preparation and storage areas.',
+      description: 'Control of cockroaches, ants, fleas, silverfish and bed bugs',
       image: '/coopex-bucket.png'
     }
   ];
 
   return (
     <div className="service-page">
-      {/* Hero Section */}
       <section className="pest-hero-enhanced">
         <div className="pest-hero-bg"></div>
         <div className="container">
           <div className="pest-hero-content">
             <span className="hero-badge-large">Professional Pest Control</span>
-            <h1>Fast, Reliable & Safe Pest Removal</h1>
-            <p>Protecting Brisbane homes and businesses with expert pest control solutions</p>
+            <h1>Pest Control Brisbane</h1>
+            <p>Fast, reliable and safe pest removal for homes and businesses across Brisbane</p>
             <div className="hero-features">
               <div className="hero-feature-item">
                 <div className="feature-icon-hero">✓</div>
@@ -71,7 +68,6 @@ function PestControl() {
         </div>
       </section>
 
-      {/* Special Offer Banner */}
       <section className="special-offer-banner">
         <div className="container">
           <div className="offer-content">
@@ -82,18 +78,19 @@ function PestControl() {
         </div>
       </section>
 
-      {/* Pests We Control */}
       <section className="pests-section-enhanced">
         <div className="container">
           <div className="section-intro">
-            <span className="section-label">What We Eliminate</span>
-            <h2>We Can Help You Eliminate:</h2>
+            <span className="section-label">Pest Solutions</span>
+            <h2>Complete Pest Management</h2>
+            <p>Expert treatment for all common household and commercial pests</p>
           </div>
           <div className="pests-grid-enhanced">
             {pests.map((pest, index) => (
               <Link to={pest.link} key={index} className="pest-link-card">
                 <div className="pest-card-icon">{pest.icon}</div>
                 <span className="pest-card-name">{pest.name}</span>
+                <p className="pest-card-desc">{pest.desc}</p>
                 <div className="pest-card-arrow">→</div>
               </Link>
             ))}
@@ -101,7 +98,6 @@ function PestControl() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
       <section className="pest-why-choose">
         <div className="container">
           <div className="why-choose-grid">
@@ -144,15 +140,14 @@ function PestControl() {
             <div className="why-choose-image">
               <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" alt="Professional Pest Control" />
               <div className="image-badge">
-                <div className="badge-text">15+ Years</div>
-                <div className="badge-subtext">Experience</div>
+                <div className="badge-text">15+</div>
+                <div className="badge-subtext">Years</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Products Section */}
       <section className="pest-products-section">
         <div className="container">
           <div className="section-intro">
@@ -176,7 +171,6 @@ function PestControl() {
         </div>
       </section>
 
-      {/* Service Areas */}
       <section className="service-areas-section">
         <div className="container">
           <div className="service-areas-content">
@@ -186,7 +180,6 @@ function PestControl() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="service-cta">
         <div className="container">
           <div className="cta-box">

@@ -5,46 +5,95 @@ import './About.css';
 function About() {
   return (
     <div className="about-page">
-      {/* Hero Section */}
       <section className="about-hero-modern">
-        <div className="about-hero-overlay"></div>
+        <div className="hero-particles"></div>
         <div className="container">
           <div className="about-hero-content">
-            <span className="hero-badge">Since 2008</span>
-            <h1>About Astra Pest Control</h1>
+            <div className="hero-badge-animated">
+              <span className="badge-pulse"></span>
+              Since 2008
+            </div>
+            <h1 className="glitch-text">About Astra Pest Control</h1>
             <p>Brisbane's Most Trusted Cleaning & Pest Control Experts</p>
+            <div className="scroll-indicator">
+              <div className="mouse">
+                <div className="wheel"></div>
+              </div>
+              <span>Scroll to explore</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Story Section */}
+      <section className="stats-banner">
+        <div className="container">
+          <div className="stats-grid">
+            <div className="stat-card">
+              <div className="stat-icon">📅</div>
+              <div className="stat-value" data-target="15">15+</div>
+              <div className="stat-label">Years Experience</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">👥</div>
+              <div className="stat-value" data-target="10000">10K+</div>
+              <div className="stat-label">Happy Clients</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">⭐</div>
+              <div className="stat-value">4.9</div>
+              <div className="stat-label">Average Rating</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-icon">✅</div>
+              <div className="stat-value">100%</div>
+              <div className="stat-label">Satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="about-story-modern">
         <div className="container">
           <div className="story-grid">
-            <div className="story-image">
-              <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Professional Cleaning" />
-              <div className="story-badge-float">
-                <div className="badge-number">15+</div>
-                <div className="badge-label">Years Experience</div>
+            <div className="story-image-wrapper">
+              <div className="image-frame">
+                <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80" alt="Professional Team" />
+                <div className="image-overlay-pattern"></div>
+              </div>
+              <div className="floating-badge">
+                <div className="badge-content">
+                  <div className="badge-number">15+</div>
+                  <div className="badge-text">Years</div>
+                </div>
               </div>
             </div>
             <div className="story-text">
-              <span className="section-label">Our Story</span>
+              <span className="section-label-modern">Our Story</span>
               <h2>Leading Carpet Cleaning & Pest Control in Brisbane</h2>
-              <p>Astra Pest Control was established over 15 years ago and operates as the leading carpet cleaning and pest control service in Brisbane, Ipswich, Gold & Sunshine Coast. Our clients are covered with full public liability insurance and all our products are environmentally friendly.</p>
-              <p>We provide exceptional service to both residential and commercial customers across all areas of Brisbane, Ipswich, Gold & Sunshine Coast with a commitment to quality and customer satisfaction.</p>
-              <div className="story-stats">
-                <div className="stat-item">
-                  <div className="stat-number">5000+</div>
-                  <div className="stat-label">Happy Clients</div>
+              <p>Astra Pest Control was established over 15 years ago and operates as the leading carpet cleaning and pest control service in Brisbane, Ipswich, Gold & Sunshine Coast.</p>
+              <p>Our clients are covered with full public liability insurance and all our products are environmentally friendly. We provide exceptional service to both residential and commercial customers.</p>
+              
+              <div className="features-modern">
+                <div className="feature-modern">
+                  <div className="feature-icon-modern">🛡️</div>
+                  <div>
+                    <h4>Fully Insured</h4>
+                    <p>Complete public liability coverage</p>
+                  </div>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">100%</div>
-                  <div className="stat-label">Guaranteed</div>
+                <div className="feature-modern">
+                  <div className="feature-icon-modern">🌿</div>
+                  <div>
+                    <h4>Eco-Friendly</h4>
+                    <p>Environmentally safe products</p>
+                  </div>
                 </div>
-                <div className="stat-item">
-                  <div className="stat-number">24/7</div>
-                  <div className="stat-label">Available</div>
+                <div className="feature-modern">
+                  <div className="feature-icon-modern">⚡</div>
+                  <div>
+                    <h4>Fast Service</h4>
+                    <p>Same day availability</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -52,117 +101,85 @@ function About() {
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className="about-values">
+      <section className="values-section-modern">
         <div className="container">
-          <div className="values-header">
-            <span className="section-label">Our Values</span>
-            <h2>Why Choose Astra Pest Control</h2>
+          <div className="section-header-center">
+            <span className="section-label-modern">Our Values</span>
+            <h2>What We Stand For</h2>
           </div>
-          <div className="values-grid">
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <circle cx="24" cy="24" r="22" stroke="#dc2626" strokeWidth="2"/>
-                  <path d="M16 24L22 30L32 18" stroke="#dc2626" strokeWidth="3" strokeLinecap="round"/>
-                </svg>
+          <div className="values-grid-modern">
+            <div className="value-card-modern">
+              <div className="value-icon-wrapper">
+                <div className="icon-bg"></div>
+                <span className="value-icon">💎</span>
               </div>
-              <h3>100% Guarantee</h3>
-              <p>We guarantee to clean your carpets to Australian Standards with the utmost care and attention. Protected by $5 million public liability insurance.</p>
+              <h3>Quality First</h3>
+              <p>We never compromise on the quality of our service or products</p>
             </div>
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 4L28 16L40 18L32 26L34 38L24 32L14 38L16 26L8 18L20 16L24 4Z" stroke="#dc2626" strokeWidth="2"/>
-                </svg>
+            <div className="value-card-modern">
+              <div className="value-icon-wrapper">
+                <div className="icon-bg"></div>
+                <span className="value-icon">🤝</span>
               </div>
-              <h3>Premium Equipment</h3>
-              <p>State-of-the-art truck mounted machines and portable equipment for high-rise buildings. Advanced technology for superior results.</p>
+              <h3>Customer Trust</h3>
+              <p>Building lasting relationships through honest service</p>
             </div>
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <circle cx="24" cy="24" r="20" stroke="#dc2626" strokeWidth="2"/>
-                  <path d="M24 12V24L32 28" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
+            <div className="value-card-modern">
+              <div className="value-icon-wrapper">
+                <div className="icon-bg"></div>
+                <span className="value-icon">🎯</span>
               </div>
-              <h3>Fast Response</h3>
-              <p>Same-day service available. We understand urgency and respond quickly to all cleaning and pest control emergencies.</p>
+              <h3>Excellence</h3>
+              <p>Striving for perfection in every job we undertake</p>
             </div>
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 8C16 8 10 14 10 22C10 30 16 36 24 36C32 36 38 30 38 22C38 14 32 8 24 8Z" stroke="#dc2626" strokeWidth="2"/>
-                  <path d="M24 16V22L28 26" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
+            <div className="value-card-modern">
+              <div className="value-icon-wrapper">
+                <div className="icon-bg"></div>
+                <span className="value-icon">🌍</span>
               </div>
-              <h3>Eco-Friendly</h3>
-              <p>All our cleaning and pest management products are safe for your family and pets. Environmentally responsible solutions.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <rect x="8" y="12" width="32" height="28" rx="2" stroke="#dc2626" strokeWidth="2"/>
-                  <path d="M16 12V8M32 12V8M8 20H40" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h3>15+ Years Experience</h3>
-              <p>Established expertise in carpet steam cleaning, dry cleaning, and comprehensive pest control services across Brisbane.</p>
-            </div>
-            <div className="value-card">
-              <div className="value-icon">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 4L30 18L44 20L34 30L36 44L24 36L12 44L14 30L4 20L18 18L24 4Z" stroke="#dc2626" strokeWidth="2"/>
-                </svg>
-              </div>
-              <h3>Certified Professionals</h3>
-              <p>Fully trained and certified technicians. We stand by our work with confidence in our staff and equipment.</p>
+              <h3>Sustainability</h3>
+              <p>Protecting the environment for future generations</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="about-process">
+      <section className="map-section">
         <div className="container">
-          <div className="process-header">
-            <span className="section-label">Our Process</span>
-            <h2>How We Deliver Excellence</h2>
+          <div className="section-header-center">
+            <span className="section-label-modern">Our Location</span>
+            <h2>Serving Brisbane & Surrounding Areas</h2>
+            <p>Proudly serving Brisbane, Gold Coast, Sunshine Coast, and Ipswich</p>
           </div>
-          <div className="process-steps">
-            <div className="process-step">
-              <div className="step-number">01</div>
-              <h3>Inspection & Assessment</h3>
-              <p>Thorough evaluation of your carpets or pest situation to determine the best approach and treatment plan.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">02</div>
-              <h3>Professional Treatment</h3>
-              <p>Using advanced equipment and eco-friendly products, we deliver superior cleaning and pest control results.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">03</div>
-              <h3>Quality Assurance</h3>
-              <p>Final inspection to ensure exceptional results. We don't leave until you're completely satisfied.</p>
-            </div>
-            <div className="process-step">
-              <div className="step-number">04</div>
-              <h3>Follow-Up Care</h3>
-              <p>Ongoing support and maintenance advice to keep your home clean and pest-free long-term.</p>
-            </div>
+          <div className="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d453867.0804777857!2d152.6790294!3d-27.4689682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s"
+              width="100%" 
+              height="500" 
+              style={{ border: 0, borderRadius: '20px' }}
+              allowFullScreen="" 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Brisbane Location Map"
+            ></iframe>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="about-cta">
+      <section className="cta-about-modern">
         <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Experience the Astra Difference?</h2>
-            <p>Join thousands of satisfied customers across Brisbane who trust us for their cleaning and pest control needs.</p>
-            <div className="cta-buttons">
-              <Link to="/contact" className="btn-cta-primary">Get Free Quote</Link>
-              <a href="tel:0732455126" className="btn-cta-secondary">Call (07) 3245 5126</a>
+          <div className="cta-content-modern">
+            <h2>Ready to Experience the Difference?</h2>
+            <p>Join thousands of satisfied customers across Brisbane</p>
+            <div className="cta-buttons-modern">
+              <a href="tel:0732455126" className="btn-modern-primary">
+                <span className="btn-icon">📞</span>
+                <span>Call (07) 3245 5126</span>
+              </a>
+              <Link to="/contact" className="btn-modern-secondary">
+                <span>Get Free Quote</span>
+                <span className="btn-arrow">→</span>
+              </Link>
             </div>
           </div>
         </div>

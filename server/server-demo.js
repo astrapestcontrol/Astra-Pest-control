@@ -51,11 +51,14 @@ const transporter = nodemailer.createTransport({
 // Quote submission endpoint
 app.post('/api/quotes', async (req, res) => {
   try {
-    const { name, email, phone, service, message } = req.body;
+    const { name, firstName, lastName, email, phone, service, timeframe, message } = req.body;
     
-    console.log('📝 Quote request received:', { name, email, phone, service });
+    // Handle both old (name) and new (firstName + lastName) formats
+    const fullName = name || `${firstName || ''} ${lastName || ''}`.trim();
+    
+    console.log('📝 Quote request received:', { fullName, email, phone, service, timeframe });
 
-    if (!name || !email || !phone || !service) {
+    if (!fullName || !email || !phone || !service) {
       return res.status(400).json({ success: false, message: 'Please fill in all required fields' });
     }
 
@@ -102,7 +105,7 @@ app.post('/api/quotes', async (req, res) => {
               <div class="detail-card">
                 <div class="detail-row">
                   <span class="label">👤 Name:</span>
-                  <span class="value">${name}</span>
+                  <span class="value">${fullName}</span>
                 </div>
                 <div class="detail-row">
                   <span class="label">📧 Email:</span>
@@ -116,6 +119,10 @@ app.post('/api/quotes', async (req, res) => {
                   <span class="label">🛠️ Service:</span>
                   <span class="value">${service}</span>
                 </div>
+                ${timeframe ? `<div class="detail-row">
+                  <span class="label">⏰ Timeframe:</span>
+                  <span class="value">${timeframe}</span>
+                </div>` : ''}
                 ${message ? `<div class="detail-row">
                   <span class="label">💬 Message:</span>
                   <span class="value">${message}</span>
@@ -178,7 +185,7 @@ app.post('/api/quotes', async (req, res) => {
             </div>
             <div class="content">
               <div class="success-badge">
-                <h3>🎉 Thank You, ${name}!</h3>
+                <h3>🎉 Thank You, ${fullName}!</h3>
                 <p style="margin: 5px 0 0 0;">Your quote request has been successfully submitted.</p>
               </div>
               
@@ -187,6 +194,7 @@ app.post('/api/quotes', async (req, res) => {
               <div class="info-box">
                 <h3>📋 Your Request Summary</h3>
                 <div class="detail-item"><strong>Service Requested:</strong> ${service}</div>
+                ${timeframe ? `<div class="detail-item"><strong>Timeframe:</strong> ${timeframe}</div>` : ''}
                 <div class="detail-item"><strong>Contact Phone:</strong> ${phone}</div>
                 <div class="detail-item"><strong>Contact Email:</strong> ${email}</div>
                 ${message ? `<div class="detail-item"><strong>Your Message:</strong> ${message}</div>` : ''}

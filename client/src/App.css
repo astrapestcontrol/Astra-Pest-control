@@ -9,6 +9,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 /* Performance Optimizations */
@@ -17,6 +18,13 @@ html {
   backface-visibility: hidden;
   -webkit-perspective: 1000;
   perspective: 1000;
+  transform: translateZ(0);
+  will-change: auto;
+}
+
+img, video, iframe {
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 :root {
@@ -36,6 +44,7 @@ body {
   color: var(--dark-gray);
   background-color: var(--white);
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 }
 
 .App {
@@ -44,9 +53,64 @@ body {
   flex-direction: column;
 }
 
-/* Smooth transitions for all elements */
+/* Smooth transitions */
 a, button, input, textarea, select {
-  transition: all 0.3s ease;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Container */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Optimize animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* GPU acceleration for common animations */
+.animate {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+}
+
+/* Lazy load images */
+img {
+  content-visibility: auto;
+}
+
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
 }
 
 /* Optimize images */

@@ -1,107 +1,138 @@
-.quote-form {
-  background: var(--white);
-  padding: 35px;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  border: 2px solid var(--border-gray);
+.quote-form-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-group-modern {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group-modern label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.form-group-modern input,
+.form-group-modern select,
+.form-group-modern textarea {
+  padding: 14px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 15px;
+  color: #1e293b;
+  background: #ffffff;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.form-group-modern input:focus,
+.form-group-modern select:focus,
+.form-group-modern textarea:focus {
+  outline: none;
+  border-color: #dc2626;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+}
+
+.form-group-modern input::placeholder,
+.form-group-modern textarea::placeholder {
+  color: #94a3b8;
+}
+
+.form-group-modern select {
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748b' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.form-group-modern textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn-modern {
+  padding: 16px 32px;
+  background: #dc2626;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 8px;
+}
+
+.submit-btn-modern:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+.submit-btn-modern:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .form-message {
-  padding: 15px;
+  padding: 16px;
   border-radius: 8px;
-  margin-bottom: 20px;
-  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.6;
   animation: slideDown 0.3s ease-out;
 }
 
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .form-message.success {
-  background: #d1fae5;
-  color: #065f46;
-  border: 2px solid #10b981;
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
 }
 
 .form-message.error {
   background: #fee2e2;
   color: #991b1b;
-  border: 2px solid #dc2626;
+  border: 1px solid #fca5a5;
 }
 
-.form-group {
-  margin-bottom: 20px;
+.loading {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 14px 16px;
-  border: 2px solid var(--border-gray);
-  border-radius: 8px;
-  font-size: 16px;
-  font-family: inherit;
-  transition: all 0.3s ease;
-  background: var(--white);
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--primary-red);
-  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
-}
-
-.form-group input:disabled,
-.form-group select:disabled,
-.form-group textarea:disabled {
-  background: var(--light-gray);
-  cursor: not-allowed;
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.submit-btn {
-  width: 100%;
-  background: linear-gradient(135deg, var(--primary-red), var(--dark-red));
-  color: var(--white);
-  padding: 16px;
-  border: none;
-  border-radius: 8px;
-  font-size: 17px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2);
-}
-
-.submit-btn:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(220, 38, 38, 0.3);
-}
-
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
-  transform: none;
-}
-
-.form-footer {
-  margin-top: 20px;
-  text-align: center;
-  font-size: 15px;
-  color: var(--text-gray);
-}
-
-.form-footer a {
-  color: var(--primary-red);
-  font-weight: 700;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.form-footer a:hover {
-  color: var(--dark-red);
+@media (max-width: 640px) {
+  .name-fields {
+    grid-template-columns: 1fr;
+  }
 }

@@ -1,128 +1,328 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Blog.css';
 
 const blogPosts = [
   {
     id: 1,
     title: 'Rubbish Removal Versus Skip Bin Hire, Which is Better?',
-    excerpt: 'When you\'re moving out, cleaning and removing waste come hand in hand. When it comes to junk removal, there are two main options: hiring a skip bin or using a rubbish removal service. Both have pros and cons, so which is the best option for you? This week we explore the differences.',
+    excerpt: 'When you\'re moving out, cleaning and removing waste come hand in hand. Discover the best option for your needs.',
     date: '2022-09-02',
     category: 'General',
-    author: 'Sairam'
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80',
+    readTime: '5 min read',
+    link: '/blog/1'
   },
   {
     id: 2,
     title: 'Guide To Carpet Cleaning Cost',
-    excerpt: 'How Much Does It Cost To Get Your Carpets Cleaned? We like to think that we can handle carpet cleaning on our own. Sure, regular vacuuming will clear up a lot of dirt and give the impression that carpets are spotlessly clean. And if we can\'t fully remove a wine stain or coffee spill, we might try a DIY solution.',
+    excerpt: 'How Much Does It Cost To Get Your Carpets Cleaned? Get the complete breakdown of professional carpet cleaning costs.',
     date: '2022-05-30',
     category: 'Cleaning',
-    author: 'Sairam'
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/2'
   },
   {
     id: 3,
     title: 'Guide to Carpet Cleaning – All Your Questions Answered',
-    excerpt: 'Things Every Home Owners Need To Know. Your carpet is one of the most important pieces of upholstery in the house. It also takes up a lot of space and gets stepped on a lot, so you will need to keep it clean. Of course, carpet cleaning is easier said than done.',
+    excerpt: 'Everything homeowners need to know about maintaining and cleaning their carpets professionally.',
     date: '2022-04-26',
     category: 'Cleaning',
-    author: 'Sairam'
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '10 min read',
+    link: '/blog/3'
   },
   {
     id: 4,
     title: '10 Health Benefits Of Carpet Cleaning',
-    excerpt: 'The Secret To A Healthier Home. If you want to know the health benefits of carpet cleaning, this infographic with the list of ten below will be a good starting point. Whether you\'re suffering from allergies or susceptible to illnesses due to being immunocompromised, these are benefits that you\'ll appreciate.',
+    excerpt: 'The Secret To A Healthier Home. Discover how professional carpet cleaning improves your health.',
     date: '2022-04-19',
     category: 'Cleaning',
-    author: 'Sairam'
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=80',
+    readTime: '6 min read',
+    link: '/blog/4'
   },
   {
     id: 5,
     title: '4 Easy Steps To Get Mud Stains Out Of Carpet',
-    excerpt: 'Every parent knows the struggle of trying to keep carpet clean. Kids are your number one culprits – for reasons yet unknown to science, they love to run through your home with their feet or shoes caked in mud, grass and who knows what! Pets are not much better.',
+    excerpt: 'Every parent knows the struggle. Learn professional techniques to remove stubborn mud stains.',
     date: '2017-08-29',
     category: 'Cleaning',
-    author: 'Sairam'
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&q=80',
+    readTime: '4 min read',
+    link: '/blog/5'
   },
   {
     id: 6,
     title: '4 Ways To Winter Proof Your Home From Pests',
-    excerpt: 'The winter season is upon us – say welcome to cozy nights sipping hot chocolate in front of a fire, enjoy delicious stews to warm the belly, and bust out those wardrobe favourites that have been hiding away for too long! Unfortunately, winter is also the time many homes become infested with pests.',
+    excerpt: 'Winter is pest season. Protect your home with these professional prevention strategies.',
     date: '2017-07-01',
     category: 'Pest Control',
-    author: 'Sairam'
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=80',
+    readTime: '5 min read',
+    link: '/blog/6'
   },
   {
-    id: 7,
-    title: 'Give Your Home an Instant Makeover',
-    excerpt: 'For many of us, our home is our haven. Having a clean, welcoming and beautiful home makes us feel a little more synchronous… and, if we\'re totally honest, is something of a badge of honour. But on the flipside, when you feel like your house is a mess, this can be a point of stress.',
-    date: '2017-06-13',
+    id: 'carpet-cleaning',
+    title: 'Carpet Cleaning',
+    excerpt: 'Deep steam cleaning for all carpet types. Professional hot water extraction and low moisture cleaning methods.',
+    date: '2024-01-15',
     category: 'Cleaning',
-    author: 'Sairam'
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    readTime: '8 min read',
+    link: '/cleaning/carpet-cleaning'
   },
   {
-    id: 8,
-    title: 'Troubleshoot Your Pest Control Problem',
-    excerpt: 'It goes without saying – pests in the home can be a serious nuisance. What makes it even worse is not knowing what the exact issue is. Our pest control Brisbane service is a comprehensive solution that ensures your home remains pest-free, but employing preventative measures is always a good idea.',
-    date: '2017-06-13',
-    category: 'Pest Control',
-    author: 'Sairam'
-  },
-  {
-    id: 9,
-    title: 'Avoiding Pests In Your Home Altogether',
-    excerpt: 'Ants, cockroaches, fleas or flies in your home are up there with the biggest nuisances. All it takes is a few bugs in the kitchen or a rogue cockroach on the floorboards to make you feel as though your home isn\'t at its cleanest. At Best 1 Cleaning and Pest Control we know how tricky pest control can be.',
-    date: '2017-05-05',
-    category: 'Pest Control',
-    author: 'Sairam'
-  },
-  {
-    id: 10,
-    title: 'Simple Ways to Remove Carpet Stains at Home',
-    excerpt: 'Between kids, pets, a love for red wine and home cooked meals, getting stains on the carpet is almost inevitable. Removing stains with carpet cleaning can be tough, first of all most carpet tends to hold onto colours and liquids more than we would like and secondly, if you aren\'t careful, a bit of well-intentioned scrubbing can make things worse.',
-    date: '2017-05-05',
+    id: 'tile-grout',
+    title: 'Tile and Grout Cleaning',
+    excerpt: 'Restore shine to tiles and grout with our professional high-pressure cleaning systems.',
+    date: '2024-01-14',
     category: 'Cleaning',
-    author: 'Sairam'
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&q=80',
+    readTime: '6 min read',
+    link: '/cleaning/tile-grout'
+  },
+  {
+    id: 'upholstery',
+    title: 'Upholstery Cleaning',
+    excerpt: 'Professional furniture cleaning for all fabric types. Safe, effective, and fast-drying methods.',
+    date: '2024-01-13',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
+    readTime: '7 min read',
+    link: '/cleaning/upholstery'
+  },
+  {
+    id: 'leather',
+    title: 'Leather Seat Cleaning',
+    excerpt: 'Specialized leather care and conditioning to restore and protect your leather furniture.',
+    date: '2024-01-12',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80',
+    readTime: '5 min read',
+    link: '/cleaning/leather'
+  },
+  {
+    id: 'mould',
+    title: 'Mould Removal',
+    excerpt: 'Safe mould treatment and prevention. Professional removal with eco-friendly products.',
+    date: '2024-01-11',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&q=80',
+    readTime: '6 min read',
+    link: '/cleaning/mould'
+  },
+  {
+    id: 'rug',
+    title: 'Rug Cleaning',
+    excerpt: 'Gentle cleaning for delicate rugs. Expert care for Persian, Oriental, and modern rugs.',
+    date: '2024-01-10',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
+    readTime: '5 min read',
+    link: '/cleaning/rug'
+  },
+  {
+    id: 'vehicles',
+    title: 'Cars, Caravans & Boats',
+    excerpt: 'Mobile vehicle cleaning service. Professional interior detailing for all vehicles.',
+    date: '2024-01-09',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80',
+    readTime: '6 min read',
+    link: '/cleaning/vehicles'
+  },
+  {
+    id: 'flood',
+    title: 'Flood Water Extraction',
+    excerpt: 'Emergency water removal service. Fast response 24/7 for flood and water damage.',
+    date: '2024-01-08',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&q=80',
+    readTime: '5 min read',
+    link: '/cleaning/flood'
+  },
+  {
+    id: 'commercial',
+    title: 'Commercial Carpet Cleaning',
+    excerpt: 'Business cleaning solutions. After-hours service available for offices and commercial spaces.',
+    date: '2024-01-07',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+    readTime: '7 min read',
+    link: '/cleaning/commercial'
+  },
+  {
+    id: 'bond',
+    title: 'Bond Cleaning',
+    excerpt: 'End of lease cleaning guarantee. Get your bond back with our comprehensive cleaning service.',
+    date: '2024-01-06',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    readTime: '8 min read',
+    link: '/cleaning/bond'
+  },
+  {
+    id: 'mattress',
+    title: 'Mattress Cleaning',
+    excerpt: 'Hygienic mattress deep cleaning. Remove dust mites, allergens, and stains for better sleep.',
+    date: '2024-01-05',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80',
+    readTime: '6 min read',
+    link: '/cleaning/mattress'
+  },
+  {
+    id: 'protection',
+    title: 'Carpet Protection – Upholstery Protection',
+    excerpt: 'Stain protection treatment. Keep your carpets and upholstery cleaner for longer.',
+    date: '2024-01-04',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '5 min read',
+    link: '/cleaning/protection'
+  },
+  {
+    id: 'encapsulation',
+    title: 'Encapsulation Low Moisture Cleaning',
+    excerpt: 'Low moisture dry cleaning method. Walk-on dry results with eco-friendly cleaning.',
+    date: '2024-01-03',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    readTime: '6 min read',
+    link: '/cleaning/encapsulation'
+  },
+  {
+    id: 'repairs',
+    title: 'Carpet Repairs – Upholstery Repairs',
+    excerpt: 'Professional carpet repair service. Save money with expert repairs instead of replacement.',
+    date: '2024-01-02',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '5 min read',
+    link: '/cleaning/repairs'
+  },
+  {
+    id: 'duo-system',
+    title: 'Duo Carpet Cleaning System for High Rise Apartments',
+    excerpt: 'High rise apartment specialist. Two-step cleaning system for fast-drying results.',
+    date: '2024-01-01',
+    category: 'Cleaning',
+    author: 'Astra Team',
+    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
+    readTime: '7 min read',
+    link: '/cleaning/duo-system'
   }
 ];
 
 function Blog() {
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [hoveredCard, setHoveredCard] = useState(null);
+  
+  const categories = ['All', 'Cleaning', 'Pest Control', 'General'];
+  
+  const filteredPosts = selectedCategory === 'All' 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
   return (
-    <div>
-      <section className="hero">
+    <div className="blog-page-modern">
+      <section className="blog-hero-modern">
+        <div className="hero-bg-pattern"></div>
         <div className="container">
-          <h1>Cleaning & Pest Control Blog</h1>
-          <p>Expert tips, guides and advice from Best 1 Cleaning and Pest Control professionals</p>
+          <div className="blog-hero-content">
+            <span className="hero-badge-blog">Expert Insights</span>
+            <h1>Cleaning & Pest Control Blog</h1>
+            <p>Tips, guides and advice from Brisbane's trusted professionals</p>
+          </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="blog-content-modern">
         <div className="container">
-          <div className="services-grid">
-            {blogPosts.map(post => (
-              <div key={post.id} className="service-card">
-                <div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '15px'}}>
-                  <span style={{color: 'var(--primary-red)', fontSize: '13px', fontWeight: '700', textTransform: 'uppercase', letterSpacing: '0.5px'}}>
-                    {post.category}
-                  </span>
-                  <span style={{color: 'var(--text-gray)', fontSize: '13px'}}>
-                    {new Date(post.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric', year: 'numeric' })}
-                  </span>
+          <div className="blog-filters-modern">
+            {categories.map(cat => (
+              <button 
+                key={cat}
+                className={`filter-btn-modern ${selectedCategory === cat ? 'active' : ''}`}
+                onClick={() => setSelectedCategory(cat)}
+              >
+                <span className="filter-text">{cat}</span>
+                {selectedCategory === cat && <span className="filter-indicator"></span>}
+              </button>
+            ))}
+          </div>
+
+          <div className="blog-grid-modern">
+            {filteredPosts.map((post, index) => (
+              <article 
+                key={post.id} 
+                className={`blog-card-modern ${hoveredCard === post.id ? 'hovered' : ''}`}
+                onMouseEnter={() => setHoveredCard(post.id)}
+                onMouseLeave={() => setHoveredCard(null)}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <div className="blog-image-modern">
+                  <img src={post.image} alt={post.title} />
+                  <div className="image-overlay-modern"></div>
+                  <span className="blog-category-badge">{post.category}</span>
+                  <div className="read-time-badge">{post.readTime}</div>
                 </div>
-                <h3 style={{marginBottom: '15px', fontSize: '20px', lineHeight: '1.4'}}>{post.title}</h3>
-                <p style={{color: 'var(--text-gray)', fontSize: '15px', lineHeight: '1.6', marginBottom: '20px'}}>{post.excerpt}</p>
-                <Link to={`/blog/${post.id}`} style={{color: 'var(--primary-red)', textDecoration: 'none', fontWeight: '700', fontSize: '15px', display: 'inline-flex', alignItems: 'center', gap: '5px'}}>
-                  Read Full Article <span style={{transition: 'transform 0.3s'}}>→</span>
-                </Link>
-              </div>
+                <div className="blog-card-content-modern">
+                  <div className="blog-meta-modern">
+                    <span className="blog-date-modern">
+                      {new Date(post.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric', year: 'numeric' })}
+                    </span>
+                    <span className="meta-divider">•</span>
+                    <span className="blog-author-modern">By {post.author}</span>
+                  </div>
+                  <h3>{post.title}</h3>
+                  <p>{post.excerpt}</p>
+                  <Link to={post.link} className="read-more-modern">
+                    <span>Read Article</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                    </svg>
+                  </Link>
+                </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="cta-section">
+      <section className="blog-cta-modern">
         <div className="container">
-          <h2>Need Professional Cleaning or Pest Control?</h2>
-          <p style={{fontSize: '20px', marginBottom: '35px', position: 'relative', zIndex: 1}}>Get expert service from Brisbane's trusted professionals</p>
-          <a href="tel:0732455126" className="btn">Call 07 3245 5126</a>
+          <div className="cta-card-modern">
+            <div className="cta-icon-modern">📧</div>
+            <h2>Stay Updated</h2>
+            <p>Get expert cleaning and pest control tips delivered to your inbox</p>
+            <div className="cta-actions-modern">
+              <a href="tel:0732455126" className="btn-cta-modern-primary">Call (07) 3245 5126</a>
+              <Link to="/contact" className="btn-cta-modern-secondary">Get Free Quote</Link>
+            </div>
+          </div>
         </div>
       </section>
     </div>

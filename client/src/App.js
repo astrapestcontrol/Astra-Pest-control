@@ -13,6 +13,24 @@ import HintsTips from './pages/HintsTips';
 import Contact from './pages/Contact';
 import Blog from './pages/Blog';
 import BlogPost from './pages/BlogPost';
+
+// Cleaning Service Pages
+import CarpetCleaning from './pages/cleaning/CarpetCleaning';
+import TileGroutCleaning from './pages/cleaning/TileGroutCleaning';
+import UpholsteryCleaning from './pages/cleaning/UpholsteryCleaning';
+import LeatherCleaning from './pages/cleaning/LeatherCleaning';
+import MouldRemoval from './pages/cleaning/MouldRemoval';
+import RugCleaning from './pages/cleaning/RugCleaning';
+import VehicleCleaning from './pages/cleaning/VehicleCleaning';
+import FloodExtraction from './pages/cleaning/FloodExtraction';
+import CommercialCleaning from './pages/cleaning/CommercialCleaning';
+import BondCleaning from './pages/cleaning/BondCleaning';
+import MattressCleaning from './pages/cleaning/MattressCleaning';
+import CarpetProtection from './pages/cleaning/CarpetProtection';
+import EncapsulationCleaning from './pages/cleaning/EncapsulationCleaning';
+import CarpetRepairs from './pages/cleaning/CarpetRepairs';
+import DuoCleaning from './pages/cleaning/DuoCleaning';
+
 import './App.css';
 
 function ScrollToTop() {
@@ -41,6 +59,21 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
             <Route path="/cleaning" element={<Cleaning />} />
+            <Route path="/cleaning/carpet-cleaning" element={<CarpetCleaning />} />
+            <Route path="/cleaning/tile-grout" element={<TileGroutCleaning />} />
+            <Route path="/cleaning/upholstery" element={<UpholsteryCleaning />} />
+            <Route path="/cleaning/leather" element={<LeatherCleaning />} />
+            <Route path="/cleaning/mould" element={<MouldRemoval />} />
+            <Route path="/cleaning/rug" element={<RugCleaning />} />
+            <Route path="/cleaning/vehicles" element={<VehicleCleaning />} />
+            <Route path="/cleaning/flood" element={<FloodExtraction />} />
+            <Route path="/cleaning/commercial" element={<CommercialCleaning />} />
+            <Route path="/cleaning/bond" element={<BondCleaning />} />
+            <Route path="/cleaning/mattress" element={<MattressCleaning />} />
+            <Route path="/cleaning/protection" element={<CarpetProtection />} />
+            <Route path="/cleaning/encapsulation" element={<EncapsulationCleaning />} />
+            <Route path="/cleaning/repairs" element={<CarpetRepairs />} />
+            <Route path="/cleaning/duo-system" element={<DuoCleaning />} />
             <Route path="/cleaning/:service" element={<Services />} />
             <Route path="/pest-control" element={<PestControl />} />
             <Route path="/pest-control/:pest" element={<Services />} />

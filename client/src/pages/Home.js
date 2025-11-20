@@ -1,9 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Reviews from '../components/Reviews';
 import './Home.css';
 
 function Home() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.2,
@@ -23,6 +25,10 @@ function Home() {
 
     return () => observer.disconnect();
   }, []);
+
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+  };
 
   return (
     <div className="home">
@@ -61,28 +67,54 @@ function Home() {
       </section>
 
       {/* Video Section */}
-      <section className="video-section">
+      <section className="video-section-wow">
         <div className="container">
-          <div className="video-content-wrapper">
-            <div className="video-wrapper-left">
-              <iframe 
-                src="https://www.youtube.com/embed/aIzVuBFdgVI?si=4Aq1f-xlU5VhNrn-" 
-                title="Astra Pest Control - Professional Services" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                allowFullScreen
-              ></iframe>
+          <div className="video-section-header">
+            <span className="section-label">Watch Us In Action</span>
+            <h2 className="section-heading">See Our Professional Service</h2>
+            <p className="section-description">Experience the quality and expertise that sets us apart</p>
+          </div>
+          
+          <div className="video-showcase">
+            <div className={`mobile-phone-frame ${isVideoPlaying ? 'landscape' : ''}`}>
+              <div className="phone-notch"></div>
+              <div className="phone-screen">
+                {!isVideoPlaying && (
+                  <div className="play-overlay" onClick={handlePlayVideo}>
+                    <div className="play-button-large">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                        <path d="M20 15L45 30L20 45V15Z" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
+                <iframe 
+                  src={`https://www.youtube.com/embed/aIzVuBFdgVI?${isVideoPlaying ? 'autoplay=1&' : ''}si=4Aq1f-xlU5VhNrn-`}
+                  title="Astra Pest Control - Professional Services" 
+                  frameBorder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                  referrerPolicy="strict-origin-when-cross-origin" 
+                  allowFullScreen
+                ></iframe>
+              </div>
             </div>
-            <div className="video-text-right">
-              <h3>Quality Carpet Cleaning Services</h3>
-              <p>With our quality carpet cleaning services, we have built a strong reputation in the carpet cleaning domain. We make every possible effort to provide our customers the best cleaning results.</p>
-              <ul className="video-features">
-                <li>✓ 100% Satisfaction Guaranteed</li>
-                <li>✓ Professional Equipment & Techniques</li>
-                <li>✓ Affordable Pricing Options</li>
-              </ul>
-              <Link to="/contact" className="btn-video-cta">Get a Free Quote</Link>
+            
+            <div className="video-features-grid">
+              <div className="video-feature-card">
+                <div className="feature-icon-video">✓</div>
+                <h4>100% Satisfaction Guaranteed</h4>
+                <p>Quality results every time</p>
+              </div>
+              <div className="video-feature-card">
+                <div className="feature-icon-video">🛠️</div>
+                <h4>Professional Equipment</h4>
+                <p>State-of-the-art technology</p>
+              </div>
+              <div className="video-feature-card">
+                <div className="feature-icon-video">💰</div>
+                <h4>Affordable Pricing</h4>
+                <p>Best value for money</p>
+              </div>
             </div>
           </div>
         </div>

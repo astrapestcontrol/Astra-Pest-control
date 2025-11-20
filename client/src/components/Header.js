@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,10 @@ function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
 
   return (
     <>
@@ -30,38 +35,42 @@ function Header() {
           </button>
 
           <nav className={`nav ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-            <Link to="/" className={isScrolled ? 'scrolled' : ''}>
+            <Link to="/" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/') ? 'active' : ''}`}>
               Home
               <span className="nav-underline"></span>
             </Link>
             
-            <Link to="/cleaning" className={isScrolled ? 'scrolled' : ''}>
+            <Link to="/cleaning" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/cleaning') ? 'active' : ''}`}>
               Cleaning
               <span className="nav-underline"></span>
             </Link>
 
-            <Link to="/pest-control" className={isScrolled ? 'scrolled' : ''}>
+            <Link to="/pest-control" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/pest-control') ? 'active' : ''}`}>
               Pest Control
               <span className="nav-underline"></span>
             </Link>
 
-            <Link to="/about" className={isScrolled ? 'scrolled' : ''}>
+            <Link to="/about" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/about') ? 'active' : ''}`}>
               About
               <span className="nav-underline"></span>
             </Link>
-            <Link to="/hints-tips" className={isScrolled ? 'scrolled' : ''}>
+            
+            <Link to="/hints-tips" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/hints-tips') ? 'active' : ''}`}>
               Hints & Tips
               <span className="nav-underline"></span>
             </Link>
-            <Link to="/faq" className={isScrolled ? 'scrolled' : ''}>
+            
+            <Link to="/faq" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/faq') ? 'active' : ''}`}>
               FAQ
               <span className="nav-underline"></span>
             </Link>
-            <Link to="/blog" className={isScrolled ? 'scrolled' : ''}>
+            
+            <Link to="/blog" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/blog') ? 'active' : ''}`}>
               Blog
               <span className="nav-underline"></span>
             </Link>
-            <Link to="/contact" className={isScrolled ? 'scrolled' : ''}>
+            
+            <Link to="/contact" className={`${isScrolled ? 'scrolled' : ''} ${isActive('/contact') ? 'active' : ''}`}>
               Contact
               <span className="nav-underline"></span>
             </Link>

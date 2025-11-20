@@ -4,18 +4,21 @@ import './ServicePages.css';
 
 function Cleaning() {
   const services = [
-    { name: 'Carpet Cleaning', icon: '🧹', link: '/cleaning/carpet-cleaning' },
-    { name: 'Tile and Grout Cleaning', icon: '🔲', link: '/cleaning/tile-grout' },
-    { name: 'Upholstery Cleaning', icon: '🛋️', link: '/cleaning/upholstery' },
-    { name: 'Leather Seat Cleaning', icon: '💺', link: '/cleaning/leather' },
-    { name: 'Mould Removal', icon: '🧪', link: '/cleaning/mould' },
-    { name: 'Rug Cleaning', icon: '🎨', link: '/cleaning/rug' },
-    { name: 'Cars, Caravans & Boats', icon: '🚗', link: '/cleaning/vehicles' },
-    { name: 'Flood Water Extraction', icon: '💧', link: '/cleaning/flood' },
-    { name: 'Commercial Carpet Cleaning', icon: '🏢', link: '/cleaning/commercial' },
-    { name: 'Bond Cleaning', icon: '🏠', link: '/cleaning/bond' },
-    { name: 'Mattress Cleaning', icon: '🛏️', link: '/cleaning/mattress' },
-    { name: 'Carpet Protection', icon: '🛡️', link: '/cleaning/protection' }
+    { name: 'Carpet Cleaning', icon: '🧹', desc: 'Deep steam cleaning for all carpet types', link: '/cleaning/carpet-cleaning' },
+    { name: 'Tile and Grout Cleaning', icon: '🔲', desc: 'Restore shine to tiles and grout', link: '/cleaning/tile-grout' },
+    { name: 'Upholstery Cleaning', icon: '🛋️', desc: 'Professional furniture cleaning', link: '/cleaning/upholstery' },
+    { name: 'Leather Seat Cleaning', icon: '💺', desc: 'Specialized leather care', link: '/cleaning/leather' },
+    { name: 'Mould Removal', icon: '🧪', desc: 'Safe mould treatment and prevention', link: '/cleaning/mould' },
+    { name: 'Rug Cleaning', icon: '🎨', desc: 'Gentle cleaning for delicate rugs', link: '/cleaning/rug' },
+    { name: 'Cars, Caravans & Boats', icon: '🚗', desc: 'Mobile vehicle cleaning service', link: '/cleaning/vehicles' },
+    { name: 'Flood Water Extraction', icon: '💧', desc: 'Emergency water removal', link: '/cleaning/flood' },
+    { name: 'Commercial Carpet Cleaning', icon: '🏢', desc: 'Business cleaning solutions', link: '/cleaning/commercial' },
+    { name: 'Bond Cleaning', icon: '🏠', desc: 'End of lease cleaning guarantee', link: '/cleaning/bond' },
+    { name: 'Mattress Cleaning', icon: '🛏️', desc: 'Hygienic mattress deep cleaning', link: '/cleaning/mattress' },
+    { name: 'Carpet Protection – Upholstery Protection', icon: '🛡️', desc: 'Stain protection treatment', link: '/cleaning/protection' },
+    { name: 'Encapsulation Low Moisture Cleaning', icon: '💨', desc: 'Low moisture dry cleaning method', link: '/cleaning/encapsulation' },
+    { name: 'Carpet Repairs – Upholstery Repairs', icon: '🔧', desc: 'Professional carpet repair service', link: '/cleaning/repairs' },
+    { name: 'Duo Carpet Cleaning System for High Rise Apartments', icon: '🏙️', desc: 'High rise apartment specialist', link: '/cleaning/duo-system' }
   ];
 
   return (
@@ -43,11 +46,7 @@ function Cleaning() {
           <div className="services-list-modern">
             {services.map((service, index) => (
               <Link to={service.link} key={index} className="service-list-item">
-                <div className="service-item-icon">{service.icon}</div>
-                <div className="service-item-content">
-                  <h3>{service.name}</h3>
-                  <span className="service-item-arrow">→</span>
-                </div>
+                {service.icon} {service.name}
               </Link>
             ))}
           </div>

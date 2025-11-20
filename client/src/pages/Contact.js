@@ -4,91 +4,177 @@ import './Contact.css';
 
 function Contact() {
   return (
-    <div className="contact-page">
+    <div className="contact-page-pro">
       {/* Hero Section */}
-      <section className="contact-hero">
+      <section className="contact-hero-pro">
+        <div className="hero-particles"></div>
         <div className="container">
-          <span className="hero-badge">Get In Touch</span>
-          <h1>Contact Us</h1>
-          <p>Get a free quote or book our professional cleaning and pest control services</p>
+          <div className="hero-content-pro">
+            <span className="hero-badge-pro">📞 Contact Us</span>
+            <h1>Let's Work Together</h1>
+            <p>Get in touch with Brisbane's most trusted cleaning and pest control experts</p>
+          </div>
         </div>
       </section>
 
-      {/* Contact Content */}
-      <section className="contact-content">
+      {/* Quick Contact Cards */}
+      <section className="quick-contact">
         <div className="container">
-          <div className="contact-grid">
-            {/* Contact Info Cards */}
-            <div className="contact-info">
-              <div className="info-card">
-                <div className="info-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="#dc2626" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3>Phone</h3>
-                <a href="tel:0732455126" className="info-link">(07) 3245 5126</a>
-                <p>Available 24/7 for emergencies</p>
+          <div className="quick-cards">
+            <a href="tel:0732455126" className="quick-card">
+              <div className="quick-icon phone-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" strokeWidth="2"/>
+                </svg>
               </div>
-
-              <div className="info-card">
-                <div className="info-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="#dc2626" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3>Email</h3>
-                <a href="mailto:info@best1cleaning.com" className="info-link">info@best1cleaning.com</a>
-                <p>We'll respond within 24 hours</p>
+              <div className="quick-content">
+                <h3>Call Us Now</h3>
+                <p>(07) 3245 5126</p>
+                <span className="quick-badge">Available 24/7</span>
               </div>
+            </a>
 
-              <div className="info-card">
-                <div className="info-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="#dc2626" strokeWidth="2"/>
-                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="#dc2626" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3>Service Area</h3>
-                <p className="info-text">Brisbane, Ipswich, Gold Coast, Sunshine Coast and surrounding suburbs</p>
+            <a href="mailto:info@best1cleaning.com" className="quick-card">
+              <div className="quick-icon email-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke="currentColor" strokeWidth="2"/>
+                </svg>
               </div>
+              <div className="quick-content">
+                <h3>Email Us</h3>
+                <p>info@best1cleaning.com</p>
+                <span className="quick-badge">Reply within 24hrs</span>
+              </div>
+            </a>
 
-              <div className="info-card">
-                <div className="info-icon">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="9" stroke="#dc2626" strokeWidth="2"/>
-                    <path d="M12 7v5l3 3" stroke="#dc2626" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                </div>
+            <div className="quick-card">
+              <div className="quick-icon time-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M12 7v5l3 3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </div>
+              <div className="quick-content">
                 <h3>Business Hours</h3>
-                <p className="info-text">Monday - Friday: 7:00 AM - 6:00 PM<br/>Saturday: 8:00 AM - 4:00 PM<br/>Sunday: Emergency only</p>
+                <p>Mon-Fri: 7AM - 6PM</p>
+                <span className="quick-badge">Sat: 8AM - 4PM</span>
               </div>
-            </div>
-
-            {/* Quote Form */}
-            <div className="contact-form-wrapper">
-              <div className="form-header">
-                <h2>Get A Free Quote</h2>
-                <p>Fill out the form below and we'll get back to you as soon as possible</p>
-              </div>
-              <QuoteForm />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="contact-cta">
+      {/* Main Content */}
+      <section className="contact-main-pro">
         <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>Call us now for immediate assistance or emergency services</p>
-            <a href="tel:0732455126" className="btn-cta-large">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
-              </svg>
-              Call (07) 3245 5126
-            </a>
+          <div className="contact-wrapper">
+            {/* Left - Form */}
+            <div className="form-section-pro">
+              <div className="form-header-pro">
+                <h2>Send Us a Message</h2>
+                <p>Fill out the form below and our team will get back to you within 24 hours</p>
+              </div>
+              <QuoteForm />
+            </div>
+
+            {/* Right - Info & Map */}
+            <div className="info-section-pro">
+              {/* Service Areas */}
+              <div className="info-card-pro areas-card">
+                <div className="card-icon-pro">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke="currentColor" strokeWidth="2"/>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+                <h3>Service Areas</h3>
+                <div className="areas-list">
+                  <span className="area-tag">Brisbane</span>
+                  <span className="area-tag">Ipswich</span>
+                  <span className="area-tag">Logan</span>
+                  <span className="area-tag">Redlands</span>
+                  <span className="area-tag">Moreton Bay</span>
+                  <span className="area-tag">Gold Coast</span>
+                  <span className="area-tag">Sunshine Coast</span>
+                </div>
+                <p className="areas-note">& all surrounding suburbs across Queensland</p>
+              </div>
+
+              {/* Why Choose Us */}
+              <div className="info-card-pro features-card">
+                <h3>Why Choose Astra?</h3>
+                <ul className="features-list-pro">
+                  <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                    </svg>
+                    <span>15+ Years Experience</span>
+                  </li>
+                  <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                    </svg>
+                    <span>100% Satisfaction Guarantee</span>
+                  </li>
+                  <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                    </svg>
+                    <span>Same Day Service Available</span>
+                  </li>
+                  <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                    </svg>
+                    <span>Eco-Friendly Products</span>
+                  </li>
+                  <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                    </svg>
+                    <span>Licensed & Insured</span>
+                  </li>
+                  <li>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill="currentColor"/>
+                    </svg>
+                    <span>Free Quotes & Advice</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Emergency CTA */}
+              <div className="info-card-pro emergency-card">
+                <div className="emergency-icon">🚨</div>
+                <h3>Need Emergency Service?</h3>
+                <p>We're available 24/7 for urgent pest control and flood extraction services</p>
+                <a href="tel:0732455126" className="emergency-btn">
+                  Call Now: (07) 3245 5126
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Map Section */}
+      <section className="map-section-pro">
+        <div className="container">
+          <div className="map-header-pro">
+            <h2>Find Us</h2>
+            <p>Proudly serving Brisbane and surrounding regions</p>
+          </div>
+          <div className="map-container-pro">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d906286.6817361!2d152.4!3d-27.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2s!4v1234567890"
+              width="100%"
+              height="500"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Service Areas Map"
+            ></iframe>
           </div>
         </div>
       </section>
