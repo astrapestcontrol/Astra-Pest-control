@@ -54,13 +54,27 @@ const transporter = nodemailer.createTransport({
 // Quote submission endpoint
 app.post('/api/quotes', async (req, res) => {
   try {
+    console.log('📥 Raw request body:', req.body);
+    
     const { firstName, lastName, email, phone, service, timeframe, message } = req.body;
     const name = `${firstName} ${lastName}`;
     
-    console.log('📝 Quote request received:', { name, email, phone, service });
+    console.log('📝 Quote request received:', { firstName, lastName, email, phone, service, timeframe });
 
-    if (!firstName || !lastName || !email || !phone || !service) {
-      return res.status(400).json({ success: false, message: 'Please fill in all required fields' });
+    if (!firstName || !lastName || !email || !phone || !service || !timeframe) {
+      console.log('❌ Validation failed - missing fields');
+      return res.status(400).json({ 
+        success: false, 
+        message: 'Please fill in all required fields',
+        missing: {
+          firstName: !firstName,
+          lastName: !lastName,
+          email: !email,
+          phone: !phone,
+          service: !service,
+          timeframe: !timeframe
+        }
+      });
     }
 
     // Admin notification email
