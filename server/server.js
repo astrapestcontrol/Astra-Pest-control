@@ -80,7 +80,7 @@ app.post('/api/quotes', async (req, res) => {
     // Admin notification email
     const adminMailOptions = {
       from: process.env.SMTP_USER,
-      to: process.env.EMAIL_TO || 'info@best1cleaning.com',
+      to: process.env.EMAIL_TO || 'jkaliki@gitam.in',
       subject: `🔔 New Quote Request - ${service}`,
       html: `
         <!DOCTYPE html>
