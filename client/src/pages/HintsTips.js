@@ -105,10 +105,10 @@ const HintsTips = () => {
               <div className="checklist">
                 <h4>Ask your cleaner:</h4>
                 <ul>
-                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style="margin-right: 8px; color: #10b981;"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>How long they have been in business</li>
-                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style="margin-right: 8px; color: #10b981;"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Look for before and after pictures</li>
-                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style="margin-right: 8px; color: #10b981;"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Do an ABN search</li>
-                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style="margin-right: 8px; color: #10b981;"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Ask if they have insurance</li>
+                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style={{marginRight: '8px', color: '#10b981'}}><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>How long they have been in business</li>
+                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style={{marginRight: '8px', color: '#10b981'}}><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Look for before and after pictures</li>
+                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style={{marginRight: '8px', color: '#10b981'}}><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Do an ABN search</li>
+                  <li><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style={{marginRight: '8px', color: '#10b981'}}><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>Ask if they have insurance</li>
                 </ul>
               </div>
             </div>
