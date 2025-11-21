@@ -79,7 +79,7 @@ app.post('/api/quotes', async (req, res) => {
 
     // Admin notification email
     const adminMailOptions = {
-      from: process.env.SMTP_USER,
+      from: `"Astra Pest Control" <${process.env.SMTP_USER}>`,
       to: process.env.EMAIL_TO || 'jkaliki@gitam.in',
       subject: `🔔 New Quote Request - ${service}`,
       html: `
@@ -157,7 +157,7 @@ app.post('/api/quotes', async (req, res) => {
 
     // Customer acknowledgment email
     const customerMailOptions = {
-      from: process.env.SMTP_USER,
+      from: `"Astra Pest Control" <${process.env.SMTP_USER}>`,
       to: email,
       subject: 'Thank You for Your Quote Request - Astra Pest Control',
       html: `
