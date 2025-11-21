@@ -51,6 +51,15 @@ const transporter = nodemailer.createTransport({
   }
 });
 
+// Verify SMTP connection
+transporter.verify(function(error, success) {
+  if (error) {
+    console.error('❌ SMTP Connection Error:', error);
+  } else {
+    console.log('✅ SMTP Server is ready to send emails');
+  }
+});
+
 // Quote submission endpoint
 app.post('/api/quotes', async (req, res) => {
   try {
@@ -260,11 +269,21 @@ app.post('/api/quotes', async (req, res) => {
     };
 
     // Send emails
-    await transporter.sendMail(adminMailOptions);
-    console.log('✅ Admin notification sent');
+    try {
+      await transporter.sendMail(adminMailOptions);
+      console.log('✅ Admin notification sent to:', process.env.EMAIL_TO || 'jkaliki@gitam.in');
+    } catch (emailError) {
+      console.error('❌ Admin email error:', emailError.message);
+      throw emailError;
+    }
 
-    await transporter.sendMail(customerMailOptions);
-    console.log('✅ Customer acknowledgment sent');
+    try {
+      await transporter.sendMail(customerMailOptions);
+      console.log('✅ Customer acknowledgment sent to:', email);
+    } catch (emailError) {
+      console.error('❌ Customer email error:', emailError.message);
+      throw emailError;
+    }
 
     res.status(201).json({ 
       success: true, 

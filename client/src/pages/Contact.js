@@ -70,10 +70,6 @@ function Contact() {
           <div className="contact-wrapper">
             {/* Left - Form */}
             <div className="form-section-pro">
-              <div className="form-header-pro">
-                <h2>Send Us a Message</h2>
-                <p>Fill out the form below and our team will get back to you within 24 hours</p>
-              </div>
               <QuoteForm />
             </div>
 
