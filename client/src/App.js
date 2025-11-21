@@ -51,7 +51,7 @@ function ScrollToTop() {
 function App() {
   return (
     <HelmetProvider>
-      <Router>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <SmoothScroll />
         <ScrollToTop />
         <div className="App">
