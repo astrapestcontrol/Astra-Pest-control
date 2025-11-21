@@ -87,30 +87,32 @@ function QuoteForm() {
           {message}
         </div>
       )}
-      
-      <div className="form-group-modern">
-        <label>Name *</label>
-        <div className="name-fields">
-          <input 
-            type="text" 
-            name="firstName" 
-            placeholder="First" 
-            value={formData.firstName} 
-            onChange={handleChange} 
-            required 
-            disabled={status === 'loading'}
-          />
-          <input 
-            type="text" 
-            name="lastName" 
-            placeholder="Last" 
-            value={formData.lastName} 
-            onChange={handleChange} 
-            required 
-            disabled={status === 'loading'}
-          />
-        </div>
-      </div>
+
+      {status !== 'success' && status !== 'error' && (
+        <>
+          <div className="form-group-modern">
+            <label>Name *</label>
+            <div className="name-fields">
+              <input 
+                type="text" 
+                name="firstName" 
+                placeholder="First" 
+                value={formData.firstName} 
+                onChange={handleChange} 
+                required 
+                disabled={status === 'loading'}
+              />
+              <input 
+                type="text" 
+                name="lastName" 
+                placeholder="Last" 
+                value={formData.lastName} 
+                onChange={handleChange} 
+                required 
+                disabled={status === 'loading'}
+              />
+            </div>
+          </div>
       
       <div className="form-group-modern">
         <label>Email *</label>
@@ -217,6 +219,21 @@ function QuoteForm() {
           </span>
         ) : 'Submit'}
       </button>
+      </>
+      )}
+
+      {(status === 'success' || status === 'error') && (
+        <button 
+          type="button" 
+          className="submit-btn-modern" 
+          onClick={() => {
+            setStatus('idle');
+            setMessage('');
+          }}
+        >
+          Send Another Message
+        </button>
+      )}
     </form>
   );
 }
