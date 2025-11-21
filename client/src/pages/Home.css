@@ -166,7 +166,6 @@
     0 40px 100px rgba(0, 0, 0, 0.5),
     0 0 120px 40px rgba(220, 38, 38, 0.3),
     0 0 200px 60px rgba(220, 38, 38, 0.15);
-  animation: ambient-glow 3s ease-in-out infinite;
 }
 
 /* Phone Buttons - Outside the frame */
@@ -559,9 +558,8 @@
   background: linear-gradient(135deg, #dc2626, #fbbf24, #dc2626);
   background-size: 200% 200%;
   border-radius: 32px;
-  filter: blur(60px);
-  opacity: 0.3;
-  animation: glowPulse 4s ease-in-out infinite;
+  filter: blur(30px);
+  opacity: 0.2;
   z-index: 0;
 }
 
@@ -628,9 +626,8 @@
   position: absolute;
   border-radius: 50%;
   background: linear-gradient(135deg, #dc2626, #fbbf24);
-  opacity: 0.15;
-  filter: blur(40px);
-  animation: float 6s ease-in-out infinite;
+  opacity: 0.1;
+  filter: blur(20px);
 }
 
 .decoration-1 {
@@ -1183,7 +1180,6 @@
   font-size: 48px;
   margin-bottom: 20px;
   display: inline-block;
-  animation: iconFloat 3s ease-in-out infinite;
 }
 
 @keyframes iconFloat {
@@ -1645,7 +1641,6 @@
   text-align: center;
   max-width: 900px;
   padding: 0 20px;
-  animation: fadeInUp 1s ease-out;
 }
 
 .banner-content-full h2 {

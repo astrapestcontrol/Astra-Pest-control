@@ -3,22 +3,28 @@ import { Link } from 'react-router-dom';
 import './ServicePages.css';
 
 function Cleaning() {
+  const ServiceIcon = () => (
+    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+    </svg>
+  );
+
   const services = [
-    { name: 'Carpet Cleaning', icon: '🧹', desc: 'Deep steam cleaning for all carpet types', link: '/cleaning/carpet-cleaning' },
-    { name: 'Tile and Grout Cleaning', icon: '🔲', desc: 'Restore shine to tiles and grout', link: '/cleaning/tile-grout' },
-    { name: 'Upholstery Cleaning', icon: '🛋️', desc: 'Professional furniture cleaning', link: '/cleaning/upholstery' },
-    { name: 'Leather Seat Cleaning', icon: '💺', desc: 'Specialized leather care', link: '/cleaning/leather' },
-    { name: 'Mould Removal', icon: '🧪', desc: 'Safe mould treatment and prevention', link: '/cleaning/mould' },
-    { name: 'Rug Cleaning', icon: '🎨', desc: 'Gentle cleaning for delicate rugs', link: '/cleaning/rug' },
-    { name: 'Cars, Caravans & Boats', icon: '🚗', desc: 'Mobile vehicle cleaning service', link: '/cleaning/vehicles' },
-    { name: 'Flood Water Extraction', icon: '💧', desc: 'Emergency water removal', link: '/cleaning/flood' },
-    { name: 'Commercial Carpet Cleaning', icon: '🏢', desc: 'Business cleaning solutions', link: '/cleaning/commercial' },
-    { name: 'Bond Cleaning', icon: '🏠', desc: 'End of lease cleaning guarantee', link: '/cleaning/bond' },
-    { name: 'Mattress Cleaning', icon: '🛏️', desc: 'Hygienic mattress deep cleaning', link: '/cleaning/mattress' },
-    { name: 'Carpet Protection – Upholstery Protection', icon: '🛡️', desc: 'Stain protection treatment', link: '/cleaning/protection' },
-    { name: 'Encapsulation Low Moisture Cleaning', icon: '💨', desc: 'Low moisture dry cleaning method', link: '/cleaning/encapsulation' },
-    { name: 'Carpet Repairs – Upholstery Repairs', icon: '🔧', desc: 'Professional carpet repair service', link: '/cleaning/repairs' },
-    { name: 'Duo Carpet Cleaning System for High Rise Apartments', icon: '🏙️', desc: 'High rise apartment specialist', link: '/cleaning/duo-system' }
+    { name: 'Carpet Cleaning', desc: 'Deep steam cleaning for all carpet types', link: '/cleaning/carpet-cleaning' },
+    { name: 'Tile and Grout Cleaning', desc: 'Restore shine to tiles and grout', link: '/cleaning/tile-grout' },
+    { name: 'Upholstery Cleaning', desc: 'Professional furniture cleaning', link: '/cleaning/upholstery' },
+    { name: 'Leather Seat Cleaning', desc: 'Specialized leather care', link: '/cleaning/leather' },
+    { name: 'Mould Removal', desc: 'Safe mould treatment and prevention', link: '/cleaning/mould' },
+    { name: 'Rug Cleaning', desc: 'Gentle cleaning for delicate rugs', link: '/cleaning/rug' },
+    { name: 'Cars, Caravans & Boats', desc: 'Mobile vehicle cleaning service', link: '/cleaning/vehicles' },
+    { name: 'Flood Water Extraction', desc: 'Emergency water removal', link: '/cleaning/flood' },
+    { name: 'Commercial Carpet Cleaning', desc: 'Business cleaning solutions', link: '/cleaning/commercial' },
+    { name: 'Bond Cleaning', desc: 'End of lease cleaning guarantee', link: '/cleaning/bond' },
+    { name: 'Mattress Cleaning', desc: 'Hygienic mattress deep cleaning', link: '/cleaning/mattress' },
+    { name: 'Carpet Protection – Upholstery Protection', desc: 'Stain protection treatment', link: '/cleaning/protection' },
+    { name: 'Encapsulation Low Moisture Cleaning', desc: 'Low moisture dry cleaning method', link: '/cleaning/encapsulation' },
+    { name: 'Carpet Repairs – Upholstery Repairs', desc: 'Professional carpet repair service', link: '/cleaning/repairs' },
+    { name: 'Duo Carpet Cleaning System for High Rise Apartments', desc: 'High rise apartment specialist', link: '/cleaning/duo-system' }
   ];
 
   return (
@@ -43,10 +49,18 @@ function Cleaning() {
             <h2>Comprehensive Cleaning Solutions</h2>
             <p>Click on any service below to learn more about our professional cleaning solutions</p>
           </div>
-          <div className="services-list-modern">
+          <div className="services-grid-clean">
             {services.map((service, index) => (
-              <Link to={service.link} key={index} className="service-list-item">
-                {service.icon} {service.name}
+              <Link to={service.link} key={index} className="service-card-clean">
+                <div className="service-card-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 11l3 3L22 4"/>
+                    <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                  </svg>
+                </div>
+                <h3>{service.name}</h3>
+                <p>{service.desc}</p>
+                <span className="card-arrow">→</span>
               </Link>
             ))}
           </div>
@@ -63,28 +77,28 @@ function Cleaning() {
               <p>Astra Pest Control can show you the best cleaning techniques, with 16 years of experience in all aspects of steam and low moisture dry cleaning in residential and commercial carpet cleaning.</p>
               <div className="features-list">
                 <div className="feature-item-clean">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></div>
                   <div>
                     <h4>Full Pre-Treatment</h4>
                     <p>Complete stain treatment, not just spot cleaning</p>
                   </div>
                 </div>
                 <div className="feature-item-clean">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></div>
                   <div>
                     <h4>State-of-the-Art Equipment</h4>
                     <p>Powerful truck-mounted and portable machines</p>
                   </div>
                 </div>
                 <div className="feature-item-clean">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></div>
                   <div>
                     <h4>Fast Drying Times</h4>
                     <p>Advanced technology for quick turnaround</p>
                   </div>
                 </div>
                 <div className="feature-item-clean">
-                  <div className="feature-check">✓</div>
+                  <div className="feature-check"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></div>
                   <div>
                     <h4>100% Satisfaction Guarantee</h4>
                     <p>All work guaranteed with our quality promise</p>

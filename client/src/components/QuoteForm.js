@@ -61,6 +61,11 @@ function QuoteForm() {
 
   return (
     <form className="quote-form-modern" onSubmit={handleSubmit}>
+      <div className="form-header-text">
+        <h3>Send Us a Message</h3>
+        <p>Fill out the form below and our team will get back to you within 24 hours</p>
+      </div>
+
       {message && (
         <div className={`form-message ${status}`}>
           {message}

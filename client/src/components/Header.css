@@ -243,65 +243,80 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  background: #dc2626;
+  gap: 8px;
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
   color: #ffffff !important;
-  padding: 14px 32px;
-  border-radius: 8px;
+  padding: 14px 28px;
+  border-radius: 10px;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
-  transition: all 0.3s ease;
-  border: 2px solid #dc2626;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
 }
 
 .book-online-btn::before {
   content: '';
   position: absolute;
   inset: 0;
-  border-radius: 8px;
-  padding: 2px;
-  background: linear-gradient(45deg, #ef4444, #fbbf24, #ef4444);
-  background-size: 200% 200%;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
   opacity: 0;
-  transition: opacity 0.3s;
-  animation: borderRotate 3s linear infinite;
+  transition: opacity 0.4s ease;
 }
 
-@keyframes borderRotate {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+.book-online-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
 }
 
 .book-online-btn:hover::before {
   opacity: 1;
 }
 
+.book-online-btn:hover::after {
+  width: 300px;
+  height: 300px;
+}
+
 .book-online-btn:hover {
-  background: #b91c1c;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.4);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(220, 38, 38, 0.5);
 }
 
 .book-online-btn span {
   position: relative;
   z-index: 1;
-  font-size: 15px;
   letter-spacing: 0.5px;
 }
 
 .book-online-btn svg {
-  display: none;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.4s ease;
+}
+
+.book-online-btn:hover svg {
+  transform: translateX(4px);
 }
 
 .book-online-btn:active {
-  transform: translateY(0);
-  box-shadow: 0 4px 10px rgba(220, 38, 38, 0.3);
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(220, 38, 38, 0.4);
+}
+
+.cta-overlay {
+  display: none;
 }
 
 .mobile-backdrop {
@@ -394,6 +409,21 @@
 
   .mobile-backdrop {
     display: block;
+  }
+}
+
+@media (max-width: 360px) {
+  .header .header-content {
+    padding: 8px 12px !important;
+  }
+
+  .logo img {
+    height: 40px;
+  }
+
+  .nav {
+    width: 100%;
+    padding: 70px 20px 20px;
   }
 }
 
