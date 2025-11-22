@@ -40,15 +40,21 @@ app.use(cors({
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true }));
 
-// Email transporter
+// Email transporter with timeout settings
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
-  port: process.env.SMTP_PORT,
+  port: parseInt(process.env.SMTP_PORT),
   secure: false,
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
-  }
+  },
+  tls: {
+    rejectUnauthorized: false
+  },
+  connectionTimeout: 10000,
+  greetingTimeout: 10000,
+  socketTimeout: 10000
 });
 
 // Verify SMTP connection
@@ -268,15 +274,17 @@ app.post('/api/quotes', async (req, res) => {
       `
     };
 
-    // Send emails
+    // Send emails with error handling
+    let emailsSent = false;
     try {
       console.log('📤 Attempting to send admin email...');
       const adminResult = await transporter.sendMail(adminMailOptions);
       console.log('✅ Admin notification sent to:', process.env.EMAIL_TO || 'jkaliki@gitam.in');
       console.log('📧 Message ID:', adminResult.messageId);
+      emailsSent = true;
     } catch (emailError) {
-      console.error('❌ Admin email error:', emailError);
-      throw emailError;
+      console.error('❌ Admin email error:', emailError.message);
+      // Don't throw - continue to try customer email
     }
 
     try {
@@ -284,14 +292,18 @@ app.post('/api/quotes', async (req, res) => {
       const customerResult = await transporter.sendMail(customerMailOptions);
       console.log('✅ Customer acknowledgment sent to:', email);
       console.log('📧 Message ID:', customerResult.messageId);
+      emailsSent = true;
     } catch (emailError) {
-      console.error('❌ Customer email error:', emailError);
-      throw emailError;
+      console.error('❌ Customer email error:', emailError.message);
+      // Don't throw - form submission still succeeds
     }
 
+    // Always return success - form data was received
     res.status(201).json({ 
       success: true, 
-      message: 'Quote request submitted successfully!' 
+      message: emailsSent 
+        ? 'Quote request submitted successfully!' 
+        : 'Quote request received! We will contact you shortly at ' + phone 
     });
 
   } catch (error) {
