@@ -12,6 +12,17 @@ const app = express();
 // Trust proxy - required for Render
 app.set('trust proxy', 1);
 
+// Force HTTPS in production
+if (process.env.NODE_ENV === 'production') {
+  app.use((req, res, next) => {
+    if (req.header('x-forwarded-proto') !== 'https') {
+      res.redirect(`https://${req.header('host')}${req.url}`);
+    } else {
+      next();
+    }
+  });
+}
+
 // Security middleware with YouTube iframe support
 app.use(helmet({ 
   contentSecurityPolicy: {
