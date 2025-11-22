@@ -7,6 +7,10 @@ function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
+    // Preload hero image
+    const img = new Image();
+    img.src = '/carpet1.jpg';
+
     const observerOptions = {
       threshold: 0.2,
       rootMargin: '0px 0px -100px 0px'
