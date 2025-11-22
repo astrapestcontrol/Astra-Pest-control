@@ -12,9 +12,18 @@ const app = express();
 // Trust proxy - required for Render
 app.set('trust proxy', 1);
 
-// Security middleware
+// Security middleware with YouTube iframe support
 app.use(helmet({ 
-  contentSecurityPolicy: false,
+  contentSecurityPolicy: {
+    directives: {
+      defaultSrc: ["'self'"],
+      styleSrc: ["'self'", "'unsafe-inline'"],
+      scriptSrc: ["'self'", "'unsafe-inline'"],
+      imgSrc: ["'self'", "data:", "https:"],
+      frameSrc: ["'self'", "https://www.youtube.com", "https://www.google.com"],
+      connectSrc: ["'self'"]
+    }
+  },
   crossOriginEmbedderPolicy: false 
 }));
 app.use(compression());
