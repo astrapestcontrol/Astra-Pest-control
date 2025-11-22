@@ -368,7 +368,7 @@
     backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: flex-start;
-    padding: 100px 25px 30px;
+    padding: 100px 0 40px 0;
     box-shadow: -5px 0 30px rgba(0,0,0,0.15);
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
@@ -382,13 +382,13 @@
 
   .nav > a {
     width: 100%;
-    padding: 16px 20px;
+    padding: 16px 25px;
     font-size: 16px;
     font-weight: 500;
     color: #1f2937 !important;
-    border-radius: 8px;
+    border-radius: 0;
     transition: all 0.2s;
-    margin-bottom: 4px;
+    margin-bottom: 0;
   }
 
   .nav > a:hover {
@@ -404,17 +404,18 @@
   }
 
   .book-online-btn {
-    width: calc(100% - 40px) !important;
+    width: calc(100% - 50px) !important;
     justify-content: center;
-    margin: 20px 20px 0 20px !important;
-    padding: 14px 24px !important;
+    margin: 30px 25px 20px 25px !important;
+    padding: 16px 24px !important;
     font-size: 15px !important;
     background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%) !important;
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    border-radius: 12px !important;
   }
 
   .book-online-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) !important;
     box-shadow: 0 6px 16px rgba(220, 38, 38, 0.4);
   }
 
