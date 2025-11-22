@@ -134,7 +134,11 @@ function About() {
             <div className="value-card-modern">
               <div className="value-icon-wrapper">
                 <div className="icon-bg"></div>
-                <span className="value-icon">💎</span>
+                <span className="value-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </span>
               </div>
               <h3>Quality First</h3>
               <p>We never compromise on the quality of our service or products</p>
@@ -142,7 +146,12 @@ function About() {
             <div className="value-card-modern">
               <div className="value-icon-wrapper">
                 <div className="icon-bg"></div>
-                <span className="value-icon">🤝</span>
+                <span className="value-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+                    <circle cx="12" cy="7" r="4"/>
+                  </svg>
+                </span>
               </div>
               <h3>Customer Trust</h3>
               <p>Building lasting relationships through honest service</p>
@@ -150,7 +159,12 @@ function About() {
             <div className="value-card-modern">
               <div className="value-icon-wrapper">
                 <div className="icon-bg"></div>
-                <span className="value-icon">🎯</span>
+                <span className="value-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </span>
               </div>
               <h3>Excellence</h3>
               <p>Striving for perfection in every job we undertake</p>
@@ -158,7 +172,13 @@ function About() {
             <div className="value-card-modern">
               <div className="value-icon-wrapper">
                 <div className="icon-bg"></div>
-                <span className="value-icon">🌍</span>
+                <span className="value-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                    <path d="M2 12h20"/>
+                  </svg>
+                </span>
               </div>
               <h3>Sustainability</h3>
               <p>Protecting the environment for future generations</p>
