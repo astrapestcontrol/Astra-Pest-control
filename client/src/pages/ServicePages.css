@@ -184,13 +184,13 @@
   .btn-hero-secondary,
   .btn-cta-primary,
   .btn-cta-secondary {
-    padding: 14px 24px !important;
-    font-size: 14px !important;
+    padding: 12px 20px !important;
+    font-size: 13px !important;
   }
 
   .hero-cta-buttons,
   .cta-buttons {
-    gap: 12px;
+    gap: 10px;
   }
 }
 
