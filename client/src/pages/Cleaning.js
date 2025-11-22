@@ -154,17 +154,30 @@ function Cleaning() {
             <p>At Astra Pest Control, we understand that our customers want to know all about the products we use in their home. We choose to use a selection of professional products put together over years of experience.</p>
             <div className="products-features">
               <div className="product-feature">
-                <div className="product-icon">🌿</div>
+                <div className="product-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
                 <h4>Environmentally Friendly</h4>
                 <p>Safe for your family and pets</p>
               </div>
               <div className="product-feature">
-                <div className="product-icon">🧪</div>
+                <div className="product-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M9 11a3 3 0 106 0 3 3 0 00-6 0z"/>
+                    <path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                  </svg>
+                </div>
                 <h4>Professional Grade</h4>
                 <p>Industry-leading cleaning solutions</p>
               </div>
               <div className="product-feature">
-                <div className="product-icon">✨</div>
+                <div className="product-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
                 <h4>Odourless</h4>
                 <p>No harsh chemical smells</p>
               </div>
