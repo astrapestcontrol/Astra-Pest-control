@@ -350,34 +350,65 @@
 .showcase-grid {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 30px;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   align-items: center;
 }
 
-.showcase-decoration {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
-  border-radius: 16px;
-  padding: 40px 20px;
-  text-align: center;
-  color: white;
-  height: 200px;
+.showcase-stats {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 24px;
+}
+
+.stat-item {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.stat-item h3 {
+  font-size: 36px;
+  font-weight: 800;
+  color: #dc2626;
+  margin: 0 0 8px 0;
+}
+
+.stat-item p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  font-weight: 600;
+}
+
+.showcase-features {
+  display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 
-.decoration-icon {
-  opacity: 0.9;
+.feature-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 16px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.showcase-decoration p {
-  font-size: 18px;
+.feature-badge svg {
+  color: #dc2626;
+  flex-shrink: 0;
+}
+
+.feature-badge span {
+  font-size: 15px;
   font-weight: 600;
-  margin: 0;
+  color: #0f172a;
 }
 
 .showcase-card-modern {

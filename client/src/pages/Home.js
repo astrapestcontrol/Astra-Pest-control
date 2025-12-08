@@ -142,13 +142,15 @@ function Home() {
           </div>
           
           <div className="showcase-grid">
-            <div className="showcase-decoration">
-              <div className="decoration-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                </svg>
+            <div className="showcase-stats">
+              <div className="stat-item">
+                <h3>15+</h3>
+                <p>Years Experience</p>
               </div>
-              <p>Licensed & Insured</p>
+              <div className="stat-item">
+                <h3>5000+</h3>
+                <p>Happy Customers</p>
+              </div>
             </div>
             
             <Link to="/pest-control" className="showcase-card-modern">
@@ -173,13 +175,25 @@ function Home() {
               </div>
             </Link>
             
-            <div className="showcase-decoration">
-              <div className="decoration-icon">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+            <div className="showcase-features">
+              <div className="feature-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
+                <span>Licensed & Insured</span>
               </div>
-              <p>100% Guaranteed</p>
+              <div className="feature-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>Same Day Service</span>
+              </div>
+              <div className="feature-badge">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span>100% Guaranteed</span>
+              </div>
             </div>
           </div>
         </div>
