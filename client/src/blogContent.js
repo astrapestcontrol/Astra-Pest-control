@@ -396,13 +396,35 @@ export const blogContent = {
     date: '2024-11-17',
     category: 'Pest Control',
     content: `
-      <h2>Bed Bug Extermination in Richlands</h2>
-      <p>Bed bugs are small, reddish-brown insects that feed on human blood at night, causing itchy bites and sleep disturbance.</p>
-      <h3>Signs of Bed Bugs</h3>
-      <ul><li>Small blood spots on sheets</li><li>Dark fecal spots on mattress</li><li>Shed skins near bed</li><li>Musty odor</li></ul>
-      <h3>Professional Treatment</h3>
-      <p>Requires heat treatment or chemical application to mattresses, bed frames, and surrounding areas. Multiple treatments may be needed.</p>
-      <p><strong>Call (07) 3245 5126 for bed bug extermination in Richlands.</strong></p>
+      <h2>"Don't let the bed bugs bite!" Get rid of bed bugs.</h2>
+      <p>For many, bed bugs are just a myth kept alive by goodnight wishes. However, do not be fooled; bed bugs are very much alive and are a constant nuisance for many households.</p>
+      
+      <p>Bed bugs are a brown/dark red insect reaching to about 5mm when fully-grown. The little blighters love nothing more than to suck the blood from their host's neck, shoulders and arms as they are attracted to the warmth and carbon dioxide of these areas.</p>
+      
+      <p>Although painless at the time, the bite of a bed bug will often become swollen and itchy, as they inject saliva when feasting which can irritate many.</p>
+      
+      <h3>Life Cycle</h3>
+      <p>Bed bugs are able to go long periods of time before needing another blood feed, which is something that makes infestation difficult to control. The life cycle of a bed bug from egg to death can be up to a year depending on food supply and their environment.</p>
+      
+      <p>A female bed bug can lay up to 500 eggs in batches of about 50, so infestation is a common problem when dealing with these creatures. Blood spots on bed sheets are often a sure sign of bed bugs.</p>
+      
+      <h3>Professional Bed Bug Extermination Methods</h3>
+      <p>If possible, we first ask the customer to strip and hot-wash linen and to bag and sun clothing.</p>
+      
+      <p>Our team begins the treatment with a thorough powerhead vacuum of mattresses and carpet. Once completed, skirting boards, cracks and crevices and carpet are treated with a non-toxic spray.</p>
+      
+      <p>Bird lice are treated in a similar way. In older houses especially, the ceilings tend to expand and contract, creating gaps. If there are birds in the roof, the lice can fall through these cracks onto furniture.</p>
+      
+      <h3>Life Cycle & Habits of Bed Bugs</h3>
+      <p>Bedbugs live in the edges of mattresses. They will harbour deep within mattresses or even upholstery. They will also dwell in the edges of carpets, curtains and even behind pictures.</p>
+      
+      <p>To successfully treat bedbugs, an intense treatment is needed. A pest control technician should ensure that all areas of an affected room are well treated.</p>
+      
+      <p>When you hire a pest control company to get rid of bedbugs, you must be sure they have the knowledge and equipment to effectively remove them from your home. Just doing a surface spray will have little effect on these pests.</p>
+      
+      <p>With a severe bed bugs problem it may be wise to have your carpets and mattresses professionally steam cleaned. This should be done before the treatment is carried out. Astra Pest Control are experts in both pest control and carpet cleaning, so this means both services can be carried out on the same day saving you time and money.</p>
+      
+      <p><strong>Contact Astra Pest Control at (07) 3245 5126 for professional bed bug treatment.</strong></p>
     `
   },
   12: {
