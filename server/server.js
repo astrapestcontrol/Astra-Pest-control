@@ -298,20 +298,40 @@ app.post('/api/quotes', async (req, res) => {
       `
     };
 
-    // Send emails
+    // Send emails with proper error handling
     try {
-      // Send both emails in parallel
-      await Promise.all([
-        transporter.sendMail(adminMailOptions)
-          .then(result => console.log('[OK] Admin email sent - ID:', result.messageId))
-          .catch(err => console.error('[ERROR] Admin email failed:', err.message)),
-        
+      // Send both emails and track results
+      const [adminResult, customerResult] = await Promise.allSettled([
+        transporter.sendMail(adminMailOptions),
         transporter.sendMail(customerMailOptions)
-          .then(result => console.log('[OK] Customer email sent - ID:', result.messageId))
-          .catch(err => console.error('[ERROR] Customer email failed:', err.message))
       ]);
 
-      // Success response
+      // Check if at least one email succeeded
+      const adminSuccess = adminResult.status === 'fulfilled';
+      const customerSuccess = customerResult.status === 'fulfilled';
+
+      if (adminSuccess) {
+        console.log('[OK] Admin email sent - ID:', adminResult.value.messageId);
+      } else {
+        console.error('[ERROR] Admin email failed:', adminResult.reason.message);
+      }
+
+      if (customerSuccess) {
+        console.log('[OK] Customer email sent - ID:', customerResult.value.messageId);
+      } else {
+        console.error('[ERROR] Customer email failed:', customerResult.reason.message);
+      }
+
+      // If both emails failed, return error
+      if (!adminSuccess && !customerSuccess) {
+        console.error('[CRITICAL] Both emails failed!');
+        return res.status(500).json({ 
+          success: false, 
+          message: 'Unable to send confirmation email. Please call us directly at (07) 3245 5126 or email info@astrapestcontrol.com.au' 
+        });
+      }
+
+      // If at least one email sent, return success
       return res.status(201).json({ 
         success: true, 
         message: 'Quote request submitted successfully!' 
@@ -321,7 +341,7 @@ app.post('/api/quotes', async (req, res) => {
       console.error('[ERROR] Email system error:', emailError.message);
       return res.status(500).json({ 
         success: false, 
-        message: 'Unable to send request. Please call us at (07) 3245 5126' 
+        message: 'Unable to send request. Please call us at (07) 3245 5126 or email info@astrapestcontrol.com.au' 
       });
     }
 
