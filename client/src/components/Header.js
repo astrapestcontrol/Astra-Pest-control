@@ -45,11 +45,6 @@ function Header() {
               Home
               <span className="nav-underline"></span>
             </Link>
-            
-            <Link to="/cleaning" onClick={closeMobileMenu} className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/cleaning' ? 'active' : ''}`}>
-              Cleaning
-              <span className="nav-underline"></span>
-            </Link>
 
             <Link to="/pest-control" onClick={closeMobileMenu} className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/pest-control' ? 'active' : ''}`}>
               Pest Control
@@ -60,29 +55,25 @@ function Header() {
               About
               <span className="nav-underline"></span>
             </Link>
-            <Link to="/hints-tips" onClick={closeMobileMenu} className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/hints-tips' ? 'active' : ''}`}>
-              Hints & Tips
-              <span className="nav-underline"></span>
-            </Link>
+
             <Link to="/faq" onClick={closeMobileMenu} className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/faq' ? 'active' : ''}`}>
               FAQ
               <span className="nav-underline"></span>
             </Link>
+
             <Link to="/blog" onClick={closeMobileMenu} className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/blog' ? 'active' : ''}`}>
               Blog
               <span className="nav-underline"></span>
             </Link>
+
             <Link to="/contact" onClick={closeMobileMenu} className={`${isScrolled ? 'scrolled' : ''} ${location.pathname === '/contact' ? 'active' : ''}`}>
               Contact
               <span className="nav-underline"></span>
             </Link>
             
             <Link to="/contact" onClick={closeMobileMenu} className={`book-online-btn ${isScrolled ? 'scrolled' : ''}`}>
-              <span>Book Online</span>
-              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-              </svg>
-              <div className="cta-overlay"></div>
+              Book Online
+            </Link>
             </Link>
           </nav>
         </div>
