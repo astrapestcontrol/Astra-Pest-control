@@ -416,13 +416,27 @@ export const blogContent = {
     date: '2024-11-19',
     category: 'Pest Control',
     content: `
-      <h2>Silverfish Control in Richlands</h2>
-      <p>Silverfish are small, silver-grey insects that damage books, wallpaper, and clothing. They thrive in damp, dark areas.</p>
-      <h3>Where They Hide</h3>
-      <p>Bathrooms, laundries, roof voids, and storage areas with high humidity.</p>
-      <h3>Control Methods</h3>
-      <p>Reduce moisture, seal entry points, and professional insecticide treatment in harbourage areas.</p>
-      <p><strong>Call (07) 3245 5126 for silverfish treatment in Richlands.</strong></p>
+      <h2>Understanding Silverfish</h2>
+      <p>Silverfish are very primitive insects under Order Thysanura. They are agile, fast running, scale covered, whitish, wingless insects, most have silvery appearance and a body that tapers to the rear.</p>
+      
+      <p>About five species of silverfish have successfully invaded buildings. Silverfish are generally found in relatively undisturbed areas such as bookcases, storage rooms and ceilings, they can damage paper and fabrics. These areas are perfect for silverfish.</p>
+      
+      <h3>Behavior and Habits</h3>
+      <p>You'll see silverfish come out at night as they are a nocturnal insect. They move extremely quickly on their feet, though will tend to stay close to a source of interest.</p>
+      
+      <p>Silverfish eat anything that is high in starch and protein. So, you'll find they'll happily munch on clothing, books, glue, photographs, dead insects and fungi or mould.</p>
+      
+      <p>If you are seeing signs of photos or your favorite books being attacked, you probably have a silverfish problem and need to have an experienced pest technician come to your home or office. This is why a pest treatment once a year should help to prevent any such problems occurring.</p>
+      
+      <h3>Control of Silverfish</h3>
+      <p>A thorough inspection of the premises is an important step in the treatment and control of these insects. This should involve moving and opening articles that have been stored for some time. This will help to disturb the silverfish.</p>
+      
+      <p>We would use a flushing agent in some cases to get them to move from where they feel safe. It is also possible to have a population residing in wall cavities. This can make it a more complex procedure.</p>
+      
+      <h3>Biology and Habits</h3>
+      <p>In their natural habitat, silverfish live under bark and in soil, leaf litter and rotting logs. Being nocturnal, they mostly hide during the day, becoming active at night when they are looking for food. They seem to be omnivorous, although they have a preference for materials of vegetable origin.</p>
+      
+      <p><strong>Contact Astra Pest Control at (07) 3245 5126 for professional silverfish treatment.</strong></p>
     `
   },
   11: {
