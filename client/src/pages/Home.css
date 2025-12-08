@@ -349,10 +349,20 @@
 
 .showcase-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 40px;
-  max-width: 600px;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 30px;
+  max-width: 1200px;
   margin: 0 auto;
+  align-items: center;
+}
+
+.showcase-grid::before,
+.showcase-grid::after {
+  content: '';
+  height: 200px;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  border-radius: 16px;
+  opacity: 0.1;
 }
 
 .showcase-card-modern {
@@ -373,7 +383,7 @@
 
 .card-image-modern {
   position: relative;
-  height: 220px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -395,7 +405,7 @@
 }
 
 .card-content-modern {
-  padding: 28px;
+  padding: 24px;
 }
 
 .card-icon-modern {
@@ -1156,7 +1166,7 @@
 
 .card-image-modern {
   position: relative;
-  height: 220px;
+  height: 180px;
   overflow: hidden;
 }
 
@@ -1184,7 +1194,7 @@
 }
 
 .card-content-modern {
-  padding: 28px;
+  padding: 24px;
   position: relative;
 }
 
