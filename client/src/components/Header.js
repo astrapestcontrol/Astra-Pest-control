@@ -74,7 +74,6 @@ function Header() {
             <Link to="/contact" onClick={closeMobileMenu} className={`book-online-btn ${isScrolled ? 'scrolled' : ''}`}>
               Book Online
             </Link>
-            </Link>
           </nav>
         </div>
       </header>
