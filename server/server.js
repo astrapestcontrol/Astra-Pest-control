@@ -66,8 +66,8 @@ app.use(express.urlencoded({ extended: true }));
 // For local: Can use Gmail SMTP
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST || 'smtp.gmail.com',
-  port: parseInt(process.env.SMTP_PORT) || 465,
-  secure: true, // Use SSL for port 465
+  port: parseInt(process.env.SMTP_PORT) || 2525,
+  secure: false, // Use STARTTLS for port 2525
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
