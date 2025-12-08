@@ -142,6 +142,15 @@ function Home() {
           </div>
           
           <div className="showcase-grid">
+            <div className="showcase-decoration">
+              <div className="decoration-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+                </svg>
+              </div>
+              <p>Licensed & Insured</p>
+            </div>
+            
             <Link to="/pest-control" className="showcase-card-modern">
               <div className="card-image-modern">
                 <img src="/cockroach.jpg" alt="Pest Control" />
@@ -163,6 +172,15 @@ function Home() {
                 </span>
               </div>
             </Link>
+            
+            <div className="showcase-decoration">
+              <div className="decoration-icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+              </div>
+              <p>100% Guaranteed</p>
+            </div>
           </div>
         </div>
       </section>

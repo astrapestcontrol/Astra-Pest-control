@@ -356,13 +356,28 @@
   align-items: center;
 }
 
-.showcase-grid::before,
-.showcase-grid::after {
-  content: '';
-  height: 200px;
+.showcase-decoration {
   background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
   border-radius: 16px;
-  opacity: 0.1;
+  padding: 40px 20px;
+  text-align: center;
+  color: white;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.decoration-icon {
+  opacity: 0.9;
+}
+
+.showcase-decoration p {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
 }
 
 .showcase-card-modern {
