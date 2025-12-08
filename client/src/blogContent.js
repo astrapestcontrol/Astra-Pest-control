@@ -1079,6 +1079,90 @@ export const blogContent = {
       <p><strong>Stay protected year-round with professional pest control. Call (07) 3245 5126 to schedule your seasonal pest inspection and treatment in Richlands.</strong></p>
     `
   },
+  13: {
+    title: 'Lice Treatment and Prevention',
+    date: '2024-11-13',
+    category: 'Pest Control',
+    content: `
+      <h2>Understanding Lice in Richlands Homes</h2>
+      <p>Lice are highly specialised external parasites of birds and mammals. They belong to Order Phthiraptera, which comprises of 3000 species worldwide, and around 200 are represented in Australia.</p>
+      
+      <p>Adult lice are 1.5 – 3.5 mm long; they are wingless and have a flattened body shape. The antennae are usually short, they have small compound eyes, and legs usually carry conspicuous claws, this claw help with movement among hair.</p>
+      
+      <h3>Life Cycle</h3>
+      <p>Lice undergo a gradual metamorphosis. The eggs are sometimes called "nits" and are usually glued to their host's hair or in the case of body louse they are found in the seams of clothing that are in close contact with the body.</p>
+      
+      <p>The eggs can hatch in 5-10 days, and nymphs feed on blood from the host, they usually pass through three instars before reaching maturity. The life cycle can take 3-4 weeks. Adults live for about a month, in this time the female may lay around 200 eggs.</p>
+      
+      <h3>Habits</h3>
+      <p>Lice spend their entire life on the host; both sexes and all developmental stages are obligate bloodsuckers and can feed intermittently throughout the day or night.</p>
+      
+      <p>The head louse is mostly associated with the hair of the head. Lice are sensitive to temperature and tend to leave a dead or dying host to seek another. Temperature and smell play an important part in host detection. Lice can spread when there is close contact between hosts.</p>
+      
+      <p>Body lice feeding involve breaking the skin and injecting saliva. This can cause irritation and scratching, in severe cases this can lead to local infection of bite wounds.</p>
+      
+      <h3>Control of Lice</h3>
+      <p>Where a louse infestation has been discovered, persons that have been in contact with the infested person should be checked out immediately, as this can limit the spread.</p>
+      
+      <ul>
+        <li>Frequent bathing and washing with soap and water</li>
+        <li>Frequent changing of underwear</li>
+        <li>Clothing and bedding should be washed in hot water</li>
+        <li>Steam cleaning of carpets, upholstery, mattresses are advisable</li>
+        <li>Special designed combs can give partial control of head lice</li>
+      </ul>
+      
+      <h3>Bird Lice</h3>
+      <p>Lice can be brought into a home from birds. Birds will nest in the roof void of a home and are carriers of lice. The most susceptible type of home for harbouring lice is the Queenslander.</p>
+      
+      <p>Once the lice have made home in the roof, they can find their way into the rest of the home by cracks around the ceiling or even from down lights in the roof. To successfully treat lice, the roof void needs to be treated. This is done by using an electric blower to fill the roof with a permethrin dust.</p>
+      
+      <p>Gaps and excess holes need to be fixed to prevent any birds from nesting within the roof void once the treatment has been completed.</p>
+      
+      <p><strong>Contact Astra Pest Control at (07) 3245 5126 for professional lice treatment in Richlands.</strong></p>
+    `
+  },
+  19: {
+    title: 'Carpet Beetle Control Guide',
+    date: '2024-11-14',
+    category: 'Pest Control',
+    content: `
+      <h2>Understanding Carpet Beetles</h2>
+      <p>Like clothes moths, carpet beetles have a marked preference for materials of animal origin, but they will attack a wider range of materials than clothes moths.</p>
+      
+      <p>Carpet beetle larvae may feed on or in wool, fur, hair, silk, clothes, fabrics, carpets, rugs, underfelts, felts, fibre-type insulation, dried insect specimens, animal carcasses, bee and wasp nests and stored foods including dried meats, seeds, grains and cereals.</p>
+      
+      <h3>Signs of Infestation</h3>
+      <p>The presence of flying or crawling adult carpet beetles may indicate the presence of an infestation. Sighting of damaged materials, sand-like larval droppings, bristly cast skins and perhaps live larvae will confirm activity.</p>
+      
+      <h3>Control of Carpet Beetles</h3>
+      <p>Where an infestation of carpet beetles requires treatment, it is important that a thorough and extensive inspection be carried out in the premises. If treatment is directed merely towards localised and obvious feeding areas, less obvious feeding areas may continue to supply adults to the rest of the premises after treatment.</p>
+      
+      <h3>Non Chemical Control</h3>
+      <p>Hygiene plays an important role in the prevention of fabric pests. The vacuuming or cleaning of carpets, rugs, upholstery should be thorough and frequent.</p>
+      
+      <p>Attention to carpet edges and down behind seat cushions, such areas are often neglected, and with the build up of dust and skin scales, they are often sites of infestation.</p>
+      
+      <p>When clothes are to be stored for some time, they should be thoroughly cleaned and dried then wrapped up tightly in plastic before storage. Clothes should never be stored in a soiled state for any length of time.</p>
+      
+      <h3>Professional Treatment</h3>
+      <p>When Astra Pest Control is hired to rid your home of carpet beetles, we first do an inspection of each room. This will give us a good idea as to how much damage has been caused and what treatment we should do.</p>
+      
+      <p>There are two main treatments for carpet beetles that we have found to work very well:</p>
+      <ol>
+        <li>Apply a liquid insecticide down around the edges of the carpet. This is the most common place to find carpet beetles (Anthrenocerus australis).</li>
+        <li>Apply a permethrin dust underneath the carpet and underlay. This is done with a specially designed nozzle that attaches to an electric blower.</li>
+      </ol>
+      
+      <p>Astra Pest Control also gives a full warranty on our services. This gives our customers peace of mind, knowing they have hired a professional pest controller to get rid of carpet beetles from their home.</p>
+      
+      <div style="margin: 32px 0; text-align: center;">
+        <iframe width="100%" height="400" style="max-width: 700px; border-radius: 8px;" src="https://www.youtube.com/embed/n35VWFvgBgo" title="Carpet Beetle Control" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      
+      <p><strong>Contact Astra Pest Control at (07) 3245 5126 for professional carpet beetle treatment in Richlands.</strong></p>
+    `
+  },
   22: {
     title: 'Signs Your Home Needs Professional Pest Inspection',
     date: '2024-12-06',
