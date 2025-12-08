@@ -138,7 +138,7 @@ function Home() {
         <div className="container">
           <div className="showcase-header">
             <span className="section-label">Our Services</span>
-            <h2 className="section-heading">Professional Solutions for Your Home</h2>
+            <h2 className="section-heading">Professional Pest & Termite Solutions for Richlands</h2>
           </div>
           
           <div className="showcase-grid">
@@ -153,8 +153,8 @@ function Home() {
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                   </svg>
                 </div>
-                <h3>Pest Control</h3>
-                <p>Complete pest management and prevention solutions for a safe environment</p>
+                <h3>Pest & Termite Control</h3>
+                <p>Expert pest and termite removal services for homes and businesses in Richlands. Licensed technicians, guaranteed results.</p>
                 <span className="card-link-modern">
                   Explore Services
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
