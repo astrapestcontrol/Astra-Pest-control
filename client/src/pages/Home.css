@@ -32,8 +32,8 @@
   overflow: hidden;
   padding-top: 80px;
   background: 
-    linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.90) 100%),
-    linear-gradient(45deg, #dc2626 0%, #991b1b 100%);
+    linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 41, 59, 0.80) 100%),
+    url('/carpet-hero.jpg') center center/cover no-repeat;
   will-change: transform;
 }
 
