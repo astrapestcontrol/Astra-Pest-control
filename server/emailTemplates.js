@@ -201,7 +201,7 @@ const customerEmailTemplate = (name, service, timeframe) => `
                   </td>
                   <td valign="top">
                     <p style="margin: 0 0 5px 0; color: #0f172a; font-size: 15px; font-weight: 600;">Personal Contact</p>
-                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.4;">We'll call you at 07569411814 within 24 hours</p>
+                    <p style="margin: 0; color: #64748b; font-size: 14px; line-height: 1.4;">We'll call you at 0450 955 420 within 24 hours</p>
                   </td>
                 </tr>
               </table>
