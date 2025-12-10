@@ -31,10 +31,6 @@ function Home() {
     return () => observer.disconnect();
   }, []);
 
-  const handlePlayVideo = () => {
-    setIsVideoPlaying(true);
-  };
-
   return (
     <div className="home">
       <Helmet>
