@@ -1760,13 +1760,38 @@
 /* Mobile phone frame design */
 .mobile-phone-frame {
   position: relative;
-  width: 300px;
-  height: 600px;
+  width: 340px;
+  height: 700px;
   margin: 0 auto;
-  background: linear-gradient(145deg, #2d3748, #1a202c);
-  border-radius: 35px;
-  padding: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: linear-gradient(145deg, #1a1a1a, #0a0a0a);
+  border-radius: 50px;
+  padding: 12px;
+  box-shadow: 
+    inset 0 2px 4px rgba(255, 255, 255, 0.1),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.5),
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 40px 80px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: center center;
+}
+
+.mobile-phone-frame::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border-radius: 42px;
+  background: linear-gradient(145deg, rgba(255,255,255,0.05), transparent);
+  pointer-events: none;
+}
+
+.mobile-phone-frame.landscape {
+  transform: rotate(90deg);
+  box-shadow: 
+    0 0 0 2px #1a1a1a,
+    0 0 0 4px #333,
+    0 40px 100px rgba(0, 0, 0, 0.5),
+    0 0 120px 40px rgba(220, 38, 38, 0.3),
+    0 0 200px 60px rgba(220, 38, 38, 0.15);
 }
 
 .phone-notch {
@@ -1774,36 +1799,54 @@
   top: 8px;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 25px;
+  width: 140px;
+  height: 28px;
   background: #000;
-  border-radius: 15px;
+  border-radius: 0 0 18px 18px;
   z-index: 10;
 }
 
 .phone-buttons {
   position: absolute;
-  right: -3px;
-  top: 80px;
+  inset: 0;
+  pointer-events: none;
 }
 
-.volume-up, .volume-down, .power-button {
+.volume-up,
+.volume-down {
+  position: absolute;
+  left: -3px;
   width: 3px;
-  background: #4a5568;
-  border-radius: 2px;
-  margin-bottom: 10px;
+  background: linear-gradient(270deg, #333, #1a1a1a);
+  border-radius: 1px 0 0 1px;
 }
 
-.volume-up { height: 30px; }
-.volume-down { height: 30px; }
-.power-button { height: 50px; right: -3px; top: 120px; position: absolute; }
+.volume-up {
+  top: 150px;
+  height: 40px;
+}
+
+.volume-down {
+  top: 205px;
+  height: 40px;
+}
+
+.power-button {
+  position: absolute;
+  right: -3px;
+  top: 180px;
+  width: 3px;
+  height: 55px;
+  background: linear-gradient(90deg, #333, #1a1a1a);
+  border-radius: 0 1px 1px 0;
+}
 
 .phone-screen {
   position: relative;
   width: 100%;
   height: 100%;
   background: #000;
-  border-radius: 25px;
+  border-radius: 44px;
   overflow: hidden;
 }
 
@@ -1811,15 +1854,16 @@
   width: 100%;
   height: 100%;
   border: none;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-phone-frame.landscape .phone-screen iframe {
+  transform: rotate(-90deg) scale(2);
 }
 
 .play-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1830,16 +1874,18 @@
 .play-button-large {
   width: 80px;
   height: 80px;
-  background: rgba(220, 38, 38, 0.9);
+  background: #dc2626;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s;
+  transition: all 0.3s;
+  box-shadow: 0 8px 32px rgba(220, 38, 38, 0.4);
 }
 
 .play-button-large:hover {
   transform: scale(1.1);
+  box-shadow: 0 12px 40px rgba(220, 38, 38, 0.6);
 }
 
 .mobile-phone-frame.landscape {
@@ -1861,25 +1907,50 @@
 }
 
 /* Mobile responsive */
-@media (max-width: 768px) {
+@media (max-width: 968px) {
   .mobile-phone-frame {
-    width: 250px;
-    height: 500px;
-    padding: 15px;
+    width: 280px;
+    height: 580px;
+    border-radius: 42px;
+    padding: 10px;
   }
   
   .mobile-phone-frame.landscape {
-    transform: rotate(90deg) scale(0.75);
+    transform: rotate(90deg) scale(0.8);
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-phone-frame {
+    width: 240px;
+    height: 480px;
+    border-radius: 35px;
+    padding: 8px;
+  }
+  
+  .mobile-phone-frame.landscape {
+    transform: rotate(90deg) scale(0.7);
   }
   
   .phone-notch {
     width: 100px;
     height: 20px;
+    top: 6px;
   }
   
-  .play-button-large {
-    width: 60px;
-    height: 60px;
+  .volume-up {
+    top: 120px;
+    height: 32px;
+  }
+  
+  .volume-down {
+    top: 165px;
+    height: 32px;
+  }
+  
+  .power-button {
+    top: 145px;
+    height: 45px;
   }
 }
 
@@ -1887,11 +1958,12 @@
   .mobile-phone-frame {
     width: 200px;
     height: 400px;
-    padding: 12px;
+    border-radius: 30px;
+    padding: 6px;
   }
   
   .mobile-phone-frame.landscape {
-    transform: rotate(90deg) scale(0.65);
+    transform: rotate(90deg) scale(0.6);
   }
 }
 
@@ -1899,11 +1971,12 @@
   .mobile-phone-frame {
     width: 180px;
     height: 360px;
-    padding: 10px;
+    border-radius: 28px;
+    padding: 5px;
   }
   
   .mobile-phone-frame.landscape {
-    transform: rotate(90deg) scale(0.6);
+    transform: rotate(90deg) scale(0.55);
   }
 }
 
