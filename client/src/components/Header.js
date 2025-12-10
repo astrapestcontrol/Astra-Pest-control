@@ -39,6 +39,7 @@ function Header() {
                 className={isScrolled ? 'logo-scrolled' : ''} 
               />
             </Link>
+            </Link>
           </div>
 
           <button className={`mobile-toggle ${isScrolled ? 'scrolled' : ''}`} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
