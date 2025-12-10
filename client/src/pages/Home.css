@@ -31,7 +31,9 @@
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.92) 100%);
+  background: 
+    linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.90) 100%),
+    linear-gradient(45deg, #dc2626 0%, #991b1b 100%);
   will-change: transform;
 }
 
@@ -39,14 +41,21 @@
   position: absolute;
   inset: 0;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(220, 38, 38, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(220, 38, 38, 0.15) 0%, transparent 50%),
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 2px,
+      rgba(255, 255, 255, 0.03) 2px,
+      rgba(255, 255, 255, 0.03) 4px
+    );
 }
 
 .hero-wrapper {
   position: relative;
   z-index: 1;
-  padding: 100px 20px;
+  padding: 120px 20px 80px;
 }
 
 .hero-text {
@@ -1569,7 +1578,11 @@
 
 @media (max-width: 768px) {
   .hero-modern {
-    height: 500px;
+    height: 550px;
+  }
+  
+  .hero-wrapper {
+    padding: 100px 20px 60px;
   }
 
   .btn-primary,
