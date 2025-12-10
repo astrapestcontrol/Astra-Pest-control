@@ -25,7 +25,7 @@ module.exports = async function handler(req, res) {
 
       // Simplified professional business email
       const businessEmailResult = await transporter.sendMail({
-        from: process.env.SMTP_USER,
+        from: `"Astra Pest Control" <${process.env.SMTP_USER}>`,
         to: process.env.EMAIL_TO,
         subject: `New Quote Request from ${fullName} - ${service}`,
         html: `
@@ -143,7 +143,7 @@ module.exports = async function handler(req, res) {
 
       // Simplified customer acknowledgment email
       const customerEmailResult = await transporter.sendMail({
-        from: process.env.SMTP_USER,
+        from: `"Astra Pest Control" <${process.env.SMTP_USER}>`,
         to: email,
         subject: 'Quote Request Confirmed - Astra Pest Control',
         html: `
@@ -206,7 +206,7 @@ module.exports = async function handler(req, res) {
                         <h3 style="color: #1f2937; font-size: 16px; margin: 0 0 15px 0;">What Happens Next?</h3>
                         <div style="margin-bottom: 15px;">
                           <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px;">1</span>
+                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px; text-align: center; line-height: 24px;">1</span>
                             <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Review & Assessment</span>
                           </div>
                           <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 34px; line-height: 1.4;">Our team reviews your request and prepares a customized quote.</p>
@@ -214,7 +214,7 @@ module.exports = async function handler(req, res) {
                         
                         <div style="margin-bottom: 15px;">
                           <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px;">2</span>
+                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px; text-align: center; line-height: 24px;">2</span>
                             <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Personal Contact</span>
                           </div>
                           <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 34px; line-height: 1.4;">We'll contact you within 24 hours to discuss details.</p>
@@ -222,7 +222,7 @@ module.exports = async function handler(req, res) {
                         
                         <div>
                           <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px;">3</span>
+                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px; text-align: center; line-height: 24px;">3</span>
                             <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Service Scheduling</span>
                           </div>
                           <p style="color: #6b7280; font-size: 13px; margin: 0 0 0 34px; line-height: 1.4;">Schedule your service at a convenient time.</p>
