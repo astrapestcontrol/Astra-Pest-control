@@ -6,7 +6,8 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { name, email, phone, service, message, propertyType, propertySize } = req.body;
+    const { firstName, lastName, email, phone, service, timeframe, message } = req.body;
+    const fullName = `${firstName} ${lastName}`;
 
     console.log('Environment variables check:');
     console.log('SMTP_HOST:', process.env.SMTP_HOST);
@@ -33,15 +34,14 @@ export default async function handler(req, res) {
     const businessEmail = {
       from: process.env.SMTP_USER,
       to: process.env.EMAIL_TO,
-      subject: `New Quote Request from ${name}`,
+      subject: `New Quote Request from ${fullName}`,
       html: `
         <h2>New Quote Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Name:</strong> ${fullName}</p>
         <p><strong>Email:</strong> ${email}</p>
         <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Service:</strong> ${service}</p>
-        <p><strong>Property Type:</strong> ${propertyType}</p>
-        <p><strong>Property Size:</strong> ${propertySize}</p>
+        <p><strong>Timeframe:</strong> ${timeframe}</p>
         <p><strong>Message:</strong> ${message}</p>
       `
     };
@@ -53,13 +53,12 @@ export default async function handler(req, res) {
       subject: 'Thank you for your quote request - Astra Pest Control',
       html: `
         <h2>Thank you for contacting Astra Pest Control!</h2>
-        <p>Dear ${name},</p>
+        <p>Dear ${firstName},</p>
         <p>We have received your quote request for <strong>${service}</strong> and will get back to you within 24 hours.</p>
         
         <h3>Your Request Details:</h3>
         <p><strong>Service:</strong> ${service}</p>
-        <p><strong>Property Type:</strong> ${propertyType}</p>
-        <p><strong>Property Size:</strong> ${propertySize}</p>
+        <p><strong>Timeframe:</strong> ${timeframe}</p>
         <p><strong>Message:</strong> ${message}</p>
         
         <p>If you have any urgent questions, please call us directly.</p>
