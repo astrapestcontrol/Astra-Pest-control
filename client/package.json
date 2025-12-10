@@ -12,10 +12,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "GENERATE_SOURCEMAP=false react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "vercel-build": "react-scripts build"
+    "vercel-build": "GENERATE_SOURCEMAP=false react-scripts build",
+    "analyze": "npm run build && npx serve -s build"
   },
   "browserslist": {
     "production": [
