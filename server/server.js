@@ -65,9 +65,9 @@ app.use(express.urlencoded({ extended: true }));
 // For Render: Use SendGrid SMTP (smtp.sendgrid.net:587) as Render blocks Gmail SMTP
 // For local: Can use Gmail SMTP
 const transporter = nodemailer.createTransport({
-  host: process.env.SMTP_HOST || 'smtp.sendgrid.net',
-  port: parseInt(process.env.SMTP_PORT) || 587,
-  secure: false,
+  host: process.env.SMTP_HOST || 'smtp.gmail.com',
+  port: parseInt(process.env.SMTP_PORT) || 2525,
+  secure: false, // Use STARTTLS for port 2525
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS
@@ -186,7 +186,7 @@ app.post('/api/quotes', async (req, res) => {
             <div class="footer">
               <p><strong>Astra Pest Control</strong></p>
               <p>Professional Cleaning & Pest Control Services</p>
-              <p style="margin-top: 10px;">(07) 3245 5126 | info@best1cleaning.com</p>
+              <p style="margin-top: 10px;">0450 955 420 | Astrapestcontrol.au@gmail.com</p>
             </div>
           </div>
         </body>
@@ -277,8 +277,8 @@ app.post('/api/quotes', async (req, res) => {
               <div class="contact-box">
                 <h3> Need Immediate Assistance?</h3>
                 <p style="margin-bottom: 20px; color: #475569;">Our team is available to help you right away</p>
-                <a href="tel:0732455126" class="contact-button">Call (07) 3245 5126</a>
-                <a href="mailto:info@best1cleaning.com" class="contact-button" style="background: #0f172a;">Email Us</a>
+                <a href="tel:0450955420" class="contact-button">Call 0450 955 420</a>
+                <a href="mailto:Astrapestcontrol.au@gmail.com" class="contact-button" style="background: #0f172a;">Email Us</a>
               </div>
 
               <p style="color: #64748b; font-size: 14px; margin-top: 30px;">
@@ -289,7 +289,7 @@ app.post('/api/quotes', async (req, res) => {
             <div class="footer">
               <p><strong>Astra Pest Control</strong></p>
               <p>Brisbane's Trusted Cleaning & Pest Control Experts</p>
-              <p style="margin-top: 10px;"> (07) 3245 5126 | [EMAIL] info@best1cleaning.com</p>
+              <p style="margin-top: 10px;"> 0450 955 420 | [EMAIL] Astrapestcontrol.au@gmail.com</p>
               <p style="margin-top: 15px; font-size: 12px;">Brisbane • Ipswich • Gold Coast • Sunshine Coast</p>
             </div>
           </div>
@@ -298,52 +298,55 @@ app.post('/api/quotes', async (req, res) => {
       `
     };
 
-    // Send emails with error handling
-    let adminEmailSent = false;
-    let customerEmailSent = false;
-    
+    // Send emails with proper error handling
     try {
-      console.log('[SEND] Attempting to send admin email to:', process.env.EMAIL_TO || 'jkaliki@gitam.in');
-      const adminResult = await transporter.sendMail(adminMailOptions);
-      console.log('[OK] Admin notification sent successfully');
-      console.log('[EMAIL] Message ID:', adminResult.messageId);
-      adminEmailSent = true;
-    } catch (emailError) {
-      console.error('[ERROR] Admin email failed:', emailError.message);
-      console.error('[ERROR] Error code:', emailError.code);
-      if (emailError.code === 'ETIMEDOUT' || emailError.code === 'ECONNECTION') {
-        console.error('[INFO] SMTP connection blocked. Render free tier blocks SMTP. Use SendGrid instead.');
+      // Send both emails and track results
+      const [adminResult, customerResult] = await Promise.allSettled([
+        transporter.sendMail(adminMailOptions),
+        transporter.sendMail(customerMailOptions)
+      ]);
+
+      // Check if at least one email succeeded
+      const adminSuccess = adminResult.status === 'fulfilled';
+      const customerSuccess = customerResult.status === 'fulfilled';
+
+      if (adminSuccess) {
+        console.log('[OK] Admin email sent - ID:', adminResult.value.messageId);
+      } else {
+        console.error('[ERROR] Admin email failed:', adminResult.reason.message);
       }
-    }
 
-    try {
-      console.log('[SEND] Attempting to send customer email to:', email);
-      const customerResult = await transporter.sendMail(customerMailOptions);
-      console.log('[OK] Customer acknowledgment sent successfully');
-      console.log('[EMAIL] Message ID:', customerResult.messageId);
-      customerEmailSent = true;
-    } catch (emailError) {
-      console.error('[ERROR] Customer email failed:', emailError.message);
-      console.error('[ERROR] Error code:', emailError.code);
-    }
+      if (customerSuccess) {
+        console.log('[OK] Customer email sent - ID:', customerResult.value.messageId);
+      } else {
+        console.error('[ERROR] Customer email failed:', customerResult.reason.message);
+      }
 
-    // Return appropriate response
-    if (adminEmailSent || customerEmailSent) {
-      res.status(201).json({ 
+      // If both emails failed, return error
+      if (!adminSuccess && !customerSuccess) {
+        console.error('[CRITICAL] Both emails failed!');
+        return res.status(500).json({ 
+          success: false, 
+          message: 'Unable to send confirmation email. Please call us directly at 0450 955 420 or email Astrapestcontrol.au@gmail.com.au' 
+        });
+      }
+
+      // If at least one email sent, return success
+      return res.status(201).json({ 
         success: true, 
         message: 'Quote request submitted successfully!' 
       });
-    } else {
-      // Emails failed but form data received
-      console.log('[WARN] Emails failed but form data received. Returning success to user.');
-      res.status(201).json({ 
-        success: true, 
-        message: 'Quote request received! We will contact you shortly at ' + phone 
+
+    } catch (emailError) {
+      console.error('[ERROR] Email system error:', emailError.message);
+      return res.status(500).json({ 
+        success: false, 
+        message: 'Unable to send request. Please call us at 0450 955 420 or email Astrapestcontrol.au@gmail.com.au' 
       });
     }
 
   } catch (error) {
-    console.error('[ERROR] Error:', error.message);
+    console.error('[ERROR] Server error:', error.message);
     res.status(500).json({ 
       success: false, 
       message: 'Error processing request. Please call us at 07 3245 5126' 

@@ -5,412 +5,436 @@ import './Blog.css';
 const blogPosts = [
   {
     id: 1,
-    title: 'Rubbish Removal Versus Skip Bin Hire, Which is Better?',
-    excerpt: 'When you\'re moving out, cleaning and removing waste come hand in hand. Discover the best option for your needs.',
-    date: '2022-09-02',
-    category: 'General',
-    author: 'Sairam',
-    image: 'https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?w=800&q=80',
-    readTime: '5 min read',
+    title: 'Complete Guide to Pest Control in Brisbane & Gold Coast: Protect Your Home',
+    excerpt: 'Everything Brisbane & Gold Coast homeowners need to know about effective pest control. From prevention to professional treatment options.',
+    date: '2024-12-01',
+    category: 'Pest Control',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1583912267550-3c3f27d8c95b?w=800&q=80',
+    readTime: '8 min read',
     link: '/blog/1'
   },
   {
     id: 2,
-    title: 'Guide To Carpet Cleaning Cost',
-    excerpt: 'How Much Does It Cost To Get Your Carpets Cleaned? Get the complete breakdown of professional carpet cleaning costs.',
-    date: '2022-05-30',
-    category: 'Cleaning',
-    author: 'Sairam',
-    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&q=80',
-    readTime: '7 min read',
+    title: 'Termite Inspection Brisbane & Gold Coast: When and Why You Need Professional Help',
+    excerpt: 'Protect your Brisbane & Gold Coast property with regular termite inspections. Learn the signs, costs, and benefits of professional termite detection.',
+    date: '2024-11-28',
+    category: 'Pest Control',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=800&q=80',
+    readTime: '10 min read',
     link: '/blog/2'
   },
   {
     id: 3,
-    title: 'Guide to Carpet Cleaning – All Your Questions Answered',
-    excerpt: 'Everything homeowners need to know about maintaining and cleaning their carpets professionally.',
-    date: '2022-04-26',
-    category: 'Cleaning',
-    author: 'Sairam',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
-    readTime: '10 min read',
-    link: '/blog/3'
+    title: 'Cockroach Control Brisbane & Gold Coast: Effective Solutions for Your Home',
+    excerpt: 'Say goodbye to cockroaches with proven control methods. Expert tips for Brisbane & Gold Coast residents to eliminate and prevent cockroach infestations.',
+    date: '2024-11-25',
+    category: 'Pest Control',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/8'
   },
   {
     id: 4,
-    title: '10 Health Benefits Of Carpet Cleaning',
-    excerpt: 'The Secret To A Healthier Home. Discover how professional carpet cleaning improves your health.',
-    date: '2022-04-19',
-    category: 'Cleaning',
-    author: 'Sairam',
-    image: 'https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=80',
-    readTime: '6 min read',
-    link: '/blog/4'
+    title: 'Rodent Control Brisbane & Gold Coast: Rats and Mice Prevention Guide',
+    excerpt: 'Keep rats and mice out of your Brisbane & Gold Coast home with professional rodent control strategies. Prevention tips and treatment options.',
+    date: '2024-11-22',
+    category: 'Pest Control',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=800&q=80',
+    readTime: '9 min read',
+    link: '/blog/18'
   },
   {
     id: 5,
-    title: '4 Easy Steps To Get Mud Stains Out Of Carpet',
-    excerpt: 'Every parent knows the struggle. Learn professional techniques to remove stubborn mud stains.',
-    date: '2017-08-29',
-    category: 'Cleaning',
-    author: 'Sairam',
-    image: 'https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&q=80',
-    readTime: '4 min read',
-    link: '/blog/5'
+    title: 'Bed Bug Treatment Brisbane & Gold Coast: Complete Elimination Guide',
+    excerpt: 'Professional bed bug treatment solutions for Brisbane & Gold Coast homes. Learn identification, prevention, and effective elimination methods.',
+    date: '2024-11-19',
+    category: 'Pest Control',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=800&q=80',
+    readTime: '8 min read',
+    link: '/blog/11'
   },
   {
     id: 6,
-    title: '4 Ways To Winter Proof Your Home From Pests',
-    excerpt: 'Winter is pest season. Protect your home with these professional prevention strategies.',
-    date: '2017-07-01',
+    title: 'Spider Control Brisbane & Gold Coast: Safe and Effective Removal Methods',
+    excerpt: 'Professional spider control for Brisbane & Gold Coast properties. Identify dangerous spiders and learn safe removal techniques.',
+    date: '2024-11-16',
     category: 'Pest Control',
-    author: 'Sairam',
-    image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=80',
-    readTime: '5 min read',
-    link: '/blog/6'
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1509718443690-d8e2fb3474b7?w=800&q=80',
+    readTime: '6 min read',
+    link: '/blog/17'
   },
   {
     id: 7,
-    title: 'Complete Guide to Flea Control',
-    excerpt: 'Everything you need to know about identifying, treating, and preventing flea infestations in your home.',
-    date: '2024-11-21',
+    title: 'Flea Control Brisbane & Gold Coast: Protect Your Pets and Family',
+    excerpt: 'Comprehensive flea control solutions for Brisbane & Gold Coast homes. Pet-safe treatments and prevention strategies.',
+    date: '2024-11-13',
     category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1530126483408-aa533e55bdb2?w=800&q=80',
-    readTime: '8 min read',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80',
+    readTime: '7 min read',
     link: '/blog/7'
   },
   {
     id: 8,
-    title: 'Cockroach Control: Protect Your Family',
-    excerpt: 'Learn how to identify, prevent, and eliminate cockroach infestations with professional pest control methods.',
-    date: '2024-11-20',
+    title: 'Ant Control Brisbane & Gold Coast: Stop Ant Invasions Before They Start',
+    excerpt: 'Effective ant control strategies for Brisbane & Gold Coast homeowners. Identify ant species and implement targeted treatment plans.',
+    date: '2024-11-10',
     category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=800&q=80',
-    readTime: '10 min read',
-    link: '/blog/8'
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=800&q=80',
+    readTime: '5 min read',
+    link: '/blog/16'
   },
   {
     id: 9,
-    title: 'Silverfish Identification and Control',
-    excerpt: 'Discover how to identify silverfish and protect your books, photos, and clothing from these destructive pests.',
-    date: '2024-11-19',
+    title: 'Silverfish Control Brisbane & Gold Coast: Eliminate These Silent Invaders',
+    excerpt: 'Professional silverfish control for Brisbane & Gold Coast homes. Learn about silverfish behavior and effective elimination methods.',
+    date: '2024-11-07',
     category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?w=800&q=80',
     readTime: '6 min read',
     link: '/blog/9'
   },
   {
     id: 10,
-    title: 'Spider Control and Prevention Guide',
-    excerpt: 'Professional tips for managing spider populations around your home and keeping your family safe.',
-    date: '2024-11-18',
+    title: 'Wasp and Bee Removal Brisbane & Gold Coast: Safe Professional Services',
+    excerpt: 'Safe wasp and bee removal in Brisbane & Gold Coast. Professional techniques to protect your family while preserving beneficial insects.',
+    date: '2024-11-04',
     category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80',
-    readTime: '7 min read',
-    link: '/blog/10'
-  },
-  {
-    id: 11,
-    title: 'Bed Bug Extermination Methods',
-    excerpt: 'Don\'t let the bed bugs bite! Professional methods to eliminate bed bugs from your home completely.',
-    date: '2024-11-17',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1631049552057-403cdb8f0658?w=800&q=80',
-    readTime: '9 min read',
-    link: '/blog/11'
-  },
-  {
-    id: 12,
-    title: 'Rodent Control: Rats and Mice',
-    excerpt: 'Effective strategies for preventing and eliminating rat and mouse infestations in residential and commercial properties.',
-    date: '2024-11-16',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=800&q=80',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
     readTime: '8 min read',
-    link: '/blog/12'
-  },
-  {
-    id: 13,
-    title: 'Silverfish Identification and Control',
-    excerpt: 'Discover how to identify silverfish and protect your books, photos, and clothing from these destructive pests.',
-    date: '2024-11-19',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80',
-    readTime: '6 min read',
-    link: '/blog/13'
-  },
-  {
-    id: 14,
-    title: 'Spider Control and Prevention Guide',
-    excerpt: 'Professional tips for managing spider populations around your home and keeping your family safe.',
-    date: '2024-11-18',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1577896851231-70ef18881754?w=800&q=80',
-    readTime: '7 min read',
     link: '/blog/14'
   },
   {
-    id: 15,
-    title: 'Bed Bug Extermination Methods',
-    excerpt: 'Don\'t let the bed bugs bite! Professional methods to eliminate bed bugs from your home completely.',
-    date: '2024-11-17',
+    id: 11,
+    title: 'Seasonal Pest Control Brisbane & Gold Coast: Year-Round Protection Guide',
+    excerpt: 'Seasonal pest control calendar for Brisbane & Gold Coast. Learn which pests are active each season and how to prepare your home.',
+    date: '2024-11-01',
     category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1631049552057-403cdb8f0658?w=800&q=80',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800&q=80',
+    readTime: '10 min read',
+    link: '/blog/6'
+  },
+  {
+    id: 12,
+    title: 'Commercial Pest Control Brisbane & Gold Coast: Protect Your Business',
+    excerpt: 'Professional commercial pest control services in Brisbane & Gold Coast. Maintain hygiene standards and protect your business reputation.',
+    date: '2024-10-29',
+    category: 'Pest Control',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
     readTime: '9 min read',
-    link: '/blog/15'
+    link: '/blog/20'
+  },
+  {
+    id: 13,
+    title: 'Guide To Carpet Cleaning Cost in Brisbane & Gold Coast',
+    excerpt: 'How Much Does It Cost To Get Your Carpets Cleaned in Brisbane & Gold Coast? Get the complete breakdown of professional carpet cleaning costs.',
+    date: '2024-10-26',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/2'
+  },
+  {
+    id: 14,
+    title: 'Guide to Carpet Cleaning Brisbane & Gold Coast – All Your Questions Answered',
+    excerpt: 'Everything Brisbane & Gold Coast homeowners need to know about maintaining and cleaning their carpets professionally.',
+    date: '2024-10-23',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=800&q=80',
+    readTime: '10 min read',
+    link: '/blog/3'
+  },
+  {
+    id: 15,
+    title: '10 Health Benefits Of Carpet Cleaning for Brisbane & Gold Coast Families',
+    excerpt: 'The Secret To A Healthier Home in Brisbane & Gold Coast. Discover how professional carpet cleaning improves your family\'s health.',
+    date: '2024-10-20',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '6 min read',
+    link: '/blog/4'
   },
   {
     id: 16,
-    title: 'Rodent Control: Rats and Mice',
-    excerpt: 'Effective strategies for preventing and eliminating rat and mouse infestations in residential and commercial properties.',
-    date: '2024-11-16',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=800&q=80',
-    readTime: '8 min read',
-    link: '/blog/16'
+    title: '4 Easy Steps To Get Mud Stains Out Of Carpet - Brisbane & Gold Coast Guide',
+    excerpt: 'Remove stubborn mud stains from your Brisbane & Gold Coast home carpets with these proven professional techniques.',
+    date: '2024-10-17',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1585421514738-01798e348b17?w=800&q=80',
+    readTime: '4 min read',
+    link: '/blog/5'
   },
   {
     id: 17,
-    title: 'Termite Inspection and Treatment',
-    excerpt: 'Protect your property from termite damage with professional inspection and treatment methods.',
-    date: '2024-11-15',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=800&q=80',
-    readTime: '12 min read',
-    link: '/blog/17'
+    title: 'Upholstery Cleaning Brisbane & Gold Coast: Restore Your Furniture',
+    excerpt: 'Professional upholstery cleaning in Brisbane & Gold Coast. Restore sofas, chairs, and fabric furniture with expert cleaning techniques.',
+    date: '2024-10-14',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/25'
   },
   {
     id: 18,
-    title: 'Lice Treatment and Prevention',
-    excerpt: 'Comprehensive guide to identifying, treating, and preventing lice infestations in your home.',
-    date: '2024-11-13',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+    title: 'Tile and Grout Cleaning Brisbane & Gold Coast: Restore Your Floors',
+    excerpt: 'Professional tile and grout cleaning services in Brisbane & Gold Coast. Remove stains, mold, and restore your tiles to like-new condition.',
+    date: '2024-10-11',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=800&q=80',
     readTime: '6 min read',
-    link: '/blog/18'
+    link: '/blog/26'
   },
   {
     id: 19,
-    title: 'Carpet Beetle Control Guide',
-    excerpt: 'Learn how to identify and eliminate carpet beetles before they damage your carpets, clothes, and fabrics.',
-    date: '2024-11-14',
-    category: 'Pest Control',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&q=80',
-    readTime: '7 min read',
-    link: '/blog/19'
-  },
-  {
-    id: 'carpet-cleaning',
-    title: 'Professional Carpet Cleaning Services',
-    excerpt: 'Deep steam cleaning for all carpet types. Professional hot water extraction and low moisture cleaning methods.',
-    date: '2024-01-15',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
-    readTime: '8 min read',
-    link: '/cleaning/carpet-cleaning'
-  },
-  {
-    id: 'tile-grout',
-    title: 'Tile and Grout Cleaning',
-    excerpt: 'Restore shine to tiles and grout with our professional high-pressure cleaning systems.',
-    date: '2024-01-14',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=800&q=80',
-    readTime: '6 min read',
-    link: '/cleaning/tile-grout'
-  },
-  {
-    id: 'upholstery',
-    title: 'Upholstery Cleaning',
-    excerpt: 'Professional furniture cleaning for all fabric types. Safe, effective, and fast-drying methods.',
-    date: '2024-01-13',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80',
-    readTime: '7 min read',
-    link: '/cleaning/upholstery'
-  },
-  {
-    id: 'leather',
-    title: 'Leather Seat Cleaning',
-    excerpt: 'Specialized leather care and conditioning to restore and protect your leather furniture.',
-    date: '2024-01-12',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80',
-    readTime: '5 min read',
-    link: '/cleaning/leather'
-  },
-  {
-    id: 'mould',
-    title: 'Mould Removal Services',
-    excerpt: 'Safe mould treatment and prevention. Professional removal with eco-friendly products.',
-    date: '2024-01-11',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1563453392212-326f5e854473?w=800&q=80',
-    readTime: '6 min read',
-    link: '/cleaning/mould'
-  },
-  {
-    id: 'rug',
-    title: 'Professional Rug Cleaning',
-    excerpt: 'Gentle cleaning for delicate rugs. Expert care for Persian, Oriental, and modern rugs.',
-    date: '2024-01-10',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=800&q=80',
-    readTime: '5 min read',
-    link: '/cleaning/rug'
-  },
-  {
-    id: 'vehicles',
-    title: 'Vehicle Interior Cleaning',
-    excerpt: 'Mobile vehicle cleaning service. Professional interior detailing for cars, caravans and boats.',
-    date: '2024-01-09',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?w=800&q=80',
-    readTime: '6 min read',
-    link: '/cleaning/vehicles'
-  },
-  {
-    id: 'flood',
-    title: 'Emergency Flood Water Extraction',
-    excerpt: 'Emergency water removal service. Fast response 24/7 for flood and water damage.',
-    date: '2024-01-08',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1547683905-f686c993aae5?w=800&q=80',
-    readTime: '5 min read',
-    link: '/cleaning/flood'
-  },
-  {
-    id: 'commercial',
-    title: 'Commercial Carpet Cleaning',
-    excerpt: 'Business cleaning solutions. After-hours service available for offices and commercial spaces.',
-    date: '2024-01-07',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
-    readTime: '7 min read',
-    link: '/cleaning/commercial'
-  },
-  {
-    id: 'bond',
-    title: 'End of Lease Bond Cleaning',
-    excerpt: 'End of lease cleaning guarantee. Get your bond back with our comprehensive cleaning service.',
-    date: '2024-01-06',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1628744876497-eb30460be9f6?w=800&q=80',
-    readTime: '8 min read',
-    link: '/cleaning/bond'
-  },
-  {
-    id: 'mattress',
-    title: 'Mattress Deep Cleaning',
-    excerpt: 'Hygienic mattress deep cleaning. Remove dust mites, allergens, and stains for better sleep.',
-    date: '2024-01-05',
-    category: 'Services',
-    author: 'Astra Team',
+    title: 'Mattress Cleaning Brisbane & Gold Coast: Healthy Sleep Solutions',
+    excerpt: 'Professional mattress cleaning in Brisbane & Gold Coast. Remove dust mites, allergens, and stains for healthier sleep.',
+    date: '2024-10-08',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
     image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80',
-    readTime: '6 min read',
-    link: '/cleaning/mattress'
-  },
-  {
-    id: 'protection',
-    title: 'Carpet & Upholstery Protection',
-    excerpt: 'Stain protection treatment. Keep your carpets and upholstery cleaner for longer.',
-    date: '2024-01-04',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80',
-    readTime: '5 min read',
-    link: '/cleaning/protection'
-  },
-  {
-    id: 'encapsulation',
-    title: 'Low Moisture Encapsulation Cleaning',
-    excerpt: 'Low moisture dry cleaning method. Walk-on dry results with eco-friendly cleaning.',
-    date: '2024-01-03',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1527515862127-a4fc05baf7a5?w=800&q=80',
-    readTime: '6 min read',
-    link: '/cleaning/encapsulation'
-  },
-  {
-    id: 'repairs',
-    title: 'Carpet & Upholstery Repairs',
-    excerpt: 'Professional carpet repair service. Save money with expert repairs instead of replacement.',
-    date: '2024-01-02',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1556911220-bff31c812dba?w=800&q=80',
-    readTime: '5 min read',
-    link: '/cleaning/repairs'
-  },
-  {
-    id: 'duo-system',
-    title: 'Duo System for High Rise Apartments',
-    excerpt: 'High rise apartment specialist. Two-step cleaning system for fast-drying results.',
-    date: '2024-01-01',
-    category: 'Services',
-    author: 'Astra Team',
-    image: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80',
     readTime: '7 min read',
-    link: '/cleaning/duo-system'
+    link: '/blog/27'
+  },
+  {
+    id: 20,
+    title: 'Bond Cleaning Brisbane & Gold Coast: Get Your Full Deposit Back',
+    excerpt: 'Professional bond cleaning services in Brisbane & Gold Coast. Guaranteed to meet real estate standards and secure your full deposit return.',
+    date: '2024-10-05',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '9 min read',
+    link: '/blog/28'
+  },
+  {
+    id: 21,
+    title: 'Rug Cleaning Brisbane & Gold Coast: Preserve Your Investment',
+    excerpt: 'Specialist rug cleaning services in Brisbane & Gold Coast. Expert care for Persian, wool, and delicate rugs with professional techniques.',
+    date: '2024-10-02',
+    category: 'Cleaning',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80',
+    readTime: '8 min read',
+    link: '/blog/29'
+  },
+  {
+    id: 26,
+    title: 'Professional Carpet Cleaning Services',
+    excerpt: 'Comprehensive guide to professional carpet cleaning services. Methods, benefits, and what to expect from expert cleaners.',
+    date: '2022-03-15',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=800&q=80',
+    readTime: '8 min read',
+    link: '/blog/20'
+  },
+  {
+    id: 27,
+    title: 'Tile and Grout Cleaning',
+    excerpt: 'Professional tile and grout cleaning services. Remove stains, mold, and restore your tiles to like-new condition.',
+    date: '2022-03-12',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=800&q=80',
+    readTime: '6 min read',
+    link: '/blog/21'
+  },
+  {
+    id: 28,
+    title: 'Upholstery Cleaning',
+    excerpt: 'Professional upholstery cleaning services. Restore sofas, chairs, and fabric furniture with expert cleaning techniques.',
+    date: '2022-03-09',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/22'
+  },
+  {
+    id: 29,
+    title: 'Leather Seat Cleaning',
+    excerpt: 'Specialist leather cleaning services. Professional care for leather furniture, car seats, and upholstery.',
+    date: '2022-03-06',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80',
+    readTime: '5 min read',
+    link: '/blog/23'
+  },
+  {
+    id: 30,
+    title: 'Mould Removal Services',
+    excerpt: 'Professional mould removal and remediation services. Protect your health with expert mould elimination techniques.',
+    date: '2022-03-03',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '8 min read',
+    link: '/blog/24'
+  },
+  {
+    id: 31,
+    title: 'Professional Rug Cleaning',
+    excerpt: 'Specialist rug cleaning services. Expert care for Persian, wool, and delicate rugs with professional techniques.',
+    date: '2022-02-28',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&q=80',
+    readTime: '8 min read',
+    link: '/blog/25'
+  },
+  {
+    id: 32,
+    title: 'Vehicle Interior Cleaning',
+    excerpt: 'Professional car, caravan, and boat interior cleaning services. Deep cleaning for all vehicle types.',
+    date: '2022-02-25',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80',
+    readTime: '6 min read',
+    link: '/blog/26'
+  },
+  {
+    id: 33,
+    title: 'Emergency Flood Water Extraction',
+    excerpt: 'Emergency flood damage restoration services. Fast water extraction and drying to prevent further damage.',
+    date: '2022-02-22',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/27'
+  },
+  {
+    id: 34,
+    title: 'Commercial Carpet Cleaning',
+    excerpt: 'Professional commercial carpet cleaning services. Maintain workplace hygiene and professional appearance.',
+    date: '2022-02-19',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80',
+    readTime: '9 min read',
+    link: '/blog/28'
+  },
+  {
+    id: 35,
+    title: 'End of Lease Bond Cleaning',
+    excerpt: 'Professional bond cleaning services. Guaranteed to meet real estate standards and secure your full deposit return.',
+    date: '2022-02-16',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '9 min read',
+    link: '/blog/29'
+  },
+  {
+    id: 36,
+    title: 'Mattress Deep Cleaning',
+    excerpt: 'Professional mattress cleaning services. Remove dust mites, allergens, and stains for healthier sleep.',
+    date: '2022-02-13',
+    category: 'Cleaning',
+    author: 'Sairam',
+    image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/30'
+  },
+  {
+    id: 37,
+    title: 'Pest Prevention Tips for Brisbane & Gold Coast Homeowners',
+    excerpt: 'Simple yet effective pest prevention strategies for Brisbane & Gold Coast homes. Stop infestations before they start with these expert tips.',
+    date: '2024-09-29',
+    category: 'General',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?w=800&q=80',
+    readTime: '7 min read',
+    link: '/blog/21'
+  },
+  {
+    id: 38,
+    title: 'Signs You Need Professional Pest Control in Brisbane & Gold Coast',
+    excerpt: 'Recognize the warning signs that indicate you need professional pest control services. Early detection saves time and money.',
+    date: '2024-09-26',
+    category: 'General',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80',
+    readTime: '6 min read',
+    link: '/blog/22'
+  },
+  {
+    id: 39,
+    title: 'Eco-Friendly Pest Control Solutions for Brisbane & Gold Coast Families',
+    excerpt: 'Safe, eco-friendly pest control methods that protect your family and the environment. Green solutions for modern homes.',
+    date: '2024-09-23',
+    category: 'General',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=800&q=80',
+    readTime: '8 min read',
+    link: '/blog/23'
+  },
+  {
+    id: 40,
+    title: 'Cost of Pest Control Services in Brisbane & Gold Coast: Complete Guide',
+    excerpt: 'Transparent pricing guide for pest control services in Brisbane & Gold Coast. Understand costs and get the best value for your investment.',
+    date: '2024-09-20',
+    category: 'General',
+    author: 'Astra Pest Control',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+    readTime: '9 min read',
+    link: '/blog/24'
   }
 ];
 
+const categories = ['All', 'Pest Control', 'Cleaning', 'General'];
+
 function Blog() {
   const [searchParams, setSearchParams] = useSearchParams();
-  const categoryParam = searchParams.get('category');
-  const pageParam = parseInt(searchParams.get('page')) || 1;
-  const [selectedCategory, setSelectedCategory] = useState(categoryParam || 'All');
-  const [currentPage, setCurrentPage] = useState(pageParam);
-  
-  const POSTS_PER_PAGE = 9;
-  
-  useEffect(() => {
-    if (categoryParam) {
-      setSelectedCategory(categoryParam);
-    }
-  }, [categoryParam]);
+  const [selectedCategory, setSelectedCategory] = useState(searchParams.get('category') || 'All');
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 9;
 
   useEffect(() => {
-    setCurrentPage(1); // Reset to page 1 when category changes
-  }, [selectedCategory]);
-  
-  const categories = ['All', 'Cleaning', 'Pest Control', 'Services', 'General'];
-  
+    const category = searchParams.get('category');
+    if (category && categories.includes(category)) {
+      setSelectedCategory(category);
+    }
+  }, [searchParams]);
+
   const filteredPosts = selectedCategory === 'All' 
     ? blogPosts 
     : blogPosts.filter(post => post.category === selectedCategory);
 
-  const totalPages = Math.ceil(filteredPosts.length / POSTS_PER_PAGE);
-  const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
-  const endIndex = startIndex + POSTS_PER_PAGE;
-  const currentPosts = filteredPosts.slice(startIndex, endIndex);
+  const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+  const startIndex = (currentPage - 1) * postsPerPage;
+  const currentPosts = filteredPosts.slice(startIndex, startIndex + postsPerPage);
+  const featuredPost = filteredPosts[0];
+  const regularPosts = currentPosts.slice(1);
 
-  const featuredPost = currentPage === 1 ? currentPosts[0] : null;
-  const regularPosts = currentPage === 1 ? currentPosts.slice(1) : currentPosts;
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+    if (category === 'All') {
+      setSearchParams({});
+    } else {
+      setSearchParams({ category });
+    }
+  };
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
@@ -419,75 +443,68 @@ function Blog() {
 
   return (
     <div className="blog-page-pro">
+      {/* Hero Section */}
       <section className="blog-hero-pro">
         <div className="container">
-          <span className="hero-label">Our Blog</span>
-          <h1>Expert Insights & Tips</h1>
-          <p>Professional advice on cleaning and pest control from Brisbane's trusted experts</p>
+          <span className="hero-label">Expert Insights</span>
+          <h1>Pest Control Blog</h1>
+          <p>Expert tips, guides, and insights for effective pest control in Brisbane, Gold Coast and surrounding areas</p>
         </div>
       </section>
 
+      {/* Main Content */}
       <section className="blog-main-pro">
         <div className="container">
+          {/* Category Filters */}
           <div className="blog-filters-pro">
-            {categories.map(cat => (
-              <button 
-                key={cat}
-                className={`filter-btn-pro ${selectedCategory === cat ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(cat)}
+            {categories.map(category => (
+              <button
+                key={category}
+                className={`filter-btn-pro ${selectedCategory === category ? 'active' : ''}`}
+                onClick={() => handleCategoryChange(category)}
               >
-                {cat}
+                {category}
               </button>
             ))}
           </div>
 
-          {featuredPost && (
+          {/* Featured Post */}
+          {currentPage === 1 && featuredPost && (
             <Link to={featuredPost.link} className="featured-post-pro">
-              <div className="featured-image-pro">
-                <img src={featuredPost.image} alt={featuredPost.title} />
-                <span className="featured-badge">Featured</span>
-              </div>
               <div className="featured-content-pro">
                 <div className="featured-meta-pro">
-                  <span className="category-tag-pro">{featuredPost.category}</span>
-                  <span className="meta-dot">•</span>
-                  <span>{new Date(featuredPost.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric' })}</span>
-                  <span className="meta-dot">•</span>
-                  <span>{featuredPost.readTime}</span>
+                  <span className="category-badge">{featuredPost.category}</span>
+                  <span className="read-time">{featuredPost.readTime}</span>
                 </div>
                 <h2>{featuredPost.title}</h2>
                 <p>{featuredPost.excerpt}</p>
-                <span className="read-link-pro">Read Full Article →</span>
+                <div className="featured-footer-pro">
+                  <span className="read-link-pro">Read Article →</span>
+                </div>
               </div>
             </Link>
           )}
 
+          {/* Blog Grid */}
           <div className="blog-grid-pro">
             {regularPosts.map((post, index) => (
-              <Link 
-                key={post.id} 
-                to={post.link}
-                className="blog-card-pro"
-                style={{ animationDelay: `${index * 0.05}s` }}
-              >
-                <div className="card-image-pro">
-                  <img src={post.image} alt={post.title} />
-                  <span className="category-badge-pro">{post.category}</span>
-                </div>
+              <Link key={post.id} to={post.link} className="blog-card-pro" style={{animationDelay: `${index * 0.1}s`}}>
                 <div className="card-content-pro">
                   <div className="card-meta-pro">
-                    <span>{new Date(post.date).toLocaleDateString('en-AU', { month: 'short', day: 'numeric' })}</span>
-                    <span className="meta-dot">•</span>
-                    <span>{post.readTime}</span>
+                    <span className="category-badge">{post.category}</span>
+                    <span className="read-time">{post.readTime}</span>
                   </div>
                   <h3>{post.title}</h3>
                   <p>{post.excerpt}</p>
-                  <span className="read-article-btn">Read Article</span>
+                  <div className="card-footer-pro">
+                    <span className="read-article-btn">Read More →</span>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
 
+          {/* Pagination */}
           {totalPages > 1 && (
             <div className="pagination">
               <button 
@@ -495,37 +512,28 @@ function Blog() {
                 onClick={() => handlePageChange(currentPage - 1)}
                 disabled={currentPage === 1}
               >
-                Previous
+                ← Previous
               </button>
-              {[...Array(totalPages)].map((_, i) => (
+              
+              {[...Array(totalPages)].map((_, index) => (
                 <button
-                  key={i + 1}
-                  className={`page-btn ${currentPage === i + 1 ? 'active' : ''}`}
-                  onClick={() => handlePageChange(i + 1)}
+                  key={index + 1}
+                  className={`page-btn ${currentPage === index + 1 ? 'active' : ''}`}
+                  onClick={() => handlePageChange(index + 1)}
                 >
-                  {i + 1}
+                  {index + 1}
                 </button>
               ))}
+              
               <button 
                 className="page-btn" 
                 onClick={() => handlePageChange(currentPage + 1)}
                 disabled={currentPage === totalPages}
               >
-                Next
+                Next →
               </button>
             </div>
           )}
-        </div>
-      </section>
-
-      <section className="blog-cta-pro">
-        <div className="container">
-          <h2>Need Professional Help?</h2>
-          <p>Get expert cleaning and pest control services today</p>
-          <div className="cta-buttons-pro">
-            <a href="tel:0732455126" className="btn-primary-pro">Call (07) 3245 5126</a>
-            <Link to="/contact" className="btn-secondary-pro">Get Free Quote</Link>
-          </div>
         </div>
       </section>
     </div>

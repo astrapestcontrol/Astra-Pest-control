@@ -81,7 +81,7 @@ const Reviews = () => {
       
       <div className="reviews-scroll-container">
         <div className="reviews-scroll-track">
-          {[...reviews, ...reviews].map((review, index) => (
+          {[...reviews, ...reviews, ...reviews, ...reviews, ...reviews, ...reviews].map((review, index) => (
             <div key={index} className="review-card-modern">
               <div className="review-stars">★★★★★</div>
               <p className="review-text">{review.text}</p>

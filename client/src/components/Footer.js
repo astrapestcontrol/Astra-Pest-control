@@ -10,20 +10,20 @@ function Footer() {
           <div className="footer-grid">
             <div className="footer-col">
               <h3 className="footer-logo">Astra Pest Control</h3>
-              <p className="footer-desc">Brisbane's trusted carpet cleaning and pest control experts since 2008. Professional service with guaranteed results.</p>
+              <p className="footer-desc">Brisbane & Gold Coast's trusted pest and termite control experts since 2008. Professional service with guaranteed results.</p>
               <div className="footer-contact">
-                <a href="tel:0732455126" className="footer-phone">
+                <a href="tel:0450955420" className="footer-phone">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
                   </svg>
-                  (07) 3245 5126
+                  0450 955 420
                 </a>
-                <a href="mailto:info@best1cleaning.com" className="footer-email">
+                <a href="mailto:Astrapestcontrol.au@gmail.com" className="footer-email">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                     <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                   </svg>
-                  info@best1cleaning.com
+                  Astrapestcontrol.au@gmail.com
                 </a>
               </div>
             </div>
@@ -43,21 +43,21 @@ function Footer() {
             <div className="footer-col">
               <h4>Our Services</h4>
               <ul className="footer-links">
-                <li><Link to="/cleaning">Carpet Cleaning</Link></li>
-                <li><Link to="/cleaning">Upholstery Cleaning</Link></li>
-                <li><Link to="/cleaning">Tile & Grout Cleaning</Link></li>
                 <li><Link to="/pest-control">General Pest Control</Link></li>
-                <li><Link to="/pest-control">Termite Treatment</Link></li>
-                <li><Link to="/pest-control">Rodent Control</Link></li>
+                <li><Link to="/blog/15">Termite Inspection</Link></li>
+                <li><Link to="/blog/15">Termite Treatment</Link></li>
+                <li><Link to="/blog/8">Cockroach Control</Link></li>
+                <li><Link to="/blog/18">Rodent Control</Link></li>
+                <li><Link to="/blog/11">Bed Bug Treatment</Link></li>
               </ul>
             </div>
 
             <div className="footer-col">
               <h4>Service Areas</h4>
-              <p className="service-areas">Brisbane, Ipswich, Logan, Redlands, Moreton Bay, Gold Coast, Sunshine Coast and surrounding suburbs across Queensland.</p>
+              <p className="service-areas">Brisbane, Gold Coast and surrounding suburbs including Logan, Ipswich, Redlands, Moreton Bay, Scenic Rim, and all greater Brisbane and Gold Coast areas.</p>
               <div className="footer-map">
                 <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1839392.8999999998!2d153.1078203!3d-27.467725!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915c270ff9490d%3A0xb72b4c06b07a9eb5!2sBest%201%20Cleaning!5e0!3m2!1sen!2sau!4v1732188226000!5m2!1sen!2sau"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0726046149!2d152.8412!3d-27.4698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91579aac93d233%3A0x402a35af3deaf40!2sBrisbane%20QLD%2C%20Australia!5e0!3m2!1sen!2sau!4v1234567890"
                   width="100%" 
                   height="150" 
                   style={{border: 0, borderRadius: '8px'}} 
@@ -67,11 +67,6 @@ function Footer() {
                   title="Best 1 Cleaning Location"
                 ></iframe>
               </div>
-              <div className="footer-cta">
-                <h5>Get a Free Quote</h5>
-                <p>Available 24/7 for your convenience</p>
-                <Link to="/contact" className="btn-footer-cta">Request Quote</Link>
-              </div>
             </div>
           </div>
         </div>
@@ -80,7 +75,7 @@ function Footer() {
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; 2025 Astra Pest Control. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Astra Pest Control. All rights reserved.</p>
             <div className="social-links">
               <a href="https://www.facebook.com/BestoneCarpetCleaningPestControl" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">

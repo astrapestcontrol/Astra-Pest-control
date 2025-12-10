@@ -38,8 +38,6 @@ function BlogPost() {
           </Link>
           <div className="post-meta-header">
             <span className="post-category">{post.category}</span>
-            <span className="meta-separator">•</span>
-            <time>{new Date(post.date).toLocaleDateString('en-AU', { month: 'long', day: 'numeric' })}</time>
           </div>
           <h1 className="post-title">{post.title}</h1>
         </div>
@@ -81,16 +79,10 @@ function BlogPost() {
           </article>
 
           <aside className="post-sidebar">
-            <div className="sidebar-card author-info">
-              <img src="/logo.png" alt="Astra Pest Control" className="author-logo" />
-              <div className="author-name">Astra Pest Control</div>
-              <p className="author-bio">Expert cleaning and pest control professionals serving Brisbane and surrounding areas.</p>
-            </div>
-
             <div className="sidebar-card cta-card">
               <h3>Need Our Services?</h3>
               <p>Get professional cleaning and pest control services today</p>
-              <a href="tel:0732455126" className="cta-btn">Call (07) 3245 5126</a>
+              <a href="tel:0450955420" className="cta-btn">Call 0450 955 420</a>
               <Link to="/contact" className="cta-btn cta-btn-secondary">Get Free Quote</Link>
             </div>
 

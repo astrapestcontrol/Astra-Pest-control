@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import Reviews from '../components/Reviews';
 import './Home.css';
 
@@ -7,10 +8,6 @@ function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   useEffect(() => {
-    // Preload hero image
-    const img = new Image();
-    img.src = '/carpet1.jpg';
-
     const observerOptions = {
       threshold: 0.2,
       rootMargin: '0px 0px -100px 0px'
@@ -36,21 +33,28 @@ function Home() {
 
   return (
     <div className="home">
+      <Helmet>
+        <title>Pest Control Brisbane & Gold Coast | Termite Inspection & Treatment | Astra Pest Control</title>
+        <meta name="description" content="Expert pest control & termite services in Brisbane and Gold Coast. Licensed technicians, 15+ years experience. Same-day service. 100% guarantee. Call 0450 955 420 for free quote!" />
+        <meta name="keywords" content="pest control Brisbane, pest control Gold Coast, termite control Brisbane, termite control Gold Coast, termite inspection, pest removal, cockroach control, rodent control, surrounding suburbs" />
+        <link rel="canonical" href="https://www.astrapest.com.au/" />
+      </Helmet>
+      
       {/* Hero Section */}
       <section className="hero-modern">
         <div className="hero-bg"></div>
         <div className="container hero-wrapper">
           <div className="hero-text">
-            <span className="hero-label">Brisbane's Premier Choice</span>
+            <span className="hero-label">Brisbane & Gold Coast's Trusted Pest Control Experts</span>
             <h1 className="hero-heading">
-              Professional Carpet Cleaning <span className="highlight">&</span> Pest Control
+              Expert Pest <span className="highlight">&</span> Termite Solutions for Brisbane & Gold Coast
             </h1>
             <p className="hero-description">
-              Transforming homes and businesses across Brisbane with 15+ years of excellence. 
-              We deliver unmatched quality in carpet cleaning and pest management services.
+              Serving Brisbane, Gold Coast and surrounding suburbs with professional pest and termite control since 2008. 
+              Protecting your home and business with guaranteed results you can trust.
             </p>
             <div className="hero-actions">
-              <a href="tel:0732455126" className="btn-primary">
+              <a href="tel:0450955420" className="btn-primary">
                 <span>Get Started</span>
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                   <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
@@ -133,108 +137,114 @@ function Home() {
         </div>
       </section>
 
-      {/* Services Showcase with Images */}
+      {/* Services Showcase */}
       <section className="services-showcase">
         <div className="container">
           <div className="showcase-header">
             <span className="section-label">Our Services</span>
-            <h2 className="section-heading">Professional Solutions for Your Home</h2>
+            <h2 className="section-heading">Professional Pest & Termite Solutions for Brisbane & Gold Coast</h2>
+            <p className="section-description">Comprehensive protection for your home and business with expert care</p>
           </div>
           
-          <div className="showcase-grid">
-            <Link to="/cleaning" className="showcase-card-modern">
-              <div className="card-image-modern">
-                <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Carpet Cleaning" />
-                <div className="image-overlay-modern"></div>
+          <div className="services-grid-new">
+            <Link to="/pest-control" className="service-card-large">
+              <div className="service-image">
+                <img src="/cockroach.jpg" alt="Pest Control Services" />
+                <div className="service-overlay">
+                  <span className="service-badge">Most Popular</span>
+                </div>
               </div>
-              <div className="card-content-modern">
-                <div className="card-icon-modern"><svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M19.36 2.72l1.42 1.42-5.72 5.71c1.07 1.54 1.22 3.39.32 4.59L9.06 8.12c1.2-.9 3.05-.75 4.59.32l5.71-5.72M5.93 17.57c-2.01-2.01-3.24-4.41-3.58-6.65l4.88-2.09 7.44 7.44-2.09 4.88c-2.24-.34-4.64-1.57-6.65-3.58z"/></svg></div>
-                <h3>Cleaning Services</h3>
-                <p>Professional carpet, upholstery, tile & grout cleaning with guaranteed results</p>
-                <span className="card-link-modern">
-                  Explore Services
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                  </svg>
-                </span>
-              </div>
-            </Link>
-            
-            <Link to="/pest-control" className="showcase-card-modern">
-              <div className="card-image-modern">
-                <img src="/cockroach.jpg" alt="Pest Control" />
-                <div className="image-overlay-modern"></div>
-              </div>
-              <div className="card-content-modern">
-                <div className="card-icon-modern">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <div className="service-content">
+                <div className="service-icon">
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                   </svg>
                 </div>
-                <h3>Pest Control</h3>
-                <p>Complete pest management and prevention solutions for a safe environment</p>
-                <span className="card-link-modern">
-                  Explore Services
+                <h3>General Pest Control</h3>
+                <p>Complete protection against cockroaches, ants, spiders, and common household pests</p>
+                <ul className="service-features">
+                  <li>Interior & exterior treatment</li>
+                  <li>Safe for pets & children</li>
+                  <li>6-month warranty</li>
+                </ul>
+                <span className="service-link">
+                  Learn More
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d="M7.5 15L12.5 10L7.5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
                   </svg>
                 </span>
               </div>
             </Link>
+
+            <div className="service-cards-small">
+              <Link to="/pest-control#termites" className="service-card-small">
+                <div className="service-icon-small">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                  </svg>
+                </div>
+                <h4>Termite Inspections</h4>
+                <p>Thorough inspections with detailed reports</p>
+                <span className="arrow">→</span>
+              </Link>
+
+              <Link to="/pest-control#termites" className="service-card-small">
+                <div className="service-icon-small">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                </div>
+                <h4>Termite Treatment</h4>
+                <p>Advanced barrier systems & baiting</p>
+                <span className="arrow">→</span>
+              </Link>
+
+              <Link to="/pest-control#rodents" className="service-card-small">
+                <div className="service-icon-small">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                </div>
+                <h4>Rodent Control</h4>
+                <p>Effective removal & prevention strategies</p>
+                <span className="arrow">→</span>
+              </Link>
+
+              <Link to="/pest-control#commercial" className="service-card-small">
+                <div className="service-icon-small">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                  </svg>
+                </div>
+                <h4>Commercial Services</h4>
+                <p>Tailored solutions for businesses</p>
+                <span className="arrow">→</span>
+              </Link>
+            </div>
+          </div>
+
+          <div className="services-trust-bar">
+            <div className="trust-item">
+              <strong>15+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div className="trust-item">
+              <strong>5000+</strong>
+              <span>Happy Customers</span>
+            </div>
+            <div className="trust-item">
+              <strong>100%</strong>
+              <span>Satisfaction Guarantee</span>
+            </div>
+            <div className="trust-item">
+              <strong>24/7</strong>
+              <span>Emergency Service</span>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Features with Icons */}
-      <section className="features-modern">
-        <div className="container">
-          <div className="features-grid">
-            <div className="feature-item">
-              <div className="feature-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <circle cx="20" cy="20" r="18" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M12 20L18 26L28 14" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h3>15+ Years Experience</h3>
-              <p>Trusted expertise serving Brisbane since 2008</p>
-            </div>
-            
-            <div className="feature-item">
-              <div className="feature-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <path d="M20 5L25 15L35 17L27 25L29 35L20 30L11 35L13 25L5 17L15 15L20 5Z" stroke="currentColor" strokeWidth="2"/>
-                </svg>
-              </div>
-              <h3>100% Guaranteed</h3>
-              <p>Quality assurance on every service we provide</p>
-            </div>
-            
-            <div className="feature-item">
-              <div className="feature-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <circle cx="20" cy="20" r="15" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M20 12V20L26 23" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h3>Same Day Service</h3>
-              <p>Fast response for urgent cleaning and pest needs</p>
-            </div>
-            
-            <div className="feature-item">
-              <div className="feature-icon">
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                  <path d="M20 8C13 8 8 13 8 20C8 27 13 32 20 32C27 32 32 27 32 20C32 13 27 8 20 8Z" stroke="currentColor" strokeWidth="2"/>
-                  <path d="M20 14V20L24 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                </svg>
-              </div>
-              <h3>Eco-Friendly</h3>
-              <p>Safe products for family, pets, and environment</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section className="process-modern">
         <div className="container">
@@ -287,7 +297,7 @@ function Home() {
         <div className="banner-content-full">
           <h2>Professional Equipment & Expert Technicians</h2>
           <p>State-of-the-art truck-mounted machines and trained professionals delivering exceptional results</p>
-          <a href="tel:0732455126" className="btn-banner-full">Call 07 3245 5126</a>
+          <a href="tel:0450955420" className="btn-banner-full">Call 07 3245 5126</a>
         </div>
       </section>
 
@@ -299,11 +309,11 @@ function Home() {
         <div className="container">
           <div className="cta-wrapper">
             <div className="cta-text">
-              <h2>Ready to Transform Your Space?</h2>
-              <p>Get in touch with Brisbane's most trusted cleaning and pest control experts</p>
+              <h2>Ready to Protect Your Property?</h2>
+              <p>Contact Brisbane & Gold Coast's most trusted pest and termite control experts</p>
             </div>
             <div className="cta-actions">
-              <a href="tel:0732455126" className="btn-cta-primary">
+              <a href="tel:0450955420" className="btn-cta-primary">
                 <span>07 3245 5126</span>
               </a>
               <Link to="/contact" className="btn-cta-secondary">Get Free Quote</Link>

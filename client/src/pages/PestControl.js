@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import './ServicePages.css';
 
 function PestControl() {
   const pests = [
-    { name: 'Cockroaches', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>, desc: 'Complete cockroach elimination', link: '/blog/12' },
-    { name: 'Termites', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Termite inspection & treatment', link: '/blog/17' },
-    { name: 'Bed Bugs', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Thorough bed bug removal', link: '/blog/15' },
-    { name: 'Spiders', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Safe spider control', link: '/blog/14' },
-    { name: 'Rats', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Mice & rat extermination', link: '/blog/16' },
-    { name: 'Fleas', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Complete flea treatment', link: '/blog/11' },
-    { name: 'Silverfish', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Silverfish control', link: '/blog/13' },
-    { name: 'Lice', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Lice treatment & prevention', link: '/blog/18' },
+    { name: 'Cockroaches', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/></svg>, desc: 'Complete cockroach elimination', link: '/blog/8' },
+    { name: 'Termites', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Termite inspection & treatment', link: '/blog/15' },
+    { name: 'Bed Bugs', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Thorough bed bug removal', link: '/blog/11' },
+    { name: 'Spiders', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Safe spider control', link: '/blog/17' },
+    { name: 'Rats', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Mice & rat extermination', link: '/blog/18' },
+    { name: 'Fleas', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Complete flea treatment', link: '/blog/7' },
+    { name: 'Silverfish', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Silverfish control', link: '/blog/9' },
+    { name: 'Lice', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Lice treatment & prevention', link: '/blog/13' },
     { name: 'Carpet Beetles', icon: <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>, desc: 'Carpet beetle elimination', link: '/blog/19' }
   ];
 
@@ -35,13 +36,20 @@ function PestControl() {
 
   return (
     <div className="service-page">
+      <Helmet>
+        <title>Pest Control Brisbane & Gold Coast | Professional Pest Removal Services | Astra</title>
+        <meta name="description" content="Professional pest control in Brisbane and Gold Coast. Cockroach, termite, rodent, spider & bed bug removal. Licensed technicians. Same-day service. Call 0450 955 420!" />
+        <meta name="keywords" content="pest control Brisbane, pest control Gold Coast, pest removal Brisbane, pest removal Gold Coast, cockroach control, termite treatment, rodent control, spider removal, bed bug treatment" />
+        <link rel="canonical" href="https://www.astrapest.com.au/pest-control" />
+      </Helmet>
+      
       <section className="pest-hero-enhanced">
         <div className="pest-hero-bg"></div>
         <div className="container">
           <div className="pest-hero-content">
             <span className="hero-badge-large">Professional Pest Control</span>
-            <h1>Pest Control Brisbane</h1>
-            <p>Fast, reliable and safe pest removal for homes and businesses across Brisbane</p>
+            <h1>Pest Control Brisbane & Gold Coast</h1>
+            <p>Fast, reliable and safe pest removal for homes and businesses in Brisbane, Gold Coast and surrounding suburbs</p>
             <div className="hero-features">
               <div className="hero-feature-item">
                 <div className="feature-icon-hero"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg></div>
@@ -56,16 +64,6 @@ function PestControl() {
                 <span>24/7 Emergency Service</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="special-offer-banner">
-        <div className="container">
-          <div className="offer-content">
-            <div className="offer-badge">Special Offer</div>
-            <h3>Move Out Pest Control - Only $35</h3>
-            <p>When booked with carpet cleaning service</p>
           </div>
         </div>
       </section>
@@ -171,8 +169,7 @@ function PestControl() {
       <section className="service-areas-section">
         <div className="container">
           <div className="service-areas-content">
-            <h2>Serving All Major Cities</h2>
-            <p>Brisbane • Gold Coast • Sunshine Coast • Ipswich • Sydney • Melbourne • Adelaide • Darwin • Perth</p>
+            <h2>Proudly Serving Brisbane, Gold Coast & Surrounding Areas</h2>
           </div>
         </div>
       </section>
@@ -184,7 +181,7 @@ function PestControl() {
             <p>Get a free quote today and protect your home from unwanted pests</p>
             <div className="cta-buttons">
               <Link to="/contact" className="btn-cta-primary">Get Free Quote</Link>
-              <a href="tel:0732455126" className="btn-cta-secondary">Call (07) 3245 5126</a>
+              <a href="tel:0450955420" className="btn-cta-secondary">Call 0450 955 420</a>
             </div>
           </div>
         </div>

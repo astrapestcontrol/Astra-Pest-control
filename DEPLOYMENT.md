@@ -1,150 +1,133 @@
-# Astra Pest Control - Deployment Guide
+# Astra Pest Control - Render Deployment Guide
 
-**Last Updated:** November 20, 2024
+## Prerequisites
+- GitHub repository: `jayakrishnaa18/New-Astra-pest-control`
+- Branch: `Redesign-V2.0`
+- Render account
 
-## 🚀 Production Deployment
+## Deployment Steps
 
-### Prerequisites
-- Node.js 14+ and npm 6+
-- Domain name configured
-- SSL certificate (Let's Encrypt recommended)
-
-### Step 1: Build the React App
+### 1. Push Latest Changes to GitHub
 ```bash
-cd /home/kalikijk/webtask
-npm run build
+git add .
+git commit -m "Ready for production deployment"
+git push origin Redesign-V2.0
 ```
 
-### Step 2: Configure Environment Variables
-Update `.env.production` with your production values:
-- `SITE_URL`: Your domain (e.g., https://astrapest.com.au)
-- `CLIENT_URL`: Same as SITE_URL
-- Email credentials (SMTP_USER, SMTP_PASS)
+### 2. Create New Web Service on Render
 
-### Step 3: Start Production Server
-```bash
-NODE_ENV=production npm start
+1. Go to https://dashboard.render.com
+2. Click "New +" → "Web Service"
+3. Connect your GitHub repository: `jayakrishnaa18/New-Astra-pest-control`
+4. Select branch: `Redesign-V2.0`
+
+### 3. Configure Web Service
+
+**Basic Settings:**
+- Name: `astra-pest-control-richlands`
+- Region: `Oregon (US West)`
+- Branch: `Redesign-V2.0`
+- Root Directory: (leave empty)
+- Environment: `Node`
+- Build Command: `npm install && cd client && npm install && npm run build`
+- Start Command: `npm start`
+- Plan: `Free` (or Starter for custom domain)
+
+### 4. Add Environment Variables
+
+Click "Advanced" → "Add Environment Variable" and add these:
+
+```
+NODE_ENV=production
+PORT=10000
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your-email@gmail.com
+SMTP_PASS=your-app-password
+EMAIL_TO=your-email@gmail.com
+MAIL_FROM=Astra Pest Control <no-reply@astrapest.com.au>
+CLIENT_URL=https://astra-pest-control-richlands.onrender.com
+SITE_NAME=Astra Pest Control
+SITE_URL=https://astra-pest-control-richlands.onrender.com
 ```
 
-Or use PM2 for process management:
-```bash
-npm install -g pm2
-pm2 start server/server.js --name astra-pest-control
-pm2 save
-pm2 startup
-```
+**Important:** Replace `CLIENT_URL` and `SITE_URL` with your actual Render URL after deployment.
 
-### Step 4: Configure Nginx (Recommended)
-```nginx
-server {
-    listen 80;
-    server_name yourdomain.com www.yourdomain.com;
-    
-    location / {
-        proxy_pass http://localhost:5000;
-        proxy_http_version 1.1;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection 'upgrade';
-        proxy_set_header Host $host;
-        proxy_cache_bypass $http_upgrade;
-    }
-}
-```
+### 5. Deploy
 
-### Step 5: SSL Certificate (Let's Encrypt)
-```bash
-sudo certbot --nginx -d yourdomain.com -d www.yourdomain.com
-```
+1. Click "Create Web Service"
+2. Wait for build to complete (5-10 minutes)
+3. Your site will be live at: `https://astra-pest-control-richlands.onrender.com`
 
-## 📦 What's Included
+### 6. Post-Deployment
 
-### Production Features
-✅ Optimized React build
-✅ Email functionality with professional templates
-✅ Security headers (Helmet)
-✅ Compression enabled
-✅ Rate limiting
-✅ CORS configured
-✅ Error handling
-✅ Health check endpoint
+1. **Update Environment Variables:**
+   - Go to your service → Environment
+   - Update `CLIENT_URL` with your actual Render URL
+   - Update `SITE_URL` with your actual Render URL
 
-### File Structure
-```
-webtask/
-├── client/
-│   ├── build/          # Production build (after npm run build)
-│   ├── public/         # Static assets
-│   └── src/            # React source code
-├── server/
-│   └── server.js       # Production server
-├── .env.production     # Production environment variables
-└── package.json        # Main package file
-```
+2. **Test the Website:**
+   - Homepage loads correctly
+   - All pages accessible
+   - Contact form works
+   - Emails are being sent
 
-## 🔧 Environment Variables
+3. **Custom Domain (Optional):**
+   - Go to Settings → Custom Domain
+   - Add your domain: `www.astrapest.com.au`
+   - Update DNS records as instructed
+   - Update `CLIENT_URL` and `SITE_URL` to your custom domain
 
-Required in `.env.production`:
-- `PORT`: Server port (default: 5000)
-- `NODE_ENV`: Set to "production"
-- `SMTP_HOST`: Email server host
-- `SMTP_PORT`: Email server port
-- `SMTP_USER`: Email username
-- `SMTP_PASS`: Email password
-- `MAIL_FROM`: Sender email
-- `MAIL_TO`: Admin email for notifications
-- `SITE_URL`: Your production domain
-- `CLIENT_URL`: Your production domain
+### 7. Update SEO for Production
 
-## 📊 Monitoring
+After deployment, update these files with your production URL:
 
-### Health Check
-```bash
-curl https://yourdomain.com/api/health
-```
+**client/public/index.html:**
+- Update all `https://www.astrapest.com.au/` URLs to your Render URL
+- Update sitemap URL
 
-### PM2 Monitoring
-```bash
-pm2 status
-pm2 logs astra-pest-control
-pm2 monit
-```
+**client/public/sitemap.xml:**
+- Replace all URLs with your production domain
 
-## 🔒 Security Checklist
+## Troubleshooting
 
-- [x] Helmet security headers enabled
-- [x] Rate limiting configured
-- [x] CORS properly set
-- [x] Environment variables secured
-- [x] SSL certificate installed
-- [ ] Firewall configured
-- [ ] Regular backups scheduled
+### Build Fails
+- Check build logs in Render dashboard
+- Ensure all dependencies are in package.json
+- Verify Node version compatibility
 
-## 📱 Testing
+### Emails Not Sending
+- Check SMTP credentials in environment variables
+- Verify Gmail "Less secure app access" or use App Password
+- Check server logs for email errors
 
-1. Test form submission
-2. Verify email delivery
-3. Check all page routes
-4. Test mobile responsiveness
-5. Verify SSL certificate
-6. Test contact form
+### 404 Errors
+- Ensure server.js serves static files correctly
+- Check that build folder exists
+- Verify all routes are configured
 
-## 🆘 Troubleshooting
+### Form Not Working
+- Check backend is running on correct port
+- Verify CORS settings allow your domain
+- Check browser console for errors
 
-### Form not working
-- Check server logs: `pm2 logs`
-- Verify email credentials
-- Check CORS settings
+## Monitoring
 
-### Server not starting
-- Check port availability: `lsof -i :5000`
-- Verify Node.js version: `node -v`
-- Check environment variables
+- **Logs:** Render Dashboard → Logs
+- **Metrics:** Render Dashboard → Metrics
+- **Health Check:** `https://your-url.onrender.com/api/health`
 
-### Email not sending
-- Verify SMTP credentials
-- Check Gmail "Less secure apps" setting
-- Review server logs
+## Free Tier Limitations
 
-## 📞 Support
+- Service spins down after 15 minutes of inactivity
+- First request after spin-down takes 30-60 seconds
+- 750 hours/month free (enough for one service)
+- Upgrade to Starter ($7/month) for:
+  - Always-on service
+  - Custom domain
+  - Better performance
 
-For deployment issues, contact: jkaliki@gitam.in
+## Support
+
+- Render Docs: https://render.com/docs
+- Email: your-support-email@domain.com
