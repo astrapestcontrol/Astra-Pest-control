@@ -8,15 +8,26 @@ export default async function handler(req, res) {
   try {
     const { name, email, phone, service, message, propertyType, propertySize } = req.body;
 
+    console.log('Environment variables check:');
+    console.log('SMTP_HOST:', process.env.SMTP_HOST);
+    console.log('SMTP_PORT:', process.env.SMTP_PORT);
+    console.log('SMTP_USER:', process.env.SMTP_USER);
+    console.log('EMAIL_TO:', process.env.EMAIL_TO);
+    console.log('SMTP_PASS exists:', !!process.env.SMTP_PASS);
+
     const transporter = nodemailer.createTransporter({
-      host: process.env.SMTP_HOST,
-      port: process.env.SMTP_PORT,
+      host: process.env.SMTP_HOST || 'smtp.gmail.com',
+      port: parseInt(process.env.SMTP_PORT) || 587,
       secure: false,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS
       }
     });
+
+    // Test connection
+    await transporter.verify();
+    console.log('SMTP connection verified successfully');
 
     // Email to business owner
     const businessEmail = {
@@ -57,12 +68,21 @@ export default async function handler(req, res) {
     };
 
     // Send both emails
+    console.log('Sending business email...');
     await transporter.sendMail(businessEmail);
+    console.log('Business email sent successfully');
+
+    console.log('Sending customer email...');
     await transporter.sendMail(customerEmail);
+    console.log('Customer email sent successfully');
 
     res.status(200).json({ success: true, message: 'Quote request sent successfully!' });
   } catch (error) {
-    console.error('Error sending email:', error);
-    res.status(500).json({ error: 'Failed to send quote request' });
+    console.error('Detailed error:', error);
+    res.status(500).json({ 
+      error: 'Failed to send quote request', 
+      details: error.message,
+      code: error.code 
+    });
   }
 }
