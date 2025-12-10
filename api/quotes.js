@@ -162,8 +162,8 @@ module.exports = async function handler(req, res) {
                     <!-- Header -->
                     <tr>
                       <td style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-                        <div style="background-color: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
-                          <span style="color: white; font-size: 24px; font-weight: bold;">✓</span>
+                        <div style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px; background-color: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                          <img src="https://www.astrapestcontrol.com.au/faviconlogo.png" alt="Astra Pest Control" style="width: 60px; height: 60px; border-radius: 50%;" />
                         </div>
                         <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">Request Confirmed</h1>
                         <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 14px;">We'll contact you within 24 hours</p>
