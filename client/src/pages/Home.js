@@ -146,20 +146,10 @@ function Home() {
             <p className="section-description">Comprehensive protection for your home and business with expert care</p>
           </div>
           
-          <div className="services-hero-image">
-            <img 
-              src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=70&fm=webp" 
-              alt="Professional pest control technician at work"
-              width="600"
-              height="400"
-              loading="lazy"
-            />
-          </div>
-          
           <div className="services-grid-new">
             <Link to="/pest-control" className="service-card-large">
               <div className="service-image">
-                <img src="/cockroach.jpg" alt="Pest Control Services" loading="lazy" width="800" height="400" />
+                <img src="/cockroach.jpg" alt="Pest Control Services" loading="eager" width="800" height="400" />
                 <div className="service-overlay">
                   <span className="service-badge">Most Popular</span>
                 </div>
