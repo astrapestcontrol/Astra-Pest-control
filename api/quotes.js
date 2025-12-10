@@ -1,6 +1,6 @@
-import nodemailer from 'nodemailer';
+const nodemailer = require('nodemailer');
 
-export default async function handler(req, res) {
+module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
@@ -8,13 +8,6 @@ export default async function handler(req, res) {
   try {
     const { firstName, lastName, email, phone, service, timeframe, message } = req.body;
     const fullName = `${firstName} ${lastName}`;
-
-    console.log('Environment variables check:');
-    console.log('SMTP_HOST:', process.env.SMTP_HOST);
-    console.log('SMTP_PORT:', process.env.SMTP_PORT);
-    console.log('SMTP_USER:', process.env.SMTP_USER);
-    console.log('EMAIL_TO:', process.env.EMAIL_TO);
-    console.log('SMTP_PASS exists:', !!process.env.SMTP_PASS);
 
     const transporter = nodemailer.createTransporter({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
@@ -25,10 +18,6 @@ export default async function handler(req, res) {
         pass: process.env.SMTP_PASS
       }
     });
-
-    // Test connection
-    await transporter.verify();
-    console.log('SMTP connection verified successfully');
 
     // Email to business owner
     const businessEmail = {
@@ -61,27 +50,20 @@ export default async function handler(req, res) {
         <p><strong>Timeframe:</strong> ${timeframe}</p>
         <p><strong>Message:</strong> ${message}</p>
         
-        <p>If you have any urgent questions, please call us directly.</p>
         <p>Best regards,<br>Astra Pest Control Team</p>
       `
     };
 
     // Send both emails
-    console.log('Sending business email...');
     await transporter.sendMail(businessEmail);
-    console.log('Business email sent successfully');
-
-    console.log('Sending customer email...');
     await transporter.sendMail(customerEmail);
-    console.log('Customer email sent successfully');
 
     res.status(200).json({ success: true, message: 'Quote request sent successfully!' });
   } catch (error) {
-    console.error('Detailed error:', error);
+    console.error('Error:', error);
     res.status(500).json({ 
       error: 'Failed to send quote request', 
-      details: error.message,
-      code: error.code 
+      details: error.message 
     });
   }
-}
+};
