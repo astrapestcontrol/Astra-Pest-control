@@ -1,5 +1,3 @@
-const nodemailer = require('nodemailer');
-
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -8,6 +6,9 @@ module.exports = async function handler(req, res) {
   try {
     const { firstName, lastName, email, phone, service, timeframe, message } = req.body;
     const fullName = `${firstName} ${lastName}`;
+
+    // Import nodemailer inside the function
+    const nodemailer = require('nodemailer');
 
     const transporter = nodemailer.createTransporter({
       host: process.env.SMTP_HOST || 'smtp.gmail.com',
