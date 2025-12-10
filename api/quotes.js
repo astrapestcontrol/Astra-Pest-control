@@ -204,29 +204,53 @@ module.exports = async function handler(req, res) {
                     <tr>
                       <td style="padding: 0 20px 20px 20px;">
                         <h3 style="color: #1f2937; font-size: 16px; margin: 0 0 15px 0;">What Happens Next?</h3>
-                        <div style="margin-bottom: 15px;">
-                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <div style="background-color: #dc2626; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">1</div>
-                            <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Review & Assessment</span>
-                          </div>
-                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 40px; line-height: 1.4;">Our team reviews your request and prepares a customized quote.</p>
-                        </div>
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                          <tr>
+                            <td width="40" valign="top">
+                              <table width="28" height="28" cellpadding="0" cellspacing="0" style="background-color: #dc2626; border-radius: 50%;">
+                                <tr>
+                                  <td align="center" valign="middle" style="color: white; font-size: 14px; font-weight: bold; line-height: 28px;">1</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td valign="top">
+                              <h4 style="color: #1f2937; font-size: 14px; margin: 0 0 5px 0; font-weight: 600;">Review & Assessment</h4>
+                              <p style="color: #6b7280; font-size: 13px; margin: 0; line-height: 1.4;">Our team reviews your request and prepares a customized quote.</p>
+                            </td>
+                          </tr>
+                        </table>
                         
-                        <div style="margin-bottom: 15px;">
-                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <div style="background-color: #dc2626; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">2</div>
-                            <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Personal Contact</span>
-                          </div>
-                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 40px; line-height: 1.4;">We'll contact you within 24 hours to discuss details.</p>
-                        </div>
+                        <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 15px;">
+                          <tr>
+                            <td width="40" valign="top">
+                              <table width="28" height="28" cellpadding="0" cellspacing="0" style="background-color: #dc2626; border-radius: 50%;">
+                                <tr>
+                                  <td align="center" valign="middle" style="color: white; font-size: 14px; font-weight: bold; line-height: 28px;">2</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td valign="top">
+                              <h4 style="color: #1f2937; font-size: 14px; margin: 0 0 5px 0; font-weight: 600;">Personal Contact</h4>
+                              <p style="color: #6b7280; font-size: 13px; margin: 0; line-height: 1.4;">We'll contact you within 24 hours to discuss details.</p>
+                            </td>
+                          </tr>
+                        </table>
                         
-                        <div>
-                          <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <div style="background-color: #dc2626; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">3</div>
-                            <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Service Scheduling</span>
-                          </div>
-                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 0 40px; line-height: 1.4;">Schedule your service at a convenient time.</p>
-                        </div>
+                        <table width="100%" cellpadding="0" cellspacing="0">
+                          <tr>
+                            <td width="40" valign="top">
+                              <table width="28" height="28" cellpadding="0" cellspacing="0" style="background-color: #dc2626; border-radius: 50%;">
+                                <tr>
+                                  <td align="center" valign="middle" style="color: white; font-size: 14px; font-weight: bold; line-height: 28px;">3</td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td valign="top">
+                              <h4 style="color: #1f2937; font-size: 14px; margin: 0 0 5px 0; font-weight: 600;">Service Scheduling</h4>
+                              <p style="color: #6b7280; font-size: 13px; margin: 0; line-height: 1.4;">Schedule your service at a convenient time.</p>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
                     
