@@ -69,7 +69,7 @@ function Home() {
       {/* Guarantee Banner */}
       <section className="guarantee-banner">
         <div className="container">
-          <h2>GUARANTEED • FAST • COURTEOUS • SAFE • ALWAYS LOW COST</h2>
+          <h2 className="guarantee-title">GUARANTEED • FAST • COURTEOUS • SAFE • ALWAYS LOW COST</h2>
           <p>Service to residential and commercial customers</p>
         </div>
       </section>
@@ -149,7 +149,7 @@ function Home() {
           <div className="services-grid-new">
             <Link to="/pest-control" className="service-card-large">
               <div className="service-image">
-                <img src="/cockroach.jpg" alt="Pest Control Services" />
+                <img src="/cockroach.jpg" alt="Pest Control Services" loading="lazy" width="800" height="400" />
                 <div className="service-overlay">
                   <span className="service-badge">Most Popular</span>
                 </div>
@@ -292,7 +292,12 @@ function Home() {
 
       {/* Image Banner */}
       <section className="image-banner-full">
-        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=1920&q=80" alt="Professional Cleaning Equipment" className="banner-bg-full" />
+        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=60&fm=webp&fm=webp" alt="Professional Cleaning Equipment" loading="lazy" width="800" height="400" 
+          className="banner-bg-full"
+          width="800"
+          height="400"
+          loading="lazy"
+        />
         <div className="banner-overlay-full"></div>
         <div className="banner-content-full">
           <h2>Professional Equipment & Expert Technicians</h2>
