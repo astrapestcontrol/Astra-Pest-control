@@ -162,9 +162,18 @@ module.exports = async function handler(req, res) {
                     <!-- Header -->
                     <tr>
                       <td style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 20px; background-color: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; overflow: hidden;">
-                          <img src="https://www.astrapestcontrol.com.au/faviconlogo.png" alt="Astra Pest Control" style="width: 60px; height: 60px; border-radius: 50%;" />
-                        </div>
+                        <table width="80" height="80" cellpadding="0" cellspacing="0" align="center" style="background-color: rgba(255,255,255,0.1); border-radius: 50%; margin: 0 auto 20px;">
+                          <tr>
+                            <td align="center" valign="middle" style="text-align: center; vertical-align: middle;">
+                              <img src="https://www.astrapestcontrol.com.au/faviconlogo.png" alt="Astra Pest Control" width="60" height="60" style="border-radius: 50%; display: block; margin: 0 auto;" />
+                              <!--[if !mso]><!-->
+                              <div style="display: none; font-size: 0; max-height: 0; overflow: hidden;">
+                                <span style="color: white; font-size: 32px; font-weight: bold; line-height: 80px;">A</span>
+                              </div>
+                              <!--<![endif]-->
+                            </td>
+                          </tr>
+                        </table>
                         <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">Request Confirmed</h1>
                         <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 14px;">We'll contact you within 24 hours</p>
                       </td>
