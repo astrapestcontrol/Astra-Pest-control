@@ -1,3 +1,6 @@
+// Import email templates
+const { adminEmailTemplate, customerEmailTemplate } = require('../server/emailTemplates');
+
 module.exports = async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
@@ -13,7 +16,6 @@ module.exports = async function handler(req, res) {
     try {
       const nodemailer = require('nodemailer');
       
-      // Fix: it's createTransport, not createTransporter
       const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -24,41 +26,22 @@ module.exports = async function handler(req, res) {
 
       console.log('Transporter created, attempting to send emails...');
 
-      // Email to business owner
+      // Email to business owner using professional template
       const businessEmailResult = await transporter.sendMail({
         from: process.env.SMTP_USER,
         to: process.env.EMAIL_TO,
-        subject: `New Quote Request from ${fullName}`,
-        html: `
-          <h2>New Quote Request</h2>
-          <p><strong>Name:</strong> ${fullName}</p>
-          <p><strong>Email:</strong> ${email}</p>
-          <p><strong>Phone:</strong> ${phone}</p>
-          <p><strong>Service:</strong> ${service}</p>
-          <p><strong>Timeframe:</strong> ${timeframe}</p>
-          <p><strong>Message:</strong> ${message}</p>
-        `
+        subject: `🚨 New Quote Request from ${fullName} - ${service}`,
+        html: adminEmailTemplate(fullName, email, phone, service, timeframe, message)
       });
 
       console.log('Business email sent:', businessEmailResult.messageId);
 
-      // Acknowledgment email to customer
+      // Acknowledgment email to customer using professional template
       const customerEmailResult = await transporter.sendMail({
         from: process.env.SMTP_USER,
         to: email,
-        subject: 'Thank you for your quote request - Astra Pest Control',
-        html: `
-          <h2>Thank you for contacting Astra Pest Control!</h2>
-          <p>Dear ${firstName},</p>
-          <p>We have received your quote request for <strong>${service}</strong> and will get back to you within 24 hours.</p>
-          
-          <h3>Your Request Details:</h3>
-          <p><strong>Service:</strong> ${service}</p>
-          <p><strong>Timeframe:</strong> ${timeframe}</p>
-          <p><strong>Message:</strong> ${message}</p>
-          
-          <p>Best regards,<br>Astra Pest Control Team</p>
-        `
+        subject: '✅ Quote Request Received - Astra Pest Control',
+        html: customerEmailTemplate(firstName, service, timeframe)
       });
 
       console.log('Customer email sent:', customerEmailResult.messageId);
