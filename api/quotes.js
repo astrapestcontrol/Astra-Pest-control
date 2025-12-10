@@ -13,7 +13,8 @@ module.exports = async function handler(req, res) {
     try {
       const nodemailer = require('nodemailer');
       
-      const transporter = nodemailer.createTransporter({
+      // Fix: it's createTransport, not createTransporter
+      const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
           user: process.env.SMTP_USER,
