@@ -395,7 +395,7 @@ const blogPosts = [
     date: '2024-09-20',
     category: 'General',
     author: 'Astra Pest Control',
-    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&q=60&fm=webp',
     readTime: '9 min read',
     link: '/blog/24'
   }

@@ -109,7 +109,7 @@ function ServiceBlog({ title, subtitle, heroImage, content, features, process, c
 
           <aside className="service-sidebar-pro">
             <div className="sidebar-card-pro author-info-pro">
-              <img src="/logo.png" alt="Astra Pest Control" className="author-logo-pro" />
+              <img src="/logo.png" alt="Astra Pest Control" loading="lazy" width="800" height="400" className="author-logo-pro" />
               <div className="author-name-pro">Astra Pest Control</div>
               <p className="author-bio-pro">Expert cleaning and pest control professionals serving Brisbane and surrounding areas.</p>
             </div>

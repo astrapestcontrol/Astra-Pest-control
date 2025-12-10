@@ -7,6 +7,10 @@ import './Home.css';
 function Home() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+  };
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.2,
@@ -26,10 +30,6 @@ function Home() {
 
     return () => observer.disconnect();
   }, []);
-
-  const handlePlayVideo = () => {
-    setIsVideoPlaying(true);
-  };
 
   return (
     <div className="home">
@@ -69,7 +69,7 @@ function Home() {
       {/* Guarantee Banner */}
       <section className="guarantee-banner">
         <div className="container">
-          <h2>GUARANTEED • FAST • COURTEOUS • SAFE • ALWAYS LOW COST</h2>
+          <h2 className="guarantee-title">GUARANTEED • FAST • COURTEOUS • SAFE • ALWAYS LOW COST</h2>
           <p>Service to residential and commercial customers</p>
         </div>
       </section>
@@ -102,7 +102,7 @@ function Home() {
                   </div>
                 )}
                 <iframe 
-                  src={`https://www.youtube.com/embed/aIzVuBFdgVI?${isVideoPlaying ? 'autoplay=1&' : ''}si=4Aq1f-xlU5VhNrn-`}
+                  src={`https://www.youtube.com/embed/aIzVuBFdgVI?${isVideoPlaying ? 'autoplay=1&' : ''}si=4Aq1f-xlU5VhNrn-&rel=0&modestbranding=1`}
                   title="Astra Pest Control - Professional Services" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -149,7 +149,7 @@ function Home() {
           <div className="services-grid-new">
             <Link to="/pest-control" className="service-card-large">
               <div className="service-image">
-                <img src="/cockroach.jpg" alt="Pest Control Services" />
+                <img src="/cockroach.jpg" alt="Pest Control Services" loading="eager" width="800" height="400" />
                 <div className="service-overlay">
                   <span className="service-badge">Most Popular</span>
                 </div>
@@ -292,7 +292,12 @@ function Home() {
 
       {/* Image Banner */}
       <section className="image-banner-full">
-        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=1920&q=80" alt="Professional Cleaning Equipment" className="banner-bg-full" />
+        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=60&fm=webp" alt="Professional Cleaning Equipment" loading="lazy" width="800" height="400" 
+          className="banner-bg-full"
+          width="800"
+          height="400"
+          loading="lazy"
+        />
         <div className="banner-overlay-full"></div>
         <div className="banner-content-full">
           <h2>Professional Equipment & Expert Technicians</h2>
