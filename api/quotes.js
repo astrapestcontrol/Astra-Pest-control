@@ -9,17 +9,19 @@ export default async function handler(req, res) {
     const { name, email, phone, service, message, propertyType, propertySize } = req.body;
 
     const transporter = nodemailer.createTransporter({
-      service: 'gmail',
+      host: process.env.SMTP_HOST,
+      port: process.env.SMTP_PORT,
+      secure: false,
       auth: {
-        user: process.env.GMAIL_USER,
-        pass: process.env.GMAIL_APP_PASSWORD
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS
       }
     });
 
     // Email to business owner
     const businessEmail = {
-      from: process.env.GMAIL_USER,
-      to: process.env.CONTACT_EMAIL || process.env.GMAIL_USER,
+      from: process.env.SMTP_USER,
+      to: process.env.EMAIL_TO,
       subject: `New Quote Request from ${name}`,
       html: `
         <h2>New Quote Request</h2>
@@ -35,7 +37,7 @@ export default async function handler(req, res) {
 
     // Acknowledgment email to customer
     const customerEmail = {
-      from: process.env.GMAIL_USER,
+      from: process.env.SMTP_USER,
       to: email,
       subject: 'Thank you for your quote request - Astra Pest Control',
       html: `
