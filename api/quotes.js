@@ -161,7 +161,7 @@ module.exports = async function handler(req, res) {
                     
                     <!-- Header -->
                     <tr>
-                      <td style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
+                      <td style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
                         <div style="background-color: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center;">
                           <span style="color: white; font-size: 24px; font-weight: bold;">✓</span>
                         </div>
@@ -173,9 +173,9 @@ module.exports = async function handler(req, res) {
                     <!-- Success Message -->
                     <tr>
                       <td style="padding: 30px 20px;">
-                        <div style="background-color: #ecfdf5; border-radius: 8px; padding: 20px; margin-bottom: 20px; text-align: center;">
-                          <h2 style="color: #065f46; font-size: 16px; margin: 0 0 8px 0;">Quote Request Received</h2>
-                          <p style="color: #047857; font-size: 14px; margin: 0;">Your request has been successfully submitted and is being reviewed.</p>
+                        <div style="background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%); border-radius: 8px; padding: 20px; margin-bottom: 20px; text-align: center;">
+                          <h2 style="color: #991b1b; font-size: 16px; margin: 0 0 8px 0;">Quote Request Received</h2>
+                          <p style="color: #dc2626; font-size: 14px; margin: 0;">Your request has been successfully submitted and is being reviewed.</p>
                         </div>
                         
                         <h3 style="color: #1f2937; font-size: 18px; margin: 0 0 10px 0;">Hello ${firstName},</h3>
