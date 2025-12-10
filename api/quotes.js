@@ -7,19 +7,13 @@ module.exports = async function handler(req, res) {
     const { firstName, lastName, email, phone, service, timeframe, message } = req.body;
     const fullName = `${firstName} ${lastName}`;
 
-    // Log the submission
-    console.log('New quote request received:');
-    console.log('Name:', fullName);
-    console.log('Email:', email);
-    console.log('Phone:', phone);
-    console.log('Service:', service);
+    console.log('Processing quote request for:', fullName);
 
-    // Try Gmail integration
+    // Try to send emails
     try {
-      // Dynamic import for better Vercel compatibility
-      const { createTransporter } = await import('nodemailer');
+      const nodemailer = require('nodemailer');
       
-      const transporter = createTransporter({
+      const transporter = nodemailer.createTransporter({
         service: 'gmail',
         auth: {
           user: process.env.SMTP_USER,
@@ -27,8 +21,10 @@ module.exports = async function handler(req, res) {
         }
       });
 
+      console.log('Transporter created, attempting to send emails...');
+
       // Email to business owner
-      const businessEmail = {
+      const businessEmailResult = await transporter.sendMail({
         from: process.env.SMTP_USER,
         to: process.env.EMAIL_TO,
         subject: `New Quote Request from ${fullName}`,
@@ -41,10 +37,12 @@ module.exports = async function handler(req, res) {
           <p><strong>Timeframe:</strong> ${timeframe}</p>
           <p><strong>Message:</strong> ${message}</p>
         `
-      };
+      });
+
+      console.log('Business email sent:', businessEmailResult.messageId);
 
       // Acknowledgment email to customer
-      const customerEmail = {
+      const customerEmailResult = await transporter.sendMail({
         from: process.env.SMTP_USER,
         to: email,
         subject: 'Thank you for your quote request - Astra Pest Control',
@@ -60,18 +58,13 @@ module.exports = async function handler(req, res) {
           
           <p>Best regards,<br>Astra Pest Control Team</p>
         `
-      };
+      });
 
-      // Send both emails
-      await transporter.sendMail(businessEmail);
-      console.log('Business email sent successfully');
-      
-      await transporter.sendMail(customerEmail);
-      console.log('Customer email sent successfully');
+      console.log('Customer email sent:', customerEmailResult.messageId);
 
     } catch (emailError) {
-      console.error('Gmail error:', emailError.message);
-      // Continue anyway - form data is still captured
+      console.error('Email sending failed:', emailError);
+      console.error('Error details:', emailError.message);
     }
 
     res.status(200).json({ 
@@ -80,9 +73,9 @@ module.exports = async function handler(req, res) {
     });
     
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Handler error:', error);
     res.status(500).json({ 
-      error: 'Failed to send quote request', 
+      error: 'Failed to process request', 
       details: error.message 
     });
   }
