@@ -6,9 +6,9 @@ import StickyCTA from './components/StickyCTA';
 import ScrollToTopButton from './components/ScrollToTopButton';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
+import Home from './pages/Home';
 
-// Lazy load all pages
-const Home = lazy(() => import('./pages/Home'));
+// Lazy load non-critical pages
 const Services = lazy(() => import('./pages/Services'));
 const Cleaning = lazy(() => import('./pages/Cleaning'));
 const PestControl = lazy(() => import('./pages/PestControl'));

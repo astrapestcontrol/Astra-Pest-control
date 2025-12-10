@@ -25,16 +25,14 @@
 
 /* Hero Modern */
 .hero-modern {
-  min-height: 100vh;
+  height: 600px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
   padding-top: 80px;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.92) 100%),
-              url('../../public/carpet1.jpg') center top/cover no-repeat;
-  background-attachment: scroll;
-  will-change: background-image;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.92) 0%, rgba(30, 41, 59, 0.92) 100%);
+  will-change: transform;
 }
 
 .hero-bg {
@@ -1571,8 +1569,7 @@
 
 @media (max-width: 768px) {
   .hero-modern {
-    min-height: 80vh;
-    background-position: 55% center;
+    height: 500px;
   }
 
   .btn-primary,
