@@ -102,7 +102,7 @@ function Home() {
                   </div>
                 )}
                 <iframe 
-                  src={`https://www.youtube.com/embed/aIzVuBFdgVI?${isVideoPlaying ? 'autoplay=1&' : ''}si=4Aq1f-xlU5VhNrn-`}
+                  src="https://www.youtube.com/embed/aIzVuBFdgVI?si=4Aq1f-xlU5VhNrn-&rel=0&modestbranding=1"
                   title="Astra Pest Control - Professional Services" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
@@ -292,7 +292,7 @@ function Home() {
 
       {/* Image Banner */}
       <section className="image-banner-full">
-        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=60&fm=webp&fm=webp" alt="Professional Cleaning Equipment" loading="lazy" width="800" height="400" 
+        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a50?w=800&q=60&fm=webp" alt="Professional Cleaning Equipment" loading="lazy" width="800" height="400" 
           className="banner-bg-full"
           width="800"
           height="400"
