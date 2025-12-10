@@ -16,7 +16,8 @@ export default async function handler(req, res) {
       }
     });
 
-    const mailOptions = {
+    // Email to business owner
+    const businessEmail = {
       from: process.env.GMAIL_USER,
       to: process.env.CONTACT_EMAIL || process.env.GMAIL_USER,
       subject: `New Quote Request from ${name}`,
@@ -32,7 +33,31 @@ export default async function handler(req, res) {
       `
     };
 
-    await transporter.sendMail(mailOptions);
+    // Acknowledgment email to customer
+    const customerEmail = {
+      from: process.env.GMAIL_USER,
+      to: email,
+      subject: 'Thank you for your quote request - Astra Pest Control',
+      html: `
+        <h2>Thank you for contacting Astra Pest Control!</h2>
+        <p>Dear ${name},</p>
+        <p>We have received your quote request for <strong>${service}</strong> and will get back to you within 24 hours.</p>
+        
+        <h3>Your Request Details:</h3>
+        <p><strong>Service:</strong> ${service}</p>
+        <p><strong>Property Type:</strong> ${propertyType}</p>
+        <p><strong>Property Size:</strong> ${propertySize}</p>
+        <p><strong>Message:</strong> ${message}</p>
+        
+        <p>If you have any urgent questions, please call us directly.</p>
+        <p>Best regards,<br>Astra Pest Control Team</p>
+      `
+    };
+
+    // Send both emails
+    await transporter.sendMail(businessEmail);
+    await transporter.sendMail(customerEmail);
+
     res.status(200).json({ success: true, message: 'Quote request sent successfully!' });
   } catch (error) {
     console.error('Error sending email:', error);
