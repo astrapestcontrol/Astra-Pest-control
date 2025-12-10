@@ -30,7 +30,14 @@ function Header() {
         <div className="container header-content">
           <div className="logo">
             <Link to="/">
-              <img src="/logo.png" alt="Astra Pest Control" className={isScrolled ? 'logo-scrolled' : ''} />
+              <img 
+                src="/logo.png" 
+                alt="Astra Pest Control" 
+                width="150" 
+                height="60"
+                loading="eager"
+                className={isScrolled ? 'logo-scrolled' : ''} 
+              />
             </Link>
           </div>
 
