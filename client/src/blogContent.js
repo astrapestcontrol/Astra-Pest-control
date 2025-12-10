@@ -1,3 +1,107 @@
+// SEO-Optimized Blog Posts for Better Search Rankings
+export const seoBlogs = [
+  {
+    id: 'pest-control-tips-brisbane-2025',
+    title: "10 Essential Pest Control Tips for Brisbane Homeowners in 2025",
+    slug: "pest-control-tips-brisbane-homeowners-2025",
+    excerpt: "Discover proven pest control strategies specifically designed for Brisbane's climate. Learn how to protect your home from cockroaches, termites, and rodents year-round.",
+    author: "Astra Pest Control Team",
+    date: "2025-12-10",
+    category: "Pest Prevention",
+    tags: ["Brisbane", "pest control", "home maintenance", "prevention", "termites"],
+    readTime: "8 min read",
+    metaDescription: "Essential pest control tips for Brisbane homeowners. Learn how to prevent cockroaches, termites, and rodents in Queensland's subtropical climate. Expert advice from licensed professionals.",
+    content: `
+      <h2>Why Brisbane Homes Need Specialized Pest Control</h2>
+      <p>Brisbane's subtropical climate creates the perfect breeding ground for pests. With high humidity and warm temperatures year-round, homeowners face unique challenges that require targeted solutions.</p>
+      
+      <h3>1. Seal Entry Points Before Summer</h3>
+      <p>Inspect your home for cracks, gaps, and holes. Pay special attention to:</p>
+      <ul>
+        <li>Window and door frames</li>
+        <li>Pipe penetrations</li>
+        <li>Roof eaves and gutters</li>
+        <li>Foundation cracks</li>
+      </ul>
+      
+      <h3>2. Manage Moisture Levels</h3>
+      <p>Brisbane's humidity attracts pests like cockroaches and silverfish. Control moisture by:</p>
+      <ul>
+        <li>Using exhaust fans in bathrooms</li>
+        <li>Fixing leaky pipes immediately</li>
+        <li>Ensuring proper drainage around your home</li>
+        <li>Using dehumidifiers in damp areas</li>
+      </ul>
+      
+      <h3>3. Regular Termite Inspections</h3>
+      <p>Queensland has some of Australia's most aggressive termite species. Schedule professional inspections every 12 months to protect your investment.</p>
+      
+      <h3>4. Kitchen Hygiene is Critical</h3>
+      <p>Cockroaches and ants are attracted to food sources. Maintain cleanliness by:</p>
+      <ul>
+        <li>Wiping down surfaces daily</li>
+        <li>Storing food in sealed containers</li>
+        <li>Taking out garbage regularly</li>
+        <li>Cleaning up spills immediately</li>
+      </ul>
+      
+      <h2>When to Call Professional Pest Control</h2>
+      <p>While prevention is key, some situations require professional intervention:</p>
+      <ul>
+        <li>Termite activity or damage</li>
+        <li>Large cockroach infestations</li>
+        <li>Rodent problems</li>
+        <li>Recurring ant colonies</li>
+      </ul>
+      
+      <p>At Astra Pest Control, we provide comprehensive pest management solutions tailored to Brisbane's unique environment. Our licensed technicians use the latest techniques and eco-friendly products to protect your home and family.</p>
+      
+      <p><strong>Need professional pest control in Brisbane?</strong> Call us at <a href="tel:0450955420">0450 955 420</a> for a free consultation and quote.</p>
+    `
+  },
+  
+  {
+    id: 'termite-season-gold-coast-2025',
+    title: "Termite Season in Queensland: What Gold Coast Residents Need to Know",
+    slug: "termite-season-queensland-gold-coast-guide",
+    excerpt: "Queensland's termite season runs year-round, but peak activity occurs during warmer months. Learn how to protect your Gold Coast property from costly termite damage.",
+    author: "Licensed Termite Specialist",
+    date: "2025-12-09",
+    category: "Termite Control",
+    tags: ["Gold Coast", "termites", "inspection", "prevention", "Queensland"],
+    readTime: "12 min read",
+    metaDescription: "Complete guide to termite season on the Gold Coast. Learn about Queensland's termite species, prevention strategies, and professional treatment options. Protect your property today.",
+    content: `
+      <h2>Understanding Queensland's Termite Activity</h2>
+      <p>Unlike other states, Queensland experiences termite activity throughout the year due to its warm, humid climate. However, peak swarming season typically occurs from October to March.</p>
+      
+      <h3>Common Termite Species on the Gold Coast</h3>
+      
+      <h4>1. Coptotermes acinaciformis</h4>
+      <ul>
+        <li>Most destructive species in Australia</li>
+        <li>Can cause severe structural damage</li>
+        <li>Forms large colonies (up to 1 million termites)</li>
+        <li>Attacks both hardwood and softwood</li>
+      </ul>
+      
+      <h3>Signs of Termite Activity</h3>
+      <p>Early detection is crucial for minimizing damage:</p>
+      <ul>
+        <li>Mud tubes on walls or foundations</li>
+        <li>Hollow-sounding timber</li>
+        <li>Tight-fitting doors or windows</li>
+        <li>Flying termites around lights</li>
+      </ul>
+      
+      <h3>Professional Termite Management</h3>
+      <p>The Gold Coast's high termite pressure requires professional monitoring and treatment. Our certified technicians use advanced detection equipment and provide guaranteed protection.</p>
+      
+      <p><strong>Schedule your termite inspection today:</strong> Call <a href="tel:0450955420">0450 955 420</a> or <a href="/contact">request a free quote online</a>.</p>
+    `
+  }
+];
+
 export const blogContent = {
   1: {
     title: 'Complete Guide to Pest Control in Brisbane & Gold Coast: Protect Your Home',
