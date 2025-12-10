@@ -25,7 +25,7 @@
 
 /* Hero Modern */
 .hero-modern {
-  height: 600px;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   position: relative;
@@ -1578,7 +1578,7 @@
 
 @media (max-width: 768px) {
   .hero-modern {
-    height: 550px;
+    min-height: 80vh;
   }
   
   .hero-wrapper {
