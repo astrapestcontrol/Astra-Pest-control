@@ -43,7 +43,7 @@ module.exports = async function handler(req, res) {
                     
                     <!-- Header -->
                     <tr>
-                      <td style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
+                      <td style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); padding: 30px; text-align: center; border-radius: 8px 8px 0 0;">
                         <h1 style="color: #ffffff; margin: 0; font-size: 24px; font-weight: 600;">New Quote Request</h1>
                         <p style="color: rgba(255,255,255,0.9); margin: 8px 0 0 0; font-size: 14px;">Astra Pest Control</p>
                       </td>
@@ -62,7 +62,7 @@ module.exports = async function handler(req, res) {
                     <!-- Customer Details -->
                     <tr>
                       <td style="padding: 0 20px 20px 20px;">
-                        <h2 style="color: #1f2937; font-size: 18px; margin: 0 0 15px 0; border-bottom: 2px solid #3b82f6; padding-bottom: 8px; display: inline-block;">Customer Information</h2>
+                        <h2 style="color: #1f2937; font-size: 18px; margin: 0 0 15px 0; border-bottom: 2px solid #dc2626; padding-bottom: 8px; display: inline-block;">Customer Information</h2>
                         
                         <table width="100%" cellpadding="12" cellspacing="0" style="background-color: #f9fafb; border-radius: 6px;">
                           <tr>
@@ -74,13 +74,13 @@ module.exports = async function handler(req, res) {
                           <tr>
                             <td style="border-bottom: 1px solid #e5e7eb;">
                               <strong style="color: #6b7280; font-size: 13px;">EMAIL:</strong><br>
-                              <a href="mailto:${email}" style="color: #3b82f6; font-size: 15px; font-weight: 600; text-decoration: none;">${email}</a>
+                              <a href="mailto:${email}" style="color: #dc2626; font-size: 15px; font-weight: 600; text-decoration: none;">${email}</a>
                             </td>
                           </tr>
                           <tr>
                             <td style="border-bottom: 1px solid #e5e7eb;">
                               <strong style="color: #6b7280; font-size: 13px;">PHONE:</strong><br>
-                              <a href="tel:${phone}" style="color: #3b82f6; font-size: 15px; font-weight: 600; text-decoration: none;">${phone}</a>
+                              <a href="tel:${phone}" style="color: #dc2626; font-size: 15px; font-weight: 600; text-decoration: none;">${phone}</a>
                             </td>
                           </tr>
                           <tr>
@@ -104,8 +104,8 @@ module.exports = async function handler(req, res) {
                     <tr>
                       <td style="padding: 0 20px 20px 20px;">
                         <h3 style="color: #1f2937; font-size: 16px; margin: 0 0 10px 0;">Additional Message:</h3>
-                        <div style="background-color: #f0f9ff; border: 1px solid #0ea5e9; border-radius: 6px; padding: 15px;">
-                          <p style="color: #0c4a6e; font-size: 14px; margin: 0; line-height: 1.5;">${message}</p>
+                        <div style="background-color: #f0f9ff; border: 1px solid #dc2626; border-radius: 6px; padding: 15px;">
+                          <p style="color: #991b1b; font-size: 14px; margin: 0; line-height: 1.5;">${message}</p>
                         </div>
                       </td>
                     </tr>
@@ -114,7 +114,7 @@ module.exports = async function handler(req, res) {
                     <!-- CTA -->
                     <tr>
                       <td style="padding: 0 20px 30px 20px; text-align: center;">
-                        <a href="tel:${phone}" style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">Call ${phone}</a>
+                        <a href="tel:${phone}" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: #ffffff; padding: 12px 24px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">Call ${phone}</a>
                       </td>
                     </tr>
                     
@@ -206,26 +206,26 @@ module.exports = async function handler(req, res) {
                         <h3 style="color: #1f2937; font-size: 16px; margin: 0 0 15px 0;">What Happens Next?</h3>
                         <div style="margin-bottom: 15px;">
                           <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px; text-align: center; line-height: 24px;">1</span>
+                            <div style="background-color: #dc2626; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">1</div>
                             <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Review & Assessment</span>
                           </div>
-                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 34px; line-height: 1.4;">Our team reviews your request and prepares a customized quote.</p>
+                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 40px; line-height: 1.4;">Our team reviews your request and prepares a customized quote.</p>
                         </div>
                         
                         <div style="margin-bottom: 15px;">
                           <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px; text-align: center; line-height: 24px;">2</span>
+                            <div style="background-color: #dc2626; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">2</div>
                             <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Personal Contact</span>
                           </div>
-                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 34px; line-height: 1.4;">We'll contact you within 24 hours to discuss details.</p>
+                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 40px; line-height: 1.4;">We'll contact you within 24 hours to discuss details.</p>
                         </div>
                         
                         <div>
                           <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                            <span style="background-color: #3b82f6; color: white; width: 24px; height: 24px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 10px; text-align: center; line-height: 24px;">3</span>
+                            <div style="background-color: #dc2626; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">3</div>
                             <span style="color: #1f2937; font-size: 14px; font-weight: 600;">Service Scheduling</span>
                           </div>
-                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 0 34px; line-height: 1.4;">Schedule your service at a convenient time.</p>
+                          <p style="color: #6b7280; font-size: 13px; margin: 0 0 0 40px; line-height: 1.4;">Schedule your service at a convenient time.</p>
                         </div>
                       </td>
                     </tr>
@@ -236,7 +236,7 @@ module.exports = async function handler(req, res) {
                         <div style="background-color: #fef3c7; border-radius: 6px; padding: 20px; text-align: center;">
                           <h3 style="color: #92400e; font-size: 16px; margin: 0 0 8px 0;">Need Immediate Assistance?</h3>
                           <p style="color: #78350f; font-size: 13px; margin: 0 0 15px 0;">Our team is ready to help you right now</p>
-                          <a href="tel:0450955420" style="display: inline-block; background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: #ffffff; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">Call 0450 955 420</a>
+                          <a href="tel:0450955420" style="display: inline-block; background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: #ffffff; padding: 12px 20px; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 14px;">Call 0450 955 420</a>
                         </div>
                       </td>
                     </tr>
