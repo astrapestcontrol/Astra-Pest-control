@@ -7,6 +7,8 @@ import ScrollToTopButton from './components/ScrollToTopButton';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
 import Home from './pages/Home';
+import BrisbaneServices from './pages/BrisbaneServices';
+import GoldCoastServices from './pages/GoldCoastServices';
 
 // Lazy load non-critical pages
 const Services = lazy(() => import('./pages/Services'));
@@ -73,6 +75,8 @@ function App() {
             <Suspense fallback={<div style={{height:'50vh',display:'flex',alignItems:'center',justifyContent:'center'}}>Loading...</div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/brisbane-pest-control" element={<BrisbaneServices />} />
+                <Route path="/gold-coast-pest-control" element={<GoldCoastServices />} />
                 <Route path="/services" element={<Services />} />
                 <Route path="/cleaning" element={<Cleaning />} />
                 <Route path="/cleaning/carpet-cleaning" element={<CarpetCleaning />} />

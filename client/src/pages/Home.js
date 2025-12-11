@@ -35,10 +35,10 @@ function Home() {
   return (
     <div className="home">
       <Helmet>
-        <title>Pest Control Brisbane & Gold Coast | Termite Inspection & Treatment | Astra Pest Control</title>
-        <meta name="description" content="Expert pest control & termite services in Brisbane and Gold Coast. Licensed technicians, 15+ years experience. Same-day service. 100% guarantee. Call 0450 955 420 for free quote!" />
-        <meta name="keywords" content="pest control Brisbane, pest control Gold Coast, termite control Brisbane, termite control Gold Coast, termite inspection, pest removal, cockroach control, rodent control, surrounding suburbs" />
-        <link rel="canonical" href="https://www.astrapest.com.au/" />
+        <title>Pest Control Brisbane & Gold Coast | #1 Termite Control | Astra Pest Control</title>
+        <meta name="description" content="#1 Pest Control Brisbane & Gold Coast. Professional termite control, cockroach removal, rodent control. Same-day service. 15+ years experience. Call 0450 955 420 for free quote!" />
+        <meta name="keywords" content="pest control Brisbane, pest control Gold Coast, termite control Brisbane, termite control Gold Coast, cockroach control Brisbane, rodent control Gold Coast, ant control Brisbane, spider control Gold Coast" />
+        <link rel="canonical" href="https://www.astrapestcontrol.com.au/" />
         <link rel="preload" href={heroImage} as="image" type="image/jpeg" />
       </Helmet>
       
