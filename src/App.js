@@ -11,18 +11,18 @@ import Home from './pages/Home';
 import BrisbaneServices from './pages/BrisbaneServices';
 import GoldCoastServices from './pages/GoldCoastServices';
 
-// Lazy load non-critical pages
-const Services = lazy(() => import('./pages/Services'));
-const Cleaning = lazy(() => import('./pages/Cleaning'));
-const PestControl = lazy(() => import('./pages/PestControl'));
-const About = lazy(() => import('./pages/About'));
-const FAQ = lazy(() => import('./pages/FAQ'));
-const HintsTips = lazy(() => import('./pages/HintsTips'));
-const Contact = lazy(() => import('./pages/Contact'));
-const Blog = lazy(() => import('./pages/Blog'));
-const BlogPost = lazy(() => import('./pages/BlogPost'));
-const Brisbane = lazy(() => import('./pages/Brisbane'));
-const GoldCoast = lazy(() => import('./pages/GoldCoast'));
+// Lazy load non-critical pages with prefetch
+const Services = lazy(() => import(/* webpackChunkName: "services" */ './pages/Services'));
+const Cleaning = lazy(() => import(/* webpackChunkName: "cleaning" */ './pages/Cleaning'));
+const PestControl = lazy(() => import(/* webpackChunkName: "pest-control" */ './pages/PestControl'));
+const About = lazy(() => import(/* webpackChunkName: "about" */ './pages/About'));
+const FAQ = lazy(() => import(/* webpackChunkName: "faq" */ './pages/FAQ'));
+const HintsTips = lazy(() => import(/* webpackChunkName: "hints-tips" */ './pages/HintsTips'));
+const Contact = lazy(() => import(/* webpackChunkName: "contact" */ './pages/Contact'));
+const Blog = lazy(() => import(/* webpackChunkName: "blog" */ './pages/Blog'));
+const BlogPost = lazy(() => import(/* webpackChunkName: "blog-post" */ './pages/BlogPost'));
+const Brisbane = lazy(() => import(/* webpackChunkName: "brisbane" */ './pages/Brisbane'));
+const GoldCoast = lazy(() => import(/* webpackChunkName: "gold-coast" */ './pages/GoldCoast'));
 
 // Lazy load cleaning service pages
 const CarpetCleaning = lazy(() => import('./pages/cleaning/CarpetCleaning'));
@@ -71,7 +71,7 @@ function App() {
           <StickyCTA />
           <ScrollToTopButton />
           <main>
-            <Suspense fallback={<div style={{height:'50vh',display:'flex',alignItems:'center',justifyContent:'center'}}>Loading...</div>}>
+            <Suspense fallback={<div style={{height:'50vh',display:'flex',alignItems:'center',justifyContent:'center',fontSize:'18px'}}>Loading...</div>}>
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/brisbane-pest-control" element={<BrisbaneServices />} />
