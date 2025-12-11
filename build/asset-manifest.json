@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.be7bec3f.css",
-    "main.js": "/static/js/main.31acc198.js",
+    "main.js": "/static/js/main.82b02b90.js",
     "services.js": "/static/js/services.b79bbdab.chunk.js",
     "cleaning.js": "/static/js/cleaning.d9adc580.chunk.js",
     "pest-control.js": "/static/js/pest-control.2438ddb3.chunk.js",
@@ -52,7 +52,7 @@
     "static/media/carpet-hero.jpg": "/static/media/carpet-hero.f410236abaa6fbb10c55.jpg",
     "index.html": "/index.html",
     "main.be7bec3f.css.map": "/static/css/main.be7bec3f.css.map",
-    "main.31acc198.js.map": "/static/js/main.31acc198.js.map",
+    "main.82b02b90.js.map": "/static/js/main.82b02b90.js.map",
     "services.b79bbdab.chunk.js.map": "/static/js/services.b79bbdab.chunk.js.map",
     "cleaning.d9adc580.chunk.js.map": "/static/js/cleaning.d9adc580.chunk.js.map",
     "pest-control.2438ddb3.chunk.js.map": "/static/js/pest-control.2438ddb3.chunk.js.map",
@@ -103,6 +103,6 @@
   },
   "entrypoints": [
     "static/css/main.be7bec3f.css",
-    "static/js/main.31acc198.js"
+    "static/js/main.82b02b90.js"
   ]
 }
