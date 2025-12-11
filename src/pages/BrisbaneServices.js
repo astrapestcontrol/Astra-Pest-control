@@ -4,7 +4,7 @@ import './ServicePages.css';
 
 function BrisbaneServices() {
   return (
-    <div className="services-page" style={{paddingTop: '100px'}}>
+    <div className="services-page" style={{paddingTop: '150px'}}>
       <Helmet>
         <title>Pest Control Brisbane | Termite Control Brisbane | Astra Pest Control</title>
         <meta name="description" content="#1 Pest Control Brisbane. Professional termite control, cockroach removal, rodent control in Brisbane. Same-day service. 15+ years experience. Call 0450 955 420" />

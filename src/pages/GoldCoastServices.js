@@ -4,7 +4,7 @@ import './ServicePages.css';
 
 function GoldCoastServices() {
   return (
-    <div className="services-page" style={{paddingTop: '100px'}}>
+    <div className="services-page" style={{paddingTop: '150px'}}>
       <Helmet>
         <title>Pest Control Gold Coast | Termite Control Gold Coast | Astra Pest Control</title>
         <meta name="description" content="#1 Pest Control Gold Coast. Professional termite control, cockroach removal, rodent control on Gold Coast. Same-day service. 15+ years experience. Call 0450 955 420" />
