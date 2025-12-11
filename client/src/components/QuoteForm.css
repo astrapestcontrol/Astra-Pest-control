@@ -192,6 +192,11 @@
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 8px;
+  width: 140px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submit-btn-modern:hover:not(:disabled) {
@@ -270,5 +275,7 @@
   .submit-btn-modern {
     padding: 14px 24px;
     font-size: 14px;
+    width: 120px;
+    height: 48px;
   }
 }
