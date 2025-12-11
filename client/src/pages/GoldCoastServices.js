@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import './Services.css';
+import './ServicePages.css';
 
 function GoldCoastServices() {
   return (
@@ -10,51 +10,6 @@ function GoldCoastServices() {
         <meta name="description" content="#1 Pest Control Gold Coast. Professional termite control, cockroach removal, rodent control on Gold Coast. Same-day service. 15+ years experience. Call 0450 955 420" />
         <meta name="keywords" content="pest control Gold Coast, termite control Gold Coast, cockroach control Gold Coast, rodent control Gold Coast, ant control Gold Coast, spider control Gold Coast" />
         <link rel="canonical" href="https://www.astrapestcontrol.com.au/gold-coast-pest-control" />
-        
-        <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Astra Pest Control Gold Coast",
-          "description": "Gold Coast's #1 pest control service. Professional termite control, cockroach removal, and rodent control on Gold Coast and surrounding areas.",
-          "url": "https://www.astrapestcontrol.com.au/gold-coast-pest-control",
-          "telephone": "+61450955420",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Gold Coast",
-            "addressRegion": "QLD",
-            "postalCode": "4217",
-            "addressCountry": "AU"
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Gold Coast",
-            "addressRegion": "QLD"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Gold Coast Pest Control Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Gold Coast Termite Control",
-                  "description": "Professional termite control and inspection services on Gold Coast"
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service", 
-                  "name": "Gold Coast Cockroach Control",
-                  "description": "Expert cockroach removal and prevention on Gold Coast properties"
-                }
-              }
-            ]
-          }
-        })}
-        </script>
       </Helmet>
 
       <section className="hero-services">
@@ -71,52 +26,17 @@ function GoldCoastServices() {
           
           <div className="service-card">
             <h3>Gold Coast Termite Control</h3>
-            <p>Professional termite inspections and treatments for Gold Coast properties. Advanced detection equipment and proven treatment methods.</p>
-            <ul>
-              <li>Gold Coast termite inspections</li>
-              <li>Termite barrier installation Gold Coast</li>
-              <li>Gold Coast termite treatment</li>
-            </ul>
+            <p>Professional termite inspections and treatments for Gold Coast properties.</p>
           </div>
 
           <div className="service-card">
             <h3>Gold Coast Cockroach Control</h3>
-            <p>Expert cockroach removal for Gold Coast homes and businesses. Safe, effective treatments with guaranteed results.</p>
-            <ul>
-              <li>Gold Coast cockroach removal</li>
-              <li>Cockroach prevention Gold Coast</li>
-              <li>Commercial cockroach control Gold Coast</li>
-            </ul>
+            <p>Expert cockroach removal for Gold Coast homes and businesses.</p>
           </div>
 
           <div className="service-card">
             <h3>Gold Coast Rodent Control</h3>
-            <p>Professional rat and mice control throughout Gold Coast. Humane removal and prevention strategies.</p>
-            <ul>
-              <li>Gold Coast rat control</li>
-              <li>Mice removal Gold Coast</li>
-              <li>Rodent proofing Gold Coast</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section className="goldcoast-areas">
-        <div className="container">
-          <h2>Gold Coast Areas We Service</h2>
-          <div className="areas-grid">
-            <div>Surfers Paradise</div>
-            <div>Broadbeach</div>
-            <div>Southport</div>
-            <div>Robina</div>
-            <div>Burleigh Heads</div>
-            <div>Coolangatta</div>
-            <div>Nerang</div>
-            <div>Varsity Lakes</div>
-            <div>Currumbin</div>
-            <div>Palm Beach</div>
-            <div>Tweed Heads</div>
-            <div>Mudgeeraba</div>
+            <p>Professional rat and mice control throughout Gold Coast.</p>
           </div>
         </div>
       </section>
