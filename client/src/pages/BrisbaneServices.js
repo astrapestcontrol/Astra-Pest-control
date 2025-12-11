@@ -26,17 +26,62 @@ function BrisbaneServices() {
           
           <div className="service-card">
             <h3>Brisbane Termite Control</h3>
-            <p>Professional termite inspections and treatments for Brisbane properties.</p>
+            <p>Professional termite inspections and treatments for Brisbane properties. Advanced detection equipment and proven treatment methods.</p>
+            <ul>
+              <li>Brisbane termite inspections</li>
+              <li>Termite barrier installation Brisbane</li>
+              <li>Brisbane termite treatment</li>
+            </ul>
           </div>
 
           <div className="service-card">
             <h3>Brisbane Cockroach Control</h3>
-            <p>Expert cockroach removal for Brisbane homes and businesses.</p>
+            <p>Expert cockroach removal for Brisbane homes and businesses. Safe, effective treatments with guaranteed results.</p>
+            <ul>
+              <li>Brisbane cockroach removal</li>
+              <li>Cockroach prevention Brisbane</li>
+              <li>Commercial cockroach control Brisbane</li>
+            </ul>
           </div>
 
           <div className="service-card">
             <h3>Brisbane Rodent Control</h3>
-            <p>Professional rat and mice control throughout Brisbane.</p>
+            <p>Professional rat and mice control throughout Brisbane. Humane removal and prevention strategies.</p>
+            <ul>
+              <li>Brisbane rat control</li>
+              <li>Mice removal Brisbane</li>
+              <li>Rodent proofing Brisbane</li>
+            </ul>
+          </div>
+
+          <div className="service-card">
+            <h3>Brisbane Ant Control</h3>
+            <p>Complete ant colony elimination for Brisbane properties.</p>
+          </div>
+
+          <div className="service-card">
+            <h3>Brisbane Spider Control</h3>
+            <p>Safe spider removal and web elimination services.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="brisbane-areas">
+        <div className="container">
+          <h2>Brisbane Areas We Service</h2>
+          <div className="areas-grid">
+            <div>Brisbane CBD</div>
+            <div>South Brisbane</div>
+            <div>West End</div>
+            <div>Fortitude Valley</div>
+            <div>New Farm</div>
+            <div>Paddington</div>
+            <div>Milton</div>
+            <div>Toowong</div>
+            <div>St Lucia</div>
+            <div>Indooroopilly</div>
+            <div>Chermside</div>
+            <div>Aspley</div>
           </div>
         </div>
       </section>
