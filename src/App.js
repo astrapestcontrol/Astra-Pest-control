@@ -1,6 +1,7 @@
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css';
 import Header from './components/Header';
 import StickyCTA from './components/StickyCTA';
@@ -107,6 +108,7 @@ function App() {
             </Suspense>
           </main>
           <Footer />
+          <Analytics />
         </div>
       </Router>
     </HelmetProvider>
