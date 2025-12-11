@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Reviews from '../components/Reviews';
@@ -6,6 +6,11 @@ import heroImage from '../assets/carpet-hero.jpg';
 import './Home.css';
 
 function Home() {
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
+  const handlePlayVideo = () => {
+    setIsVideoPlaying(true);
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -81,7 +86,7 @@ function Home() {
           </div>
           
           <div className="video-showcase">
-            <div className="mobile-phone-frame">
+            <div className={`mobile-phone-frame ${isVideoPlaying ? 'landscape' : ''}`}>
               <div className="phone-notch"></div>
               <div className="phone-buttons">
                 <div className="volume-up"></div>
@@ -89,14 +94,25 @@ function Home() {
                 <div className="power-button"></div>
               </div>
               <div className="phone-screen">
-                <div className="video-placeholder">
-                  <div className="play-button-overlay">
-                    <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
-                      <path d="M20 15L45 30L20 45V15Z" />
-                    </svg>
+                {!isVideoPlaying && (
+                  <div className="play-overlay" onClick={handlePlayVideo}>
+                    <div className="play-button-large">
+                      <svg width="60" height="60" viewBox="0 0 60 60" fill="white">
+                        <path d="M20 15L45 30L20 45V15Z" />
+                      </svg>
+                    </div>
                   </div>
-                  <p>Professional Pest Control Services</p>
-                </div>
+                )}
+                {isVideoPlaying && (
+                  <iframe 
+                    src="https://www.youtube.com/embed/aIzVuBFdgVI?autoplay=1&si=4Aq1f-xlU5VhNrn-&rel=0&modestbranding=1"
+                    title="Astra Pest Control - Professional Services" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                    loading="lazy"
+                  ></iframe>
+                )}
               </div>
             </div>
             
